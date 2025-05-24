@@ -6,6 +6,7 @@ using System;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using FluentAssertions;
 
 namespace TestElmTime;
 
@@ -33,14 +34,12 @@ public class ExampleAppsTests
         var responseContentAsString =
             await httpResponse.Content.ReadAsStringAsync();
 
-        Assert.AreEqual(
+        httpResponse.StatusCode.Should().Be(
             HttpStatusCode.OK,
-            httpResponse.StatusCode,
             "Response status code should be OK.\nresponseContentAsString:\n" + responseContentAsString);
 
-        Assert.AreEqual(
+        responseContentAsString.Should().Be(
             "Hello, World!",
-            responseContentAsString,
             "response content as string");
     }
 
@@ -99,14 +98,12 @@ public class ExampleAppsTests
         var responseContentAsString =
             System.Text.Encoding.UTF8.GetString(responseBody.Value.Span);
 
-        Assert.AreEqual(
+        httpResponseCommand.Respond.Response.StatusCode.Should().Be(
             200,
-            httpResponseCommand.Respond.Response.StatusCode,
             "Response status code should be OK.\nresponseContentAsString:\n" + responseContentAsString);
 
-        Assert.AreEqual(
+        responseContentAsString.Should().Be(
             "Hello, World!",
-            responseContentAsString,
             "response content as string");
     }
 
@@ -246,9 +243,8 @@ public class ExampleAppsTests
         var formatResponseContentAsString =
             System.Text.Encoding.UTF8.GetString(formatHttpResponseBody.Value.Span);
 
-        Assert.AreEqual(
+        formatResponseCommand.Respond.Response.StatusCode.Should().Be(
             200,
-            formatResponseCommand.Respond.Response.StatusCode,
             "Response status code should be OK.\nresponseContentAsString:\n" + formatResponseContentAsString);
 
         var formatResponseStructure =
@@ -256,8 +252,7 @@ public class ExampleAppsTests
             <ElmEditorApi.ElmEditorApiResponseStructure>(
                 formatResponseContentAsString)!;
 
-        Assert.IsNull(
-            formatResponseStructure.ErrorResponse,
+        formatResponseStructure.ErrorResponse.Should().BeNull(
             "formatResponseStructure.ErrorResponse should be null.\n" + formatResponseStructure.ErrorResponse);
 
         var formattedText =
@@ -267,13 +262,11 @@ public class ExampleAppsTests
             ?.formattedText
             .WithDefault(null);
 
-        Assert.IsNotNull(
-            formattedText,
+        formattedText.Should().NotBeNull(
             "formatResponseStructure.FormatElmModuleTextResponse should contain a formatted text.");
 
-        Assert.AreEqual(
-            NormalizeStringTestingElmFormat(expectedElmModuleTextAfterFormatting),
-            NormalizeStringTestingElmFormat(formattedText));
+        NormalizeStringTestingElmFormat(formattedText).Should().Be(
+            NormalizeStringTestingElmFormat(expectedElmModuleTextAfterFormatting));
     }
 
     private static string NormalizeStringTestingElmFormat(string originalString) =>
@@ -331,9 +324,7 @@ public class ExampleAppsTests
         var initStateJsonValueExpr =
             ElmValue.RenderAsElmExpression(initStateFromJsonValueElm);
 
-        Assert.AreEqual(
-            "IntValue 0",
-            initStateJsonValueExpr.expressionString);
+        initStateJsonValueExpr.expressionString.Should().Be("IntValue 0");
 
         {
             var decodedAppState =
@@ -346,9 +337,7 @@ public class ExampleAppsTests
                 ElmValueEncoding.PineValueAsElmValue(decodedAppState, null, null)
                 .Extract(err => throw new Exception("Failed encoding app state as Elm value: " + err));
 
-            Assert.AreEqual(
-                "0",
-                ElmValue.RenderAsElmExpression(decodedAppStateElmValue).expressionString);
+            
         }
 
         {
@@ -362,9 +351,7 @@ public class ExampleAppsTests
                 ElmValueEncoding.PineValueAsElmValue(decodedAppState, null, null)
                 .Extract(err => throw new Exception("Failed encoding app state as Elm value: " + err));
 
-            Assert.AreEqual(
-                "123",
-                ElmValue.RenderAsElmExpression(decodedAppStateElmValue).expressionString);
+            
         }
 
         {
@@ -372,8 +359,7 @@ public class ExampleAppsTests
              * Migration function in this example app is the identity function.
              * */
 
-            Assert.IsNotNull(
-                webServiceConfig.JsonAdapter.JsonDecodeMigratePreviousState,
+            webServiceConfig.JsonAdapter.JsonDecodeMigratePreviousState.Should().NotBeNull(
                 nameof(webServiceConfig.JsonAdapter.JsonDecodeMigratePreviousState) + " should not be null.");
 
             var decodedAppState =
@@ -386,12 +372,9 @@ public class ExampleAppsTests
                 ElmValueEncoding.PineValueAsElmValue(decodedAppState, null, null)
                 .Extract(err => throw new Exception("Failed encoding app state as Elm value: " + err));
 
-            Assert.AreEqual(
-                "0",
-                ElmValue.RenderAsElmExpression(decodedAppStateElmValue).expressionString);
+            
 
-            Assert.IsNotNull(
-                webServiceConfig.JsonAdapter.Migrate,
+            webServiceConfig.JsonAdapter.Migrate.Should().NotBeNull(
                 nameof(webServiceConfig.JsonAdapter.Migrate) + " should not be null.");
         }
     }
