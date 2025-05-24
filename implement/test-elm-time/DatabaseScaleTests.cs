@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -60,17 +61,16 @@ public class DatabaseScaleTests
             {
                 var getResponse = await apiGetEntryAsync(item.entryId);
 
-                Assert.AreEqual(
+                ((int)getResponse.StatusCode).Should().Be(
                     200,
-                    (int)getResponse.StatusCode,
                     "Check status code of entry " + item.entryId);
 
                 var responseContentAsByteArray =
                     await getResponse.Content.ReadAsByteArrayAsync();
 
-                CollectionAssert.AreEqual(
+                responseContentAsByteArray.Should().BeEquivalentTo(
                     item.entryContent,
-                    responseContentAsByteArray,
+                    options => options.WithStrictOrdering(),
                     "Check content of entry " + item.entryId);
             }
 
@@ -106,7 +106,7 @@ public class DatabaseScaleTests
 
             var aggregateLength = parsedResponse.Sum(e => e.entryOverview.length);
 
-            Assert.IsTrue(100 * 10_000 + 400 * 10_000 <= aggregateLength);
+            aggregateLength.Should().BeGreaterThanOrEqualTo(100 * 10_000 + 400 * 10_000);
         }
     }
 }
