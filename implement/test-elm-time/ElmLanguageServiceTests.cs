@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
+using FluentAssertions;
 
 namespace TestElmTime;
 
@@ -39,7 +40,7 @@ public class ElmLanguageServiceTests
         var elmCompilerFromBundleValue =
             Pine.Core.Elm.BundledElmEnvironments.BundledElmEnvironmentFromFileTree(combinedSourceFiles);
 
-        Assert.IsNotNull(elmCompilerFromBundleValue);
+        elmCompilerFromBundleValue.Should().NotBeNull();
 
         var elmCompiler =
             ElmCompiler.ElmCompilerFromEnvValue(elmCompilerFromBundleValue)
@@ -104,7 +105,7 @@ public class ElmLanguageServiceTests
         var elmCompilerFromBundleValue =
             Pine.Core.Elm.BundledElmEnvironments.BundledElmEnvironmentFromFileTree(combinedSourceFiles);
 
-        Assert.IsNotNull(elmCompilerFromBundleValue);
+        elmCompilerFromBundleValue.Should().NotBeNull();
 
         var elmCompiler =
             ElmCompiler.ElmCompilerFromEnvValue(elmCompilerFromBundleValue)
@@ -192,9 +193,7 @@ public class ElmLanguageServiceTests
             languageService.ProvideHover(hoverRequest)
             .Extract(err => throw new Exception(err));
 
-        Assert.AreEqual(
-            expectedHoverText,
-            string.Concat(hoverResponse));
+        string.Concat(hoverResponse).Should().Be(expectedHoverText);
     }
 
     private static void MutateServiceAddingFiles(
