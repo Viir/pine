@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pine.Core;
 using System.Collections.Generic;
 using System.Linq;
+using FluentAssertions;
 
 namespace Pine.UnitTests;
 
@@ -89,13 +90,8 @@ public class ExpressionTests
             var anyNodeIsEnvironment =
                 rootAndSubexpressions.OfType<Expression.Environment>().Any();
 
-            Assert.AreEqual(
-                subexpressions.Count,
-                testCase.SubexpressionCount);
-
-            Assert.AreEqual(
-                anyNodeIsEnvironment,
-                testCase.ReferencesEnvironment);
+            testCase.SubexpressionCount.Should().Be(subexpressions.Count);
+            testCase.ReferencesEnvironment.Should().Be(anyNodeIsEnvironment);
         }
     }
 }

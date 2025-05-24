@@ -3,6 +3,7 @@ using Pine.Core;
 using Pine.Core.PopularEncodings;
 using Pine.Json;
 using System.Text.Json;
+using FluentAssertions;
 
 namespace Pine.UnitTests;
 
@@ -73,7 +74,7 @@ public class JsonConverterForPineValueTests
                         asJson,
                         options: jsonSerializerOptions);
 
-                Assert.AreEqual(testCase, fromJson);
+                fromJson.Should().BeEquivalentTo(testCase);
             }
             catch (System.Exception ex)
             {
@@ -96,15 +97,13 @@ public class JsonConverterForPineValueTests
                 pineValue,
                 options: jsonSerializerOptions);
 
-        Assert.AreEqual(
-            "1234",
-            serializePineValue(
-                IntegerEncoding.EncodeSignedInteger(1234)));
+        serializePineValue(
+            IntegerEncoding.EncodeSignedInteger(1234))
+            .Should().Be("1234");
 
-        Assert.AreEqual(
-            "-34567",
-            serializePineValue(
-                IntegerEncoding.EncodeSignedInteger(-34567)));
+        serializePineValue(
+            IntegerEncoding.EncodeSignedInteger(-34567))
+            .Should().Be("-34567");
     }
 
     [TestMethod]
@@ -119,14 +118,12 @@ public class JsonConverterForPineValueTests
                 pineValue,
                 options: jsonSerializerOptions);
 
-        Assert.AreEqual(
-            $$"""{"BlobAsString":"stringValue 789"}""",
-            serializePineValue(
-                StringEncoding.BlobValueFromString("stringValue 789")));
+        serializePineValue(
+            StringEncoding.BlobValueFromString("stringValue 789"))
+            .Should().Be($$"""{"BlobAsString":"stringValue 789"}""");
 
-        Assert.AreEqual(
-            "[]",
-            serializePineValue(PineValue.EmptyList));
+        serializePineValue(PineValue.EmptyList)
+            .Should().Be("[]");
     }
 
     [TestMethod]
@@ -141,13 +138,11 @@ public class JsonConverterForPineValueTests
                 pineValue,
                 options: jsonSerializerOptions);
 
-        Assert.AreEqual(
-            $$"""{"ListAsString_2024":"stringValue 789"}""",
-            serializePineValue(
-                StringEncoding.ValueFromString_2024("stringValue 789")));
+        serializePineValue(
+            StringEncoding.ValueFromString_2024("stringValue 789"))
+            .Should().Be($$"""{"ListAsString_2024":"stringValue 789"}""");
 
-        Assert.AreEqual(
-            "[]",
-            serializePineValue(PineValue.EmptyList));
+        serializePineValue(PineValue.EmptyList)
+            .Should().Be("[]");
     }
 }

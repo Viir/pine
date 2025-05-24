@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pine.Core;
 using System.Collections.Generic;
+using FluentAssertions;
 
 namespace Pine.UnitTests;
 
@@ -24,7 +25,7 @@ public class ReusedInstancesTests
 
         foreach (var kv in a)
         {
-            Assert.IsTrue(b.ContainsKey(kv.Key), "contains key");
+            b.Should().ContainKey(kv.Key).Because("contains key");
         }
     }
 }
