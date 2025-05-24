@@ -33,7 +33,7 @@ public class BundledElmEnvironments
 
         var hash = PineValueHashTree.ComputeHash(pineValue);
 
-        return Convert.ToHexStringLower(hash[..16].Span);
+        return HexStringUtils.ToHexStringLower(hash[..16].ToArray());
     }
 
     public const string EmbeddedResourceFilePath = "prebuilt-artifact/compiled-elm-environments.json.gzip";

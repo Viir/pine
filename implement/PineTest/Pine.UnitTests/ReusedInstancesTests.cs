@@ -21,12 +21,12 @@ public class ReusedInstancesTests
     {
         if (a.Count != b.Count)
         {
-            Execute.Assertion.FailWith("Counts are not equal: {0} vs {1}", a.Count, b.Count);
+            a.Count.Should().Be(b.Count, "counts should be equal");
         }
 
         foreach (var kv in a)
         {
-            b.Should().ContainKey(kv.Key).Because("contains key");
+            b.Should().ContainKey(kv.Key);
         }
     }
 }

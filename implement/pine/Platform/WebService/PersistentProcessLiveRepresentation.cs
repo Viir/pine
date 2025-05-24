@@ -33,7 +33,7 @@ public class PersistentProcessLiveRepresentation : IAsyncDisposable
 
     private readonly Pine.CompilePineToDotNet.CompilerMutableCache hashCache = new();
 
-    private readonly System.Threading.Lock processLock = new();
+    private readonly object processLock = new();
 
     public readonly ProcessAppConfig lastAppConfig;
 

@@ -13,7 +13,7 @@ namespace Pine.Elm.Platform;
 /// </summary>
 public class MutatingWebServiceApp
 {
-    private readonly System.Threading.Lock stateLock = new();
+    private readonly object stateLock = new();
 
     private record CacheAndVM(
         PineVMCache PineVMCache,

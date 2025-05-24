@@ -19,7 +19,7 @@ public class ElmCompilerCache
 
     private readonly Dictionary<ElmValue, Expression> elmValueDecodedAsExpressionElmCompilerCache = [];
 
-    private readonly System.Threading.Lock cachesLock = new();
+    private readonly object cachesLock = new();
 
 
     public PineValue EncodeValueForCompiler(PineValue pineValue)

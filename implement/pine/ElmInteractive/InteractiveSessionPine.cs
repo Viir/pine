@@ -17,7 +17,7 @@ namespace ElmTime.ElmInteractive;
 
 public class InteractiveSessionPine : IInteractiveSession
 {
-    private readonly System.Threading.Lock submissionLock = new();
+    private readonly object submissionLock = new();
 
     private System.Threading.Tasks.Task<Result<string, PineValue>> buildPineEvalContextTask;
 

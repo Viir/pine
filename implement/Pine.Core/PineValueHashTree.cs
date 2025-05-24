@@ -176,7 +176,7 @@ public static class PineValueHashTree
 
             Result<string, PineValue> TryLoadElementForHash(ReadOnlyMemory<byte> elementHash)
             {
-                var elementHashBase16 = Convert.ToHexStringLower(elementHash.Span);
+                var elementHashBase16 = HexStringUtils.ToHexStringLower(elementHash.ToArray());
 
                 if (valueFromCache?.Invoke(elementHashBase16) is { } cachedValue)
                 {
@@ -226,7 +226,7 @@ public static class PineValueHashTree
                 {
                     return
                         "Failed to load element " +
-                        Convert.ToHexStringLower(elementHash.Span) + ": " + err;
+                        HexStringUtils.ToHexStringLower(elementHash.ToArray()) + ": " + err;
                 }
 
                 if (loadResult.IsOkOrNull() is not { } ok)

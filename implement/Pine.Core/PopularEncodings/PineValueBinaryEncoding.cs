@@ -117,7 +117,7 @@ public static class PineValueBinaryEncoding
             Span<byte> encodedId = stackalloc byte[8];
 
             BinaryPrimitives.WriteInt64BigEndian(encodedId, componentId);
-            write(encodedId);
+            write(encodedId.ToArray());
 
             EncodeExpression(
                 declaration,
@@ -152,39 +152,39 @@ public static class PineValueBinaryEncoding
     {
         if (declarations.TryGetValue(composition, out var refId))
         {
-            write(tagReferenceEncoded.Span);
+            write(tagReferenceEncoded.ToArray());
 
             Span<byte> encodedId = stackalloc byte[8];
             BinaryPrimitives.WriteInt64BigEndian(encodedId, refId);
-            write(encodedId);
+            write(encodedId.ToArray());
 
             return;
         }
 
         if (composition is PineValue.BlobValue blob)
         {
-            write(tagBlobEncoded.Span);
+            write(tagBlobEncoded.ToArray());
 
             Span<byte> encodedLength = stackalloc byte[8];
             BinaryPrimitives.WriteInt64BigEndian(encodedLength, blob.Bytes.Length);
-            write(encodedLength);
+            write(encodedLength.ToArray());
 
-            write(blob.Bytes.Span);
+            write(blob.Bytes.ToArray());
 
             // encode blobs aligned to blocks of four bytes.
 
             switch (blob.Bytes.Length % 4)
             {
                 case 1:
-                    write(paddingBytes_3.Span);
+                    write(paddingBytes_3.ToArray());
                     break;
 
                 case 2:
-                    write(paddingBytes_2.Span);
+                    write(paddingBytes_2.ToArray());
                     break;
 
                 case 3:
-                    write(paddingBytes_1.Span);
+                    write(paddingBytes_1.ToArray());
                     break;
             }
 
@@ -193,11 +193,11 @@ public static class PineValueBinaryEncoding
 
         if (composition is PineValue.ListValue list)
         {
-            write(tagListEncoded.Span);
+            write(tagListEncoded.ToArray());
 
             Span<byte> encodedLength = stackalloc byte[8];
             BinaryPrimitives.WriteInt64BigEndian(encodedLength, list.Elements.Length);
-            write(encodedLength);
+            write(encodedLength.ToArray());
 
             for (var i = 0; i < list.Elements.Length; i++)
             {

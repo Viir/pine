@@ -152,7 +152,7 @@ public class ProcessStoreWriterInFileStore(
 {
     private Func<IImmutableList<string>> getCompositionLogRequestedNextFilePath = getCompositionLogRequestedNextFilePath;
 
-    private readonly System.Threading.Lock appendSerializedCompositionRecordLock = new();
+    private readonly object appendSerializedCompositionRecordLock = new();
 
     private IImmutableList<string>? appendSerializedCompositionRecordLastFilePath = null;
 

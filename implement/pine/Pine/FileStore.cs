@@ -263,7 +263,7 @@ public class FileStoreFromWriterAndReader(
 
 public class RecordingFileStoreWriter : IFileStoreWriter
 {
-    private readonly System.Threading.Lock @lock = new();
+    private readonly object @lock = new();
 
     private (ImmutableList<WriteOperation> history, TreeNodeWithStringPath latestVersion) historyAndReduction =
         ([], TreeNodeWithStringPath.EmptyTree);
