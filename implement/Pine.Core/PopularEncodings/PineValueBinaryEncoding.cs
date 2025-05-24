@@ -45,9 +45,9 @@ public static class PineValueBinaryEncoding
         System.IO.Stream stream,
         PineValue composition)
     {
-        void write(ReadOnlySpan<byte> bytes)
+        void write(byte[] bytes)
         {
-            stream.Write(bytes);
+            stream.Write(bytes, 0, bytes.Length);
         }
 
         Encode(write, composition);
@@ -59,20 +59,21 @@ public static class PineValueBinaryEncoding
     /// <param name="write">An action that writes the encoded bytes.</param>
     /// <param name="composition">The PineValue instance to encode.</param>
     public static void Encode(
-        Action<ReadOnlySpan<byte>> write,
+        Action<byte[]> write,
         PineValue composition) =>
         Encode(composition, write, componentIdOffset: 0);
 
     private static void Encode(
         PineValue root,
-        Action<ReadOnlySpan<byte>> write,
+        Action<byte[]> write,
         long componentIdOffset)
     {
         var seenOnce = new HashSet<PineValue>();
 
         var seenTwice = new HashSet<PineValue>();
 
-        var stack = new Stack<PineValue>([root]);
+        var stack = new Stack<PineValue>();
+        stack.Push(root);
 
         while (stack.Count is not 0)
         {
@@ -146,7 +147,7 @@ public static class PineValueBinaryEncoding
 
     private static void EncodeExpression(
         PineValue composition,
-        Action<ReadOnlySpan<byte>> write,
+        Action<byte[]> write,
         IReadOnlyDictionary<PineValue, long> declarations)
     {
         if (declarations.TryGetValue(composition, out var refId))

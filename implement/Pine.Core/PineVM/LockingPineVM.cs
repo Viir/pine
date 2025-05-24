@@ -4,7 +4,7 @@ public class LockingPineVM : IPineVM
 {
     private readonly IPineVM pineVM;
 
-    private readonly System.Threading.Lock pineVMLock = new();
+    private readonly object pineVMLock = new();
 
     public LockingPineVM(IPineVM pineVM)
     {

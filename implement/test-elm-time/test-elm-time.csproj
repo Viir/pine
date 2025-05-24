@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>TestElmTime</RootNamespace>
 
     <IsPackable>false</IsPackable>
@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="AwesomeAssertions" Version="8.2.0" />
-    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
     <PackageReference Include="morelinq" Version="4.4.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="3.8.3" />
