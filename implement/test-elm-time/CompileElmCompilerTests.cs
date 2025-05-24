@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
+using FluentAssertions;
 
 namespace TestElmTime;
 
@@ -46,7 +47,7 @@ public class CompileElmCompilerTests
         var testSubmissionResponse =
             testSubmissionResult.Extract(err => throw new Exception(err));
 
-        Assert.AreEqual("4", testSubmissionResponse.InteractiveResponse.DisplayText);
+        testSubmissionResponse.InteractiveResponse.DisplayText.Should().Be("4");
 
         var interactiveEnvironmentValue = interactiveSession.CurrentEnvironmentValue();
 
@@ -68,9 +69,8 @@ public class CompileElmCompilerTests
                 [IntegerEncoding.EncodeSignedInteger(13),
                     IntegerEncoding.EncodeSignedInteger(17)]);
 
-        Assert.AreEqual(
-            IntegerEncoding.EncodeSignedInteger(4),
-            modByApplicationResult.Extract(err => throw new Exception(err)));
+        modByApplicationResult.Extract(err => throw new Exception(err))
+            .Should().Be(IntegerEncoding.EncodeSignedInteger(4));
 
         modByApplicationResult =
             ElmInteractiveEnvironment.ApplyFunction(
@@ -80,9 +80,8 @@ public class CompileElmCompilerTests
                 [IntegerEncoding.EncodeSignedInteger(41),
                     IntegerEncoding.EncodeSignedInteger(47)]);
 
-        Assert.AreEqual(
-            IntegerEncoding.EncodeSignedInteger(6),
-            modByApplicationResult.Extract(err => throw new Exception(err)));
+        modByApplicationResult.Extract(err => throw new Exception(err))
+            .Should().Be(IntegerEncoding.EncodeSignedInteger(6));
     }
 
     [TestMethod]
@@ -159,9 +158,8 @@ public class CompileElmCompilerTests
         var moduleDefinitionNodeAsExpression =
             ElmValue.RenderAsElmExpression(moduleDefinitionNode).expressionString;
 
-        Assert.AreEqual(
-            """Node { end = { column = 36, row = 1 }, start = { column = 1, row = 1 } } (NormalModule { exposingList = Node { end = { column = 36, row = 1 }, start = { column = 23, row = 1 } } (All { end = { column = 35, row = 1 }, start = { column = 33, row = 1 } }), moduleName = Node { end = { column = 22, row = 1 }, start = { column = 8, row = 1 } } ["Namespace","Beta"] })""",
-            moduleDefinitionNodeAsExpression);
+        moduleDefinitionNodeAsExpression.Should().Be(
+            """Node { end = { column = 36, row = 1 }, start = { column = 1, row = 1 } } (NormalModule { exposingList = Node { end = { column = 36, row = 1 }, start = { column = 23, row = 1 } } (All { end = { column = 35, row = 1 }, start = { column = 33, row = 1 } }), moduleName = Node { end = { column = 22, row = 1 }, start = { column = 8, row = 1 } } ["Namespace","Beta"] })""");
 
         var importsNode =
             ((ElmValue.ElmRecord)responseAsElmValue).Fields.First(f => f.FieldName is "imports").Value;
@@ -169,9 +167,8 @@ public class CompileElmCompilerTests
         var importsNodeAsExpression =
             ElmValue.RenderAsElmExpression(importsNode).expressionString;
 
-        Assert.AreEqual(
-            """[Node { end = { column = 12, row = 3 }, start = { column = 1, row = 3 } } { exposingList = Nothing, moduleAlias = Nothing, moduleName = Node { end = { column = 12, row = 3 }, start = { column = 8, row = 3 } } ["Dict"] }]""",
-            importsNodeAsExpression);
+        importsNodeAsExpression.Should().Be(
+            """[Node { end = { column = 12, row = 3 }, start = { column = 1, row = 3 } } { exposingList = Nothing, moduleAlias = Nothing, moduleName = Node { end = { column = 12, row = 3 }, start = { column = 8, row = 3 } } ["Dict"] }]""");
 
         var declarationsList =
             (ElmValue.ElmList)((ElmValue.ElmRecord)responseAsElmValue)["declarations"]!;
@@ -183,7 +180,7 @@ public class CompileElmCompilerTests
             ((ElmValue.ElmRecord)((ElmValue.ElmRecord)declarationNode.Arguments[0])["start"]!)["row"]!).Value)
             .ToImmutableArray();
 
-        Assert.AreEqual(6, declarations.Length);
+        declarations.Length.Should().Be(6);
 
         var typeAliasDeclarationNode = declarations.ElementAt(0);
         var recordAliasDeclarationNode = declarations.ElementAt(1);
@@ -192,9 +189,8 @@ public class CompileElmCompilerTests
         var typeAliasDeclarationNodeAsExpression =
             ElmValue.RenderAsElmExpression(typeAliasDeclarationNode).expressionString;
 
-        Assert.AreEqual(
-            """Node { end = { column = 14, row = 7 }, start = { column = 1, row = 6 } } (AliasDeclaration { documentation = Nothing, generics = [], name = Node { end = { column = 20, row = 6 }, start = { column = 12, row = 6 } } "MaybeInt", typeAnnotation = Node { end = { column = 14, row = 7 }, start = { column = 5, row = 7 } } (Typed (Node { end = { column = 10, row = 7 }, start = { column = 5, row = 7 } } ([],"Maybe")) [Node { end = { column = 14, row = 7 }, start = { column = 11, row = 7 } } (Typed (Node { end = { column = 14, row = 7 }, start = { column = 11, row = 7 } } ([],"Int")) [])]) })""",
-            typeAliasDeclarationNodeAsExpression);
+        typeAliasDeclarationNodeAsExpression.Should().Be(
+            """Node { end = { column = 14, row = 7 }, start = { column = 1, row = 6 } } (AliasDeclaration { documentation = Nothing, generics = [], name = Node { end = { column = 20, row = 6 }, start = { column = 12, row = 6 } } "MaybeInt", typeAnnotation = Node { end = { column = 14, row = 7 }, start = { column = 5, row = 7 } } (Typed (Node { end = { column = 10, row = 7 }, start = { column = 5, row = 7 } } ([],"Maybe")) [Node { end = { column = 14, row = 7 }, start = { column = 11, row = 7 } } (Typed (Node { end = { column = 14, row = 7 }, start = { column = 11, row = 7 } } ([],"Int")) [])]) })""");
 
         var recordAliasDeclarationNodeAsExpression =
             ElmValue.RenderAsElmExpression(recordAliasDeclarationNode).expressionString;
@@ -219,7 +215,7 @@ public class CompileElmCompilerTests
             var declaration =
                 (ElmValue.ElmTag)functionDeclarationNode.Arguments.ElementAt(1);
 
-            Assert.AreEqual("FunctionDeclaration", declaration.TagName);
+            declaration.TagName.Should().Be("FunctionDeclaration");
 
             var declarationRecord = (ElmValue.ElmRecord)declaration.Arguments.Single();
 
@@ -253,7 +249,7 @@ public class CompileElmCompilerTests
             var declaration =
                 (ElmValue.ElmTag)functionDeclarationNode.Arguments.ElementAt(1);
 
-            Assert.AreEqual("FunctionDeclaration", declaration.TagName);
+            declaration.TagName.Should().Be("FunctionDeclaration");
 
             var declarationRecord = (ElmValue.ElmRecord)declaration.Arguments.Single();
 
@@ -291,7 +287,7 @@ public class CompileElmCompilerTests
         var testSubmissionResponse =
             testSubmissionResult.Extract(err => throw new Exception(err));
 
-        Assert.AreEqual("False", testSubmissionResponse.InteractiveResponse.DisplayText);
+        testSubmissionResponse.InteractiveResponse.DisplayText.Should().Be("False");
 
         var interactiveEnvironmentValue = interactiveSession.CurrentEnvironmentValue();
 
@@ -565,7 +561,7 @@ public class CompileElmCompilerTests
                     )
                 .Extract(err => throw new Exception(err));
 
-            Assert.IsNotNull(compilerResponseValue, "compilerResponseValue");
+            compilerResponseValue.Should().NotBeNull("compilerResponseValue");
 
             var compilerResponseElm =
                 elmCompilerCache.PineValueDecodedAsElmValue(compilerResponseValue)
@@ -1201,7 +1197,7 @@ public class CompileElmCompilerTests
                     environmentList.Last().Invoke()
                     .Extract(err => throw new Exception("Failed parsing last module from environment list: " + err));
 
-                Assert.AreEqual(parsedModuleNameFlat, pineCompiledModule.moduleName, "parsed module name");
+                pineCompiledModule.moduleName.Should().Be(parsedModuleNameFlat, "parsed module name");
 
                 /*
                  
