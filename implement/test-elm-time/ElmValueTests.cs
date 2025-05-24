@@ -3,6 +3,8 @@ using Pine.Core;
 using Pine.Core.Elm;
 using Pine.Core.PopularEncodings;
 using System.Collections.Generic;
+using FluentAssertions;
+using FluentAssertions.Execution;
 
 namespace TestElmTime;
 
@@ -149,7 +151,7 @@ public class ElmValueTests
 
         if (parseResult is Result<string, IReadOnlyList<(string fieldName, PineValue fieldValue)>>.Err parseAsRecordErr)
         {
-            Assert.Fail("Failed parsing as record: " + parseAsRecordErr.Value);
+            Execute.Assertion.FailWith("Failed parsing as record: {0}", parseAsRecordErr.Value);
         }
 
         if (parseResult is not Result<string, IReadOnlyList<(string fieldName, PineValue fieldValue)>>.Ok parseAsRecordOk)

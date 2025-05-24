@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pine.Core;
 using System.Collections.Generic;
 using FluentAssertions;
+using FluentAssertions.Execution;
 
 namespace Pine.UnitTests;
 
@@ -20,7 +21,7 @@ public class ReusedInstancesTests
     {
         if (a.Count != b.Count)
         {
-            Assert.Fail("Counts are not equal: " + a.Count + " vs " + b.Count);
+            Execute.Assertion.FailWith("Counts are not equal: {0} vs {1}", a.Count, b.Count);
         }
 
         foreach (var kv in a)

@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using FluentAssertions;
+using FluentAssertions.Execution;
 
 namespace TestElmTime;
 
@@ -1746,7 +1748,7 @@ public class ParseElmModuleTextToPineValueTests
 
                 if (fromDotnetResult.IsErrOrNull() is { } err)
                 {
-                    Assert.Fail("Failed to parse Elm module text as Elm syntax: " + err);
+                    Execute.Assertion.FailWith("Failed to parse Elm module text as Elm syntax: {0}", err);
                 }
 
                 if (fromDotnetResult.IsOkOrNull() is not { } fromDotnetOk)
@@ -1763,7 +1765,7 @@ public class ParseElmModuleTextToPineValueTests
                 {
                     Console.WriteLine(firstDifference);
 
-                    Assert.Fail(firstDifference);
+                    Execute.Assertion.FailWith(firstDifference);
                 }
             }
             catch (Exception e)
@@ -1812,13 +1814,12 @@ public class ParseElmModuleTextToPineValueTests
             {
                 Console.WriteLine(firstDifference);
 
-                Assert.Fail(firstDifference);
+                Execute.Assertion.FailWith(firstDifference);
             }
         }
 
-        Assert.AreEqual(
+        responseAsExpression.Should().Be(
             expectedExpressionString,
-            responseAsExpression,
             "Module parsed as expression syntax");
 
         if (alsoTestDotnetParser)
@@ -1828,7 +1829,7 @@ public class ParseElmModuleTextToPineValueTests
 
             if (fromDotnetResult.IsErrOrNull() is { } err)
             {
-                Assert.Fail("Failed to parse Elm module text as Elm syntax: " + err);
+                Execute.Assertion.FailWith("Failed to parse Elm module text as Elm syntax: {0}", err);
             }
 
             if (fromDotnetResult.IsOkOrNull() is not { } fromDotnetOk)
@@ -1845,8 +1846,8 @@ public class ParseElmModuleTextToPineValueTests
             {
                 Console.WriteLine(firstDifference);
 
-                Assert.Fail(
-                    "Dotnet parser produced different expression syntax: " +
+                Execute.Assertion.FailWith(
+                    "Dotnet parser produced different expression syntax: {0}",
                     firstDifference);
             }
 

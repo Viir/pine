@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pine.Elm019;
 using FluentAssertions;
+using FluentAssertions.Execution;
 
 namespace TestElmTime;
 
@@ -75,7 +76,7 @@ public class Elm019MakeReportParsingTests
 
         if (parsedReport is not ElmMakeReport.ElmMakeReportCompileErrors compileErrors)
         {
-            Assert.Fail("Unexpected type: " + parsedReport?.GetType());
+            Execute.Assertion.FailWith("Unexpected type: {0}", parsedReport?.GetType());
             return;
         }
 
@@ -143,7 +144,7 @@ public class Elm019MakeReportParsingTests
 
         if (parsedReport is not ElmMakeReport.ElmMakeReportError errorReport)
         {
-            Assert.Fail("Unexpected type: " + parsedReport?.GetType());
+            Execute.Assertion.FailWith("Unexpected type: {0}", parsedReport?.GetType());
             return;
         }
 

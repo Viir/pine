@@ -4,6 +4,8 @@ using Pine.Core;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using FluentAssertions;
+using FluentAssertions.Execution;
 
 namespace TestElmTime;
 
@@ -101,13 +103,12 @@ public class ElmSyntaxTests
 
             if (parseModuleNameResult.IsErrOrNull() is { } err)
             {
-                Assert.Fail(
-                    "Failed to parse module name: " + err + "\nmodule text:\n" + testCase.moduleText);
+                Execute.Assertion.FailWith("Failed to parse module name: {0}\nmodule text:\n{1}", err, testCase.moduleText);
             }
 
             if (parseModuleNameResult.IsOkOrNull() is not { } parsedName)
             {
-                Assert.Fail("Unknown result type: " + parseModuleNameResult);
+                Execute.Assertion.FailWith("Unknown result type: {0}", parseModuleNameResult);
                 return;
             }
 
