@@ -2,6 +2,7 @@
 using Pine;
 using System.Collections.Immutable;
 using System.Linq;
+using FluentAssertions;
 
 namespace TestElmTime;
 
@@ -44,8 +45,8 @@ public class ProcessWithLogTests
         {
             var result = testCase.process.LogToList();
 
-            Assert.AreEqual(testCase.expectedResult, result.result);
-            CollectionAssert.AreEqual(testCase.expectedLog, result.log.ToList());
+            result.result.Should().Be(testCase.expectedResult);
+            result.log.ToList().Should().BeEquivalentTo(testCase.expectedLog, options => options.WithStrictOrdering());
         }
     }
 
