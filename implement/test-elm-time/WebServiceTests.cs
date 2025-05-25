@@ -160,7 +160,7 @@ public class WebServiceTests
             var httpResponse =
                 await publicAppClient.GetAsync(string.Join("/", demoFile.path));
 
-            Assert.AreEqual(HttpStatusCode.OK, httpResponse.StatusCode);
+            httpResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
             var responseContent =
                 await httpResponse.Content.ReadAsByteArrayAsync();
@@ -168,14 +168,14 @@ public class WebServiceTests
             var inspectResponseContent =
                 System.Text.Encoding.UTF8.GetString(responseContent);
 
-            CollectionAssert.AreEqual(demoFile.content.ToArray(), responseContent);
+            responseContent.Should().Equal(demoFile.content.ToArray());
         }
 
         {
             var httpResponse =
                 await publicAppClient.GetAsync("readme-md");
 
-            Assert.AreEqual(HttpStatusCode.OK, httpResponse.StatusCode);
+            httpResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
             var responseContent =
                 await httpResponse.Content.ReadAsStringAsync();
@@ -189,12 +189,12 @@ public class WebServiceTests
             var httpResponse =
                 await publicAppClient.GetAsync("alpha-file-via-other-interface-module");
 
-            Assert.AreEqual(HttpStatusCode.OK, httpResponse.StatusCode);
+            httpResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
             var responseContent =
                 await httpResponse.Content.ReadAsStringAsync();
 
-            Assert.AreEqual("Text file content", responseContent);
+            responseContent.Should().Be("Text file content");
         }
     }
 
@@ -419,23 +419,28 @@ public class WebServiceTests
         {
             using var publicAppClient = testSetup.BuildPublicAppHttpClient();
 
-            Assert.AreEqual(
+            var emptyResponse = await publicAppClient.GetAsync("");
+            var emptyContent = await emptyResponse.Content.ReadAsStringAsync();
+            emptyContent.Should().Be(
                 "",
-                await (await publicAppClient.GetAsync("")).Content.ReadAsStringAsync(),
                 "Initial State");
 
-            Assert.AreEqual(HttpStatusCode.OK, HttpPostStringContentAtRoot(publicAppClient, "part-a").StatusCode);
+            var partAResponse = HttpPostStringContentAtRoot(publicAppClient, "part-a");
+            partAResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
-            Assert.AreEqual(
+            var partAGetResponse = await publicAppClient.GetAsync("");
+            var partAContent = await partAGetResponse.Content.ReadAsStringAsync();
+            partAContent.Should().Be(
                 "part-a",
-                await (await publicAppClient.GetAsync("")).Content.ReadAsStringAsync(),
                 "State after first post");
 
-            Assert.AreEqual(HttpStatusCode.OK, HttpPostStringContentAtRoot(publicAppClient, "-⚙️-part-b").StatusCode);
+            var partBResponse = HttpPostStringContentAtRoot(publicAppClient, "-⚙️-part-b");
+            partBResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
-            Assert.AreEqual(
+            var finalGetResponse = await publicAppClient.GetAsync("");
+            var finalContent = await finalGetResponse.Content.ReadAsStringAsync();
+            finalContent.Should().Be(
                 "part-a-⚙️-part-b",
-                await (await publicAppClient.GetAsync("")).Content.ReadAsStringAsync(),
                 "State After Multiple Posts");
 
             using (var client = testSetup.BuildAdminInterfaceHttpClient())
@@ -462,21 +467,22 @@ public class WebServiceTests
                         "HTTP status code for authorized request to set elm app state.");
             }
 
-            Assert.AreEqual(
+            var stateResponse = await publicAppClient.GetAsync("");
+            var stateContent = await stateResponse.Content.ReadAsStringAsync();
+            stateContent.Should().Be(
                 "new-state",
-                await (await publicAppClient.GetAsync("")).Content.ReadAsStringAsync(),
                 "State after setting elm app state.");
 
-            Assert.AreEqual(HttpStatusCode.OK, HttpPostStringContentAtRoot(publicAppClient, "_appendix").StatusCode);
+            var appendixResponse = HttpPostStringContentAtRoot(publicAppClient, "_appendix");
+            appendixResponse.StatusCode.Should().Be(HttpStatusCode.OK);
         }
 
         using (var server = testSetup.StartWebHost())
         {
             using var publicAppClient = testSetup.BuildPublicAppHttpClient();
 
-            Assert.AreEqual(
+            publicAppClient.GetAsync("").Result.Content.ReadAsStringAsync().Result.Should().Be(
                 "new-state_appendix",
-                publicAppClient.GetAsync("").Result.Content.ReadAsStringAsync().Result,
                 "State after setting elm app state, appending, and restarting server.");
         }
     }
@@ -508,7 +514,7 @@ public class WebServiceTests
                 "",
                 new StringContent(requestContentString));
 
-        Assert.AreEqual("application/json", response.Content.Headers.ContentType?.ToString());
+        response.Content.Headers.ContentType?.ToString().Should().Be("application/json");
 
         var responseContentString =
             await response.Content.ReadAsStringAsync();
@@ -745,7 +751,7 @@ public class WebServiceTests
 
         await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(5));
 
-        Assert.IsTrue(httpPostTask.IsCompleted, "HTTP task is completed.");
+        httpPostTask.IsCompleted.Should().BeTrue(because: "HTTP task is completed.");
     }
 
     [TestMethod]
@@ -1194,7 +1200,7 @@ public class WebServiceTests
             var httpResponseContent =
                 await httpResponse.Content.ReadAsStringAsync();
 
-            Assert.AreEqual(expectedResponse, httpResponseContent, false, "server response");
+             httpResponseContent.Should().Be(expectedResponse, because: "server response");
         }
     }
 
@@ -1923,7 +1929,7 @@ public class WebServiceTests
         var responseContent =
             await httpResponse.Content.ReadAsStringAsync();
 
-        Assert.AreEqual("value from local assembly", responseContent);
+        responseContent.Should().Be("value from local assembly");
     }
 
     [TestMethod]
@@ -1949,7 +1955,7 @@ public class WebServiceTests
 
             var httpResponseContent = await httpResponse.Content.ReadAsStringAsync();
 
-            Assert.AreEqual("3", httpResponseContent, false, "response content");
+             httpResponseContent.Should().Be("3", because: "response content");
         }
 
         {
@@ -1960,7 +1966,7 @@ public class WebServiceTests
 
             Assert.IsTrue(httpResponse.IsSuccessStatusCode);
 
-            Assert.AreEqual("4", httpResponseContent, false, "response content");
+             httpResponseContent.Should().Be("4", because: "response content");
         }
 
         {
