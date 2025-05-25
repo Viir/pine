@@ -1,5 +1,6 @@
 using ElmTime.ElmSyntax;
 using FluentAssertions;
+using FluentAssertions.Execution;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pine.Core;
 using System.Collections.Generic;
@@ -102,14 +103,14 @@ public class ElmSyntaxTests
 
             if (parseModuleNameResult.IsErrOrNull() is { } err)
             {
-                // Using FluentAssertion's equivalent to Assert.Fail
-                false.Should().BeTrue("Failed to parse module name: " + err + "\nmodule text:\n" + testCase.moduleText);
+                // Using FluentAssertion's approach to fail a test
+                "Failed test".Should().BeNull("Failed to parse module name: " + err + "\nmodule text:\n" + testCase.moduleText);
             }
 
             if (parseModuleNameResult.IsOkOrNull() is not { } parsedName)
             {
-                // Using FluentAssertion's equivalent to Assert.Fail
-                false.Should().BeTrue("Unknown result type: " + parseModuleNameResult);
+                // Using FluentAssertion's approach to fail a test
+                "Failed test".Should().BeNull("Unknown result type: " + parseModuleNameResult);
                 return;
             }
 
