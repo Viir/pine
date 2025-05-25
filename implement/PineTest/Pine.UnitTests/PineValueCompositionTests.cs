@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pine.Core;
 using Pine.Core.PopularEncodings;
@@ -42,7 +43,7 @@ public class PineValueCompositionTests
         {
             var asComposition = PineValueComposition.FromTreeWithStringPath(testCase.input);
 
-            Assert.AreEqual(testCase.expectedOutput, asComposition);
+            asComposition.Should().Be(testCase.expectedOutput);
         }
     }
 
