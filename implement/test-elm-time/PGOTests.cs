@@ -1,5 +1,6 @@
 using ElmTime.ElmInteractive;
 using ElmTime.ElmSyntax;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pine.Core;
 using Pine.Core.Elm;
