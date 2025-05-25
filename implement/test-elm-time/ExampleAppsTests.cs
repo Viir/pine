@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pine.Core;
 using Pine.Core.Elm;
@@ -246,9 +247,8 @@ public class ExampleAppsTests
         var formatResponseContentAsString =
             System.Text.Encoding.UTF8.GetString(formatHttpResponseBody.Value.Span);
 
-        Assert.AreEqual(
+        formatResponseCommand.Respond.Response.StatusCode.Should().Be(
             200,
-            formatResponseCommand.Respond.Response.StatusCode,
             "Response status code should be OK.\nresponseContentAsString:\n" + formatResponseContentAsString);
 
         var formatResponseStructure =
@@ -256,8 +256,7 @@ public class ExampleAppsTests
             <ElmEditorApi.ElmEditorApiResponseStructure>(
                 formatResponseContentAsString)!;
 
-        Assert.IsNull(
-            formatResponseStructure.ErrorResponse,
+        formatResponseStructure.ErrorResponse.Should().BeNull(
             "formatResponseStructure.ErrorResponse should be null.\n" + formatResponseStructure.ErrorResponse);
 
         var formattedText =
@@ -267,13 +266,11 @@ public class ExampleAppsTests
             ?.formattedText
             .WithDefault(null);
 
-        Assert.IsNotNull(
-            formattedText,
+        formattedText.Should().NotBeNull(
             "formatResponseStructure.FormatElmModuleTextResponse should contain a formatted text.");
 
-        Assert.AreEqual(
-            NormalizeStringTestingElmFormat(expectedElmModuleTextAfterFormatting),
-            NormalizeStringTestingElmFormat(formattedText));
+        NormalizeStringTestingElmFormat(formattedText).Should().Be(
+            NormalizeStringTestingElmFormat(expectedElmModuleTextAfterFormatting));
     }
 
     private static string NormalizeStringTestingElmFormat(string originalString) =>

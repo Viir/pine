@@ -26,7 +26,9 @@ public class CompilePineToDotNetTests
     [TestMethod]
     public void Test_sort_pine_value_for_declaration()
     {
-        Assert.IsTrue(value_d597fb92e5.ContainsInListTransitive(value_299b7decef));
+        Assert.IsTrue(
+            paths[i].SequenceEqual(testCase.expectedPaths[i]),
+            "Path " + i);
 
         var listBeforeOrdering =
             new[]
@@ -46,15 +48,14 @@ public class CompilePineToDotNetTests
             CSharpDeclarationOrder.OrderValuesForDeclaration(listBeforeOrdering)
             .ToImmutableList();
 
-        CollectionAssert.AreEqual(
+        orderedValues.Should().Equal(
             new[]
             {
                 StringEncoding.ValueFromString("Ok"),
                 StringEncoding.ValueFromString("Err"),
                 value_299b7decef,
                 value_d597fb92e5
-            },
-            orderedValues);
+            });
     }
 
     [TestMethod]
@@ -323,7 +324,7 @@ public class CompilePineToDotNetTests
 
             for (var i = 0; i < testCase.expectedPaths.Count; i++)
             {
-                Assert.IsTrue(paths[i].SequenceEqual(testCase.expectedPaths[i]), "Path " + i);
+                paths[i].SequenceEqual(testCase.expectedPaths[i]).Should().BeTrue("Path " + i);
             }
         }
     }
