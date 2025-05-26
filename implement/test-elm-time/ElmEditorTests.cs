@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pine;
 using Pine.Core;
@@ -66,25 +67,23 @@ a =
             var responseContentAsString =
                 httpResponse.Content.ReadAsStringAsync().Result;
 
-            Assert.AreEqual(
+            httpResponse.StatusCode.Should().Be(
                 HttpStatusCode.OK,
-                httpResponse.StatusCode,
                 "Response status code should be OK.\nresponseContentAsString:\n" + responseContentAsString);
 
             var responseStructure =
                 JsonSerializer.Deserialize<ElmEditorApi.ElmEditorApiResponseStructure>(responseContentAsString)!;
 
-            Assert.IsNull(
-                responseStructure.ErrorResponse,
+            responseStructure.ErrorResponse.Should().BeNull(
                 "responseStructure.ErrorResponse should be null.\n" + responseStructure.ErrorResponse);
 
-            Assert.AreEqual(
-                NormalizeStringTestingElmFormat(expectedElmModuleTextAfterFormatting),
-                NormalizeStringTestingElmFormat(responseStructure
+            NormalizeStringTestingElmFormat(responseStructure
                     ?.FormatElmModuleTextResponse
                     ?.FirstOrDefault()?.formattedText
-                    .WithDefaultBuilder(() => throw new ArgumentNullException())!),
-                "Response content");
+                    .WithDefaultBuilder(() => throw new ArgumentNullException())!)
+                .Should().Be(
+                    NormalizeStringTestingElmFormat(expectedElmModuleTextAfterFormatting),
+                    "Response content");
         }
     }
 
