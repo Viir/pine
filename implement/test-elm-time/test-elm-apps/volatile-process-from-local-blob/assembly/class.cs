@@ -1,3 +1,4 @@
+using FluentAssertions;
 ﻿namespace assembly
 {
     public class Class
