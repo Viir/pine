@@ -7,6 +7,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Pine.Elm019;
 using System.Collections.Immutable;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.Text;
+using LSP = Pine.Core.LanguageServerProtocol;
 
 namespace Pine.Elm;
 
@@ -782,15 +786,6 @@ public class LanguageServer(
         IReadOnlyList<string> linesBefore =
             [.. textDocumentContentBefore.ModuleLines()];
 
-        static TextEdit replaceWholeDocument(string newContent)
-        {
-            return new TextEdit(
-                Range: new Range(
-                    Start: new Position(Line: 0, Character: 0),
-                    End: new Position(Line: 999_999_999, Character: 999_999_999)),
-                NewText: newContent);
-        }
-
         Log(
             "Document " + textDocumentUri + " had " +
             CommandLineInterface.FormatIntegerForDisplay(linesBefore.Count) +
@@ -811,9 +806,22 @@ public class LanguageServer(
             clientTextDocumentContents[textDocumentUri] = newContent;
         }
 
-        return
-            [replaceWholeDocument(newContent)
-            ];
+        // If there are no changes, return empty list
+        if (textDocumentContentBefore == newContent)
+        {
+            Log("No formatting changes needed for " + textDocumentUri);
+            return [];
+        }
+
+        // Compute text edits instead of replacing the whole document
+        var textEdits = ComputeTextChanges(textDocumentContentBefore, newContent);
+        
+        Log(
+            "Formatting " + textDocumentUri + " returned " +
+            CommandLineInterface.FormatIntegerForDisplay(textEdits.Count) +
+            " text edits");
+            
+        return textEdits;
     }
 
     public string? TextDocument_formatting_lessStore(
@@ -950,7 +958,7 @@ public class LanguageServer(
             ];
     }
 
-    public IReadOnlyList<Location> TextDocument_definition(
+    public IReadOnlyList<LSP.Location> TextDocument_definition(
         TextDocumentPositionParams positionParams)
     {
         var textDocumentUri = DocumentUriCleaned(positionParams.TextDocument.Uri);
@@ -1075,25 +1083,25 @@ public class LanguageServer(
             CommandLineInterface.FormatIntegerForDisplay(clock.ElapsedMilliseconds) + " ms, returning " +
             documentSymbolsOk.Count + " items");
 
-        static SymbolKind mapSymbolKind(Interface.SymbolKind symbolKind)
+        static LSP.SymbolKind mapSymbolKind(Interface.SymbolKind symbolKind)
         {
             return symbolKind switch
             {
-                Interface.SymbolKind.File => SymbolKind.File,
-                Interface.SymbolKind.Module => SymbolKind.Module,
-                Interface.SymbolKind.Namespace => SymbolKind.Namespace,
-                Interface.SymbolKind.Package => SymbolKind.Package,
-                Interface.SymbolKind.Class => SymbolKind.Class,
-                Interface.SymbolKind.Enum => SymbolKind.Enum,
-                Interface.SymbolKind.Interface => SymbolKind.Interface,
-                Interface.SymbolKind.Function => SymbolKind.Function,
-                Interface.SymbolKind.Constant => SymbolKind.Constant,
-                Interface.SymbolKind.String => SymbolKind.String,
-                Interface.SymbolKind.Number => SymbolKind.Number,
-                Interface.SymbolKind.Boolean => SymbolKind.Boolean,
-                Interface.SymbolKind.Array => SymbolKind.Array,
-                Interface.SymbolKind.EnumMember => SymbolKind.EnumMember,
-                Interface.SymbolKind.Struct => SymbolKind.Struct,
+                Interface.SymbolKind.File => LSP.SymbolKind.File,
+                Interface.SymbolKind.Module => LSP.SymbolKind.Module,
+                Interface.SymbolKind.Namespace => LSP.SymbolKind.Namespace,
+                Interface.SymbolKind.Package => LSP.SymbolKind.Package,
+                Interface.SymbolKind.Class => LSP.SymbolKind.Class,
+                Interface.SymbolKind.Enum => LSP.SymbolKind.Enum,
+                Interface.SymbolKind.Interface => LSP.SymbolKind.Interface,
+                Interface.SymbolKind.Function => LSP.SymbolKind.Function,
+                Interface.SymbolKind.Constant => LSP.SymbolKind.Constant,
+                Interface.SymbolKind.String => LSP.SymbolKind.String,
+                Interface.SymbolKind.Number => LSP.SymbolKind.Number,
+                Interface.SymbolKind.Boolean => LSP.SymbolKind.Boolean,
+                Interface.SymbolKind.Array => LSP.SymbolKind.Array,
+                Interface.SymbolKind.EnumMember => LSP.SymbolKind.EnumMember,
+                Interface.SymbolKind.Struct => LSP.SymbolKind.Struct,
 
                 _ =>
                 throw new System.NotImplementedException("Unexpected symbol kind: " + symbolKind)
@@ -1130,7 +1138,7 @@ public class LanguageServer(
             .Select(ds => mapDocumentSymbol(ds.Struct))];
     }
 
-    public IReadOnlyList<Location> TextDocument_references(
+    public IReadOnlyList<LSP.Location> TextDocument_references(
         TextDocumentPositionParams positionParams)
     {
         var textDocumentUri = DocumentUriCleaned(positionParams.TextDocument.Uri);
@@ -1256,7 +1264,7 @@ public class LanguageServer(
 
     public void TextDocument_didSave(
         DidSaveTextDocumentParams didSaveParams,
-        System.Action<TextDocumentIdentifier, IReadOnlyList<Diagnostic>> publishDiagnostics)
+        System.Action<TextDocumentIdentifier, IReadOnlyList<LSP.Diagnostic>> publishDiagnostics)
     {
         var textDocumentUri = DocumentUriCleaned(didSaveParams.TextDocument.Uri);
 
@@ -1368,10 +1376,10 @@ public class LanguageServer(
 
                 Log("Elm make errors for " + path + ": " + pathErrors.Length);
 
-                IReadOnlyList<Diagnostic> diagnostics =
+                IReadOnlyList<LSP.Diagnostic> diagnostics =
                     [..pathErrors
                     .Select(problem =>
-                        new Diagnostic(
+                        new LSP.Diagnostic(
                             Range: new Range(
                                 Start: new Position(
                                     Line: (uint)problem.Region.Start.Line - 1,
@@ -1379,7 +1387,7 @@ public class LanguageServer(
                                 End: new Position(
                                     Line: (uint)problem.Region.End.Line - 1,
                                     Character: (uint)problem.Region.End.Column - 1)),
-                            Severity: DiagnosticSeverity.Error,
+                            Severity: LSP.DiagnosticSeverity.Error,
                             Code: null,
                             Source: "elm make",
                             Message: string.Join("", problem.Message.Select(MessageItemToString)),
@@ -1424,6 +1432,51 @@ public class LanguageServer(
         {
             return "Failed to parse elm make report: " + e;
         }
+    }
+    
+    /// <summary>
+    /// Computes the text changes between the original text and the new text using Roslyn.
+    /// Returns a list of TextEdit objects that represent the changes.
+    /// </summary>
+    private IReadOnlyList<TextEdit> ComputeTextChanges(string originalText, string newText)
+    {
+        // Create source texts from the original and new content
+        var originalSourceText = SourceText.From(originalText);
+        var newSourceText = SourceText.From(newText);
+        
+        // Get text changes from Roslyn
+        var textChanges = newSourceText.GetTextChanges(originalSourceText);
+        
+        Log(
+            "Computed " + textChanges.Count + " text changes from " +
+            CommandLineInterface.FormatIntegerForDisplay(originalText.Length) +
+            " chars to " +
+            CommandLineInterface.FormatIntegerForDisplay(newText.Length) +
+            " chars");
+        
+        // Convert to TextEdit format
+        var edits = new List<TextEdit>();
+        foreach (var change in textChanges)
+        {
+            // Convert from offset to line/column for the start position
+            var startLinePosition = originalSourceText.Lines.GetLinePosition(change.Span.Start);
+            var startPosition = new Position(
+                Line: (uint)startLinePosition.Line,
+                Character: (uint)startLinePosition.Character);
+                
+            // Convert from offset to line/column for the end position
+            var endLinePosition = originalSourceText.Lines.GetLinePosition(change.Span.End);
+            var endPosition = new Position(
+                Line: (uint)endLinePosition.Line, 
+                Character: (uint)endLinePosition.Character);
+                
+            // Create a TextEdit with the computed range and new text
+            edits.Add(new TextEdit(
+                Range: new Range(Start: startPosition, End: endPosition),
+                NewText: change.NewText));
+        }
+        
+        return edits;
     }
 
     public static string? FindElmJsonFile(string elmModuleFilePath)
@@ -1657,9 +1710,9 @@ public class LanguageServer(
             languageServiceState.HandleRequest(request);
     }
 
-    public IEnumerable<Location> MapLocations(
+    public IEnumerable<LSP.Location> MapLocations(
         IEnumerable<Interface.LocationInFile> locations,
-        System.Func<Interface.FileLocation, IEnumerable<Location>> noMatchingUri)
+        System.Func<Interface.FileLocation, IEnumerable<LSP.Location>> noMatchingUri)
     {
         return
             locations
@@ -1674,7 +1727,7 @@ public class LanguageServer(
 
                 return
                     [
-                    new Location(
+                    new LSP.Location(
                         uri,
                         new Range(
                             Start: new Position(
