@@ -1473,7 +1473,7 @@ public class LanguageServer(
             // Create a TextEdit with the computed range and new text
             edits.Add(new TextEdit(
                 Range: new Range(Start: startPosition, End: endPosition),
-                NewText: change.NewText));
+                NewText: change.NewText ?? string.Empty));
         }
         
         return edits;
