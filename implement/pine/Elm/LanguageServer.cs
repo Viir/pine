@@ -7,6 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Pine.Elm019;
 using System.Collections.Immutable;
+using Range = Pine.Core.LanguageServerProtocol.Range;
+using Position = Pine.Core.LanguageServerProtocol.Position;
+using System;
 
 namespace Pine.Elm;
 
@@ -866,7 +869,7 @@ public class LanguageServer(
                 : originalLines[originalLines.Length - 1].Length;
             
             // Create the replacement text from the modified lines
-            var newLinesSlice = new ArraySegment<string>(newLines, j, newLines.Length - newLinesFromEnd - j);
+            var newLinesSlice = newLines.Skip(j).Take(newLines.Length - newLinesFromEnd - j);
             var replacementText = string.Join('\n', newLinesSlice);
             
             // Add edit for the modified lines
