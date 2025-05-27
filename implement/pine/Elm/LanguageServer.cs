@@ -782,15 +782,6 @@ public class LanguageServer(
         IReadOnlyList<string> linesBefore =
             [.. textDocumentContentBefore.ModuleLines()];
 
-        static TextEdit replaceWholeDocument(string newContent)
-        {
-            return new TextEdit(
-                Range: new Range(
-                    Start: new Position(Line: 0, Character: 0),
-                    End: new Position(Line: 999_999_999, Character: 999_999_999)),
-                NewText: newContent);
-        }
-
         Log(
             "Document " + textDocumentUri + " had " +
             CommandLineInterface.FormatIntegerForDisplay(linesBefore.Count) +
@@ -811,9 +802,82 @@ public class LanguageServer(
             clientTextDocumentContents[textDocumentUri] = newContent;
         }
 
-        return
-            [replaceWholeDocument(newContent)
-            ];
+        // Instead of replacing the whole document with a single edit,
+        // compute a list of edits that represent the differences
+        var edits = ComputeTextEdits(textDocumentContentBefore, newContent);
+        
+        Log($"Computed {edits.Count} text edits for formatting {textDocumentUri}");
+        
+        return edits;
+    }
+    
+    /// <summary>
+    /// Computes a list of text edits that transform the original text into the new text.
+    /// Uses a line-based approach where each edit represents a change to one or more complete lines.
+    /// </summary>
+    /// <param name="originalText">The original text content</param>
+    /// <param name="newText">The new text content</param>
+    /// <returns>A list of TextEdit objects representing the differences</returns>
+    public static IReadOnlyList<TextEdit> ComputeTextEdits(string originalText, string newText)
+    {
+        // If texts are identical, no edits needed
+        if (originalText == newText)
+        {
+            return [];
+        }
+
+        // Split texts into lines
+        var originalLines = originalText.Split('\n');
+        var newLines = newText.Split('\n');
+        
+        var edits = new List<TextEdit>();
+        var i = 0; // Index for original lines
+        var j = 0; // Index for new lines
+        
+        // Find common prefix
+        while (i < originalLines.Length && j < newLines.Length && originalLines[i] == newLines[j])
+        {
+            i++;
+            j++;
+        }
+        
+        // Find common suffix (working backwards from the end)
+        int originalLinesFromEnd = 0;
+        int newLinesFromEnd = 0;
+        
+        while (i + originalLinesFromEnd < originalLines.Length && 
+               j + newLinesFromEnd < newLines.Length && 
+               originalLines[originalLines.Length - 1 - originalLinesFromEnd] == newLines[newLines.Length - 1 - newLinesFromEnd])
+        {
+            originalLinesFromEnd++;
+            newLinesFromEnd++;
+        }
+        
+        // If there's a difference in the middle
+        if (i < originalLines.Length - originalLinesFromEnd || j < newLines.Length - newLinesFromEnd)
+        {
+            // Calculate range start and end positions
+            var rangeStartLine = i;
+            var rangeStartChar = 0;
+            
+            var rangeEndLine = originalLines.Length - originalLinesFromEnd;
+            var rangeEndChar = rangeEndLine < originalLines.Length 
+                ? 0 
+                : originalLines[originalLines.Length - 1].Length;
+            
+            // Create the replacement text from the modified lines
+            var newLinesSlice = new ArraySegment<string>(newLines, j, newLines.Length - newLinesFromEnd - j);
+            var replacementText = string.Join('\n', newLinesSlice);
+            
+            // Add edit for the modified lines
+            edits.Add(new TextEdit(
+                Range: new Range(
+                    Start: new Position(Line: (uint)rangeStartLine, Character: (uint)rangeStartChar),
+                    End: new Position(Line: (uint)rangeEndLine, Character: (uint)rangeEndChar)),
+                NewText: replacementText));
+        }
+        
+        return edits;
     }
 
     public string? TextDocument_formatting_lessStore(
