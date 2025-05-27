@@ -3,12 +3,16 @@ using Pine.Core.LanguageServerProtocol;
 using Pine.Elm;
 using StreamJsonRpc;
 using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using Range = Pine.Core.LanguageServerProtocol.Range;
+using Position = Pine.Core.LanguageServerProtocol.Position;
+using FluentAssertions;
 
 namespace TestElmTime;
 
@@ -69,6 +73,140 @@ public class ElmLanguageServerTests
         {
             lspProcess.Kill();
         }
+    }
+
+    [Fact]
+    public void Computes_text_edits_for_format_document_request()
+    {
+        // Define test cases with original text, new text, and expected text edits
+        var testCases = new List<(string OriginalText, string NewText, IReadOnlyList<TextEdit> ExpectedEdits)>
+        {
+            // Test case 1: No changes
+            (
+                "module Main exposing (..)\n\nmain = text \"Hello\"",
+                "module Main exposing (..)\n\nmain = text \"Hello\"",
+                new List<TextEdit>()
+            ),
+
+            // Test case 2: Single line change
+            (
+                "module Main exposing (..)\n\nmain = text \"Hello\"",
+                "module Main exposing (..)\n\nmain = text \"Hello, World!\"",
+                new List<TextEdit>
+                {
+                    new TextEdit(
+                        Range: new Range(
+                            Start: new Position(Line: 2, Character: 0),
+                            End: new Position(Line: 2, Character: 19)),
+                        NewText: "main = text \"Hello, World!\"")
+                }
+            )
+        };
+
+        // Create a language server instance
+        var languageServer = new LanguageServer(
+            logDelegate: Console.WriteLine,
+            elmPackagesSearchDirectories: new List<string>());
+
+        // Test each case
+        foreach (var (originalText, newText, expectedEdits) in testCases)
+        {
+            // Use the ComputeTextEdits method to get actual edits
+            var actualEdits = LanguageServer.ComputeTextEdits(originalText, newText);
+
+            // Validate the edits
+            actualEdits.Count.Should().Be(expectedEdits.Count);
+
+            for (int i = 0; i < expectedEdits.Count; i++)
+            {
+                var expected = expectedEdits[i];
+                var actual = actualEdits[i];
+
+                actual.Range.Start.Line.Should().Be(expected.Range.Start.Line);
+                actual.Range.Start.Character.Should().Be(expected.Range.Start.Character);
+                actual.Range.End.Line.Should().Be(expected.Range.End.Line);
+                actual.Range.End.Character.Should().Be(expected.Range.End.Character);
+                actual.NewText.Should().Be(expected.NewText);
+            }
+
+            // Verify that applying the edits to the original text results in the new text
+            var resultText = ApplyTextEdits(originalText, actualEdits);
+            resultText.Should().Be(newText);
+        }
+    }
+
+    private static string ApplyTextEdits(string originalText, IReadOnlyList<TextEdit> edits)
+    {
+        // Convert string to lines for easier editing
+        var lines = originalText.Split('\n').ToList();
+
+        // Apply edits in reverse order to avoid position changes
+        foreach (var edit in edits.OrderByDescending(e => e.Range.Start.Line).ThenByDescending(e => e.Range.Start.Character))
+        {
+            // Extract the range information
+            var startLine = (int)edit.Range.Start.Line;
+            var startChar = (int)edit.Range.Start.Character;
+            var endLine = (int)edit.Range.End.Line;
+            var endChar = (int)edit.Range.End.Character;
+            
+            // Handle the case where the edit spans multiple lines
+            if (startLine != endLine)
+            {
+                // Remove full lines between start and end (exclusive)
+                if (endLine - startLine > 1)
+                {
+                    lines.RemoveRange(startLine + 1, endLine - startLine - 1);
+                }
+                
+                // Handle the partial start and end lines
+                var startLineContent = lines[startLine];
+                var endLineContent = lines.Count > endLine ? lines[endLine] : "";
+                
+                // Create the new content for the start line
+                var newLineContent = startLineContent.Substring(0, startChar);
+                
+                if (endLine < lines.Count)
+                {
+                    // Add the remaining content from the end line
+                    if (endChar < endLineContent.Length)
+                    {
+                        newLineContent += endLineContent.Substring(endChar);
+                    }
+                    
+                    // Replace start line and remove end line
+                    lines[startLine] = newLineContent;
+                    lines.RemoveAt(startLine + 1); // End line is now at startLine + 1
+                }
+                else
+                {
+                    // End line doesn't exist, just update start line
+                    lines[startLine] = newLineContent;
+                }
+            }
+            else
+            {
+                // Single line edit
+                var line = lines[startLine];
+                lines[startLine] = line.Substring(0, startChar) + line.Substring(endChar);
+            }
+            
+            // Insert the new text
+            if (!string.IsNullOrEmpty(edit.NewText))
+            {
+                var newTextLines = edit.NewText.Split('\n');
+                
+                // Insert the first line at the edit position
+                lines[startLine] = lines[startLine].Insert(startChar, newTextLines[0]);
+                
+                // Insert any additional lines
+                for (int i = 1; i < newTextLines.Length; i++)
+                {
+                    lines.Insert(startLine + i, newTextLines[i]);
+                }
+            }
+        }
+        
+        return string.Join('\n', lines);
     }
 
     static string FindPineExecutableFilePath()
