@@ -400,4 +400,31 @@ public class ElmLanguageServerTests
             }
         }
     }
+
+    [Fact]
+    public void TextDocument_formatting_returns_minimal_edits()
+    {
+        // Test that the actual document formatting process now returns multiple edits instead of single whole-document replacement
+        
+        var originalContent = "function hello() {\n  console.log(  'hello'  );\n}\n\nfunction goodbye() {\n  console.log('goodbye');\n}";
+        var formattedContent = "function hello() {\n  console.log('hello');\n}\n\nfunction goodbye() {\n  console.log('goodbye');\n}";
+        
+        var edits = LanguageServer.ComputeTextEditsForDocumentFormat(originalContent, formattedContent);
+        
+        // Should return a minimal edit for just the changed line, not a whole document replacement
+        edits.Count.Should().BeGreaterThanOrEqualTo(1);
+        
+        // The edit should not span the entire document (old behavior would replace everything)
+        var firstEdit = edits[0];
+        var isWholeDocumentReplacement = 
+            firstEdit.Range.Start.Line == 0 && 
+            firstEdit.Range.Start.Character == 0 &&
+            firstEdit.Range.End.Line > 100; // Old implementation used 999_999_999
+            
+        isWholeDocumentReplacement.Should().BeFalse("formatting should return minimal edits, not whole document replacement");
+        
+        // Verify the result is correct
+        var result = LanguageServer.ApplyTextEdits(originalContent, edits);
+        result.Should().Be(formattedContent);
+    }
 }

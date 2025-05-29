@@ -782,15 +782,6 @@ public class LanguageServer(
         IReadOnlyList<string> linesBefore =
             [.. textDocumentContentBefore.ModuleLines()];
 
-        static TextEdit replaceWholeDocument(string newContent)
-        {
-            return new TextEdit(
-                Range: new Range(
-                    Start: new Position(Line: 0, Character: 0),
-                    End: new Position(Line: 999_999_999, Character: 999_999_999)),
-                NewText: newContent);
-        }
-
         Log(
             "Document " + textDocumentUri + " had " +
             CommandLineInterface.FormatIntegerForDisplay(linesBefore.Count) +
@@ -812,8 +803,7 @@ public class LanguageServer(
         }
 
         return
-            [replaceWholeDocument(newContent)
-            ];
+            ComputeTextEditsForDocumentFormat(textDocumentContentBefore, newContent);
     }
 
     public string? TextDocument_formatting_lessStore(
@@ -1930,11 +1920,24 @@ public class LanguageServer(
         else if (middleNewLines.Length == 0)
         {
             // This is a deletion
-            startLinePos = (uint)startLine;
-            endLinePos = (uint)endLine;
-            startChar = 0;
-            endChar = (uint)originalLines[endLine].Length;
-            newTextForEdit = "";
+            if (commonSuffixLength == 0 && endLine == originalLines.Length - 1)
+            {
+                // Deleting lines from the end - start from end of last remaining line
+                startLinePos = (uint)(startLine - 1);
+                endLinePos = (uint)endLine;
+                startChar = (uint)originalLines[startLine - 1].Length;
+                endChar = (uint)originalLines[endLine].Length;
+                newTextForEdit = "";
+            }
+            else
+            {
+                // Deleting lines from middle or beginning
+                startLinePos = (uint)startLine;
+                endLinePos = (uint)endLine;
+                startChar = 0;
+                endChar = (uint)originalLines[endLine].Length;
+                newTextForEdit = "";
+            }
         }
         else
         {
