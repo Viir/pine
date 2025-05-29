@@ -376,12 +376,12 @@ public class ElmLanguageServerTests
                 if (testCaseIndex < 6) // Only check exact format for first 6 test cases
                 {
                     actualEdits.Should().HaveCount(testCase.ExpectedEdits.Count);
-                    
+
                     for (int i = 0; i < testCase.ExpectedEdits.Count; i++)
                     {
                         var expected = testCase.ExpectedEdits[i];
                         var actual = actualEdits[i];
-                        
+
                         actual.Range.Start.Line.Should().Be(expected.Range.Start.Line);
                         actual.Range.Start.Character.Should().Be(expected.Range.Start.Character);
                         actual.Range.End.Line.Should().Be(expected.Range.End.Line);
@@ -393,7 +393,7 @@ public class ElmLanguageServerTests
             catch (Exception ex)
             {
                 throw new Exception(
-                    "Failed in test case " + testCaseIndex + ":\n" + 
+                    "Failed in test case " + testCaseIndex + ":\n" +
                     "Original: " + testCase.OriginalText + "\n" +
                     "New: " + testCase.NewText,
                     innerException: ex);
@@ -405,24 +405,24 @@ public class ElmLanguageServerTests
     public void TextDocument_formatting_returns_minimal_edits()
     {
         // Test that the actual document formatting process now returns multiple edits instead of single whole-document replacement
-        
+
         var originalContent = "function hello() {\n  console.log(  'hello'  );\n}\n\nfunction goodbye() {\n  console.log('goodbye');\n}";
         var formattedContent = "function hello() {\n  console.log('hello');\n}\n\nfunction goodbye() {\n  console.log('goodbye');\n}";
-        
+
         var edits = LanguageServer.ComputeTextEditsForDocumentFormat(originalContent, formattedContent);
-        
+
         // Should return a minimal edit for just the changed line, not a whole document replacement
         edits.Count.Should().BeGreaterThanOrEqualTo(1);
-        
+
         // The edit should not span the entire document (old behavior would replace everything)
         var firstEdit = edits[0];
-        var isWholeDocumentReplacement = 
-            firstEdit.Range.Start.Line == 0 && 
+        var isWholeDocumentReplacement =
+            firstEdit.Range.Start.Line == 0 &&
             firstEdit.Range.Start.Character == 0 &&
             firstEdit.Range.End.Line > 100; // Old implementation used 999_999_999
-            
+
         isWholeDocumentReplacement.Should().BeFalse("formatting should return minimal edits, not whole document replacement");
-        
+
         // Verify the result is correct
         var result = LanguageServer.ApplyTextEdits(originalContent, edits);
         result.Should().Be(formattedContent);

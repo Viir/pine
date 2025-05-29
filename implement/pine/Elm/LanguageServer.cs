@@ -1863,8 +1863,8 @@ public class LanguageServer(
         // Find common prefix length
         int commonPrefixLength = 0;
         int minLength = System.Math.Min(originalLines.Length, newLines.Length);
-        
-        while (commonPrefixLength < minLength && 
+
+        while (commonPrefixLength < minLength &&
                originalLines[commonPrefixLength] == newLines[commonPrefixLength])
         {
             commonPrefixLength++;
@@ -1873,9 +1873,9 @@ public class LanguageServer(
         // Find common suffix length
         int commonSuffixLength = 0;
         int maxSuffixLength = minLength - commonPrefixLength;
-        
+
         while (commonSuffixLength < maxSuffixLength &&
-               originalLines[originalLines.Length - 1 - commonSuffixLength] == 
+               originalLines[originalLines.Length - 1 - commonSuffixLength] ==
                newLines[newLines.Length - 1 - commonSuffixLength])
         {
             commonSuffixLength++;
@@ -1884,7 +1884,7 @@ public class LanguageServer(
         // Calculate start and end lines for the edit
         int startLine = commonPrefixLength;
         int endLine = originalLines.Length - commonSuffixLength - 1;
-        
+
         // Handle the middle section that needs to be replaced
         var middleNewLines = newLines
             .Skip(commonPrefixLength)
