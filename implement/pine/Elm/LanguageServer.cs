@@ -782,15 +782,6 @@ public class LanguageServer(
         IReadOnlyList<string> linesBefore =
             [.. textDocumentContentBefore.ModuleLines()];
 
-        static TextEdit replaceWholeDocument(string newContent)
-        {
-            return new TextEdit(
-                Range: new Range(
-                    Start: new Position(Line: 0, Character: 0),
-                    End: new Position(Line: 999_999_999, Character: 999_999_999)),
-                NewText: newContent);
-        }
-
         Log(
             "Document " + textDocumentUri + " had " +
             CommandLineInterface.FormatIntegerForDisplay(linesBefore.Count) +
@@ -812,8 +803,7 @@ public class LanguageServer(
         }
 
         return
-            [replaceWholeDocument(newContent)
-            ];
+            ComputeTextEditsForDocumentFormat(textDocumentContentBefore, newContent);
     }
 
     public string? TextDocument_formatting_lessStore(
@@ -1855,5 +1845,116 @@ public class LanguageServer(
 
         // Reconstruct the text
         return string.Join("\n", lines);
+    }
+
+    /// <summary>
+    /// Compute text edits to transform original text to new text using a line-based algorithm.
+    /// Finds common prefix and suffix, then creates a single edit for the middle differences.
+    /// </summary>
+    public static IReadOnlyList<TextEdit> ComputeTextEditsForDocumentFormat(
+        string originalText, string newText)
+    {
+        if (originalText == newText)
+            return [];
+
+        var originalLines = originalText.ModuleLines().ToArray();
+        var newLines = newText.ModuleLines().ToArray();
+
+        // Find common prefix length
+        int commonPrefixLength = 0;
+        int minLength = System.Math.Min(originalLines.Length, newLines.Length);
+
+        while (commonPrefixLength < minLength &&
+               originalLines[commonPrefixLength] == newLines[commonPrefixLength])
+        {
+            commonPrefixLength++;
+        }
+
+        // Find common suffix length
+        int commonSuffixLength = 0;
+        int maxSuffixLength = minLength - commonPrefixLength;
+
+        while (commonSuffixLength < maxSuffixLength &&
+               originalLines[originalLines.Length - 1 - commonSuffixLength] ==
+               newLines[newLines.Length - 1 - commonSuffixLength])
+        {
+            commonSuffixLength++;
+        }
+
+        // Calculate start and end lines for the edit
+        int startLine = commonPrefixLength;
+        int endLine = originalLines.Length - commonSuffixLength - 1;
+
+        // Handle the middle section that needs to be replaced
+        var middleNewLines = newLines
+            .Skip(commonPrefixLength)
+            .Take(newLines.Length - commonPrefixLength - commonSuffixLength)
+            .ToArray();
+
+        // Determine positions and new text based on the scenario
+        uint startLinePos, endLinePos, startChar, endChar;
+        string newTextForEdit;
+
+        if (startLine > endLine)
+        {
+            // This is an insertion at the end or in the middle
+            if (startLine >= originalLines.Length)
+            {
+                // Insertion at the very end of document
+                startLinePos = (uint)(originalLines.Length - 1);
+                endLinePos = startLinePos;
+                startChar = (uint)originalLines[originalLines.Length - 1].Length;
+                endChar = startChar;
+                newTextForEdit = "\n" + string.Join("\n", middleNewLines);
+            }
+            else
+            {
+                // Insertion in the middle
+                startLinePos = (uint)startLine;
+                endLinePos = startLinePos;
+                startChar = 0;
+                endChar = 0;
+                newTextForEdit = string.Join("\n", middleNewLines) + "\n";
+            }
+        }
+        else if (middleNewLines.Length == 0)
+        {
+            // This is a deletion
+            if (commonSuffixLength == 0 && endLine == originalLines.Length - 1)
+            {
+                // Deleting lines from the end - start from end of last remaining line
+                startLinePos = (uint)(startLine - 1);
+                endLinePos = (uint)endLine;
+                startChar = (uint)originalLines[startLine - 1].Length;
+                endChar = (uint)originalLines[endLine].Length;
+                newTextForEdit = "";
+            }
+            else
+            {
+                // Deleting lines from middle or beginning
+                startLinePos = (uint)startLine;
+                endLinePos = (uint)endLine;
+                startChar = 0;
+                endChar = (uint)originalLines[endLine].Length;
+                newTextForEdit = "";
+            }
+        }
+        else
+        {
+            // This is a replacement
+            startLinePos = (uint)startLine;
+            endLinePos = (uint)endLine;
+            startChar = 0;
+            endChar = (uint)originalLines[endLine].Length;
+            newTextForEdit = string.Join("\n", middleNewLines);
+        }
+
+        var textEdit = new TextEdit(
+            Range: new Range(
+                Start: new Position(Line: startLinePos, Character: startChar),
+                End: new Position(Line: endLinePos, Character: endChar)),
+            NewText: newTextForEdit);
+
+        return [textEdit];
     }
 }
