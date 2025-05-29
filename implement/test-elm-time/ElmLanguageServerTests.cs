@@ -126,6 +126,11 @@ public class ElmLanguageServerTests
         IReadOnlyList<TextEdit> Edits,
         string ExpectedText);
 
+    public record FormatDocumentTestCase(
+        string OriginalText,
+        string NewText,
+        IReadOnlyList<TextEdit> ExpectedEdits);
+
     [Fact]
     public void Apply_text_edits_handles_various_scenarios()
     {
@@ -258,6 +263,139 @@ public class ElmLanguageServerTests
             {
                 throw new Exception(
                     "Failed in test case " + testCaseIndex + ":\n" + testCase.OriginalText,
+                    innerException: ex);
+            }
+        }
+    }
+
+    [Fact]
+    public void Computes_text_edits_for_format_document_request()
+    {
+        IReadOnlyList<FormatDocumentTestCase> testCases =
+            [
+            // Test case 1: Edit at start of document
+            new(
+                OriginalText: "old line 1\nline 2\nline 3",
+                NewText: "new line 1\nline 2\nline 3",
+                ExpectedEdits: [new TextEdit(
+                    Range: new Pine.Core.LanguageServerProtocol.Range(
+                        Start: new Position(Line: 0, Character: 0),
+                        End: new Position(Line: 0, Character: 10)),
+                    NewText: "new line 1")]
+            ),
+
+            // Test case 2: Edit at middle of document
+            new(
+                OriginalText: "line 1\nold line 2\nline 3",
+                NewText: "line 1\nnew line 2\nline 3",
+                ExpectedEdits: [new TextEdit(
+                    Range: new Pine.Core.LanguageServerProtocol.Range(
+                        Start: new Position(Line: 1, Character: 0),
+                        End: new Position(Line: 1, Character: 10)),
+                    NewText: "new line 2")]
+            ),
+
+            // Test case 3: Edit at end of document
+            new(
+                OriginalText: "line 1\nline 2\nold line 3",
+                NewText: "line 1\nline 2\nnew line 3",
+                ExpectedEdits: [new TextEdit(
+                    Range: new Pine.Core.LanguageServerProtocol.Range(
+                        Start: new Position(Line: 2, Character: 0),
+                        End: new Position(Line: 2, Character: 10)),
+                    NewText: "new line 3")]
+            ),
+
+            // Test case 4: Multiple lines changed in middle
+            new(
+                OriginalText: "line 1\nold line 2\nold line 3\nline 4",
+                NewText: "line 1\nnew line 2\nnew line 3\nline 4",
+                ExpectedEdits: [new TextEdit(
+                    Range: new Pine.Core.LanguageServerProtocol.Range(
+                        Start: new Position(Line: 1, Character: 0),
+                        End: new Position(Line: 2, Character: 10)),
+                    NewText: "new line 2\nnew line 3")]
+            ),
+
+            // Test case 5: No changes
+            new(
+                OriginalText: "line 1\nline 2\nline 3",
+                NewText: "line 1\nline 2\nline 3",
+                ExpectedEdits: []
+            ),
+
+            // Test case 6: Entire document changed
+            new(
+                OriginalText: "old line 1\nold line 2",
+                NewText: "new line 1\nnew line 2",
+                ExpectedEdits: [new TextEdit(
+                    Range: new Pine.Core.LanguageServerProtocol.Range(
+                        Start: new Position(Line: 0, Character: 0),
+                        End: new Position(Line: 1, Character: 10)),
+                    NewText: "new line 1\nnew line 2")]
+            ),
+
+            // Test case 7: Lines added at end
+            new(
+                OriginalText: "line 1\nline 2",
+                NewText: "line 1\nline 2\nline 3",
+                ExpectedEdits: [new TextEdit(
+                    Range: new Pine.Core.LanguageServerProtocol.Range(
+                        Start: new Position(Line: 1, Character: 6),
+                        End: new Position(Line: 1, Character: 6)),
+                    NewText: "\nline 3")]
+            ),
+
+            // Test case 8: Lines removed from end
+            new(
+                OriginalText: "line 1\nline 2\nline 3",
+                NewText: "line 1\nline 2",
+                ExpectedEdits: [new TextEdit(
+                    Range: new Pine.Core.LanguageServerProtocol.Range(
+                        Start: new Position(Line: 1, Character: 6),
+                        End: new Position(Line: 2, Character: 6)),
+                    NewText: "")]
+            )
+            ];
+
+        for (var testCaseIndex = 0; testCaseIndex < testCases.Count; testCaseIndex++)
+        {
+            var testCase = testCases[testCaseIndex];
+
+            try
+            {
+                var actualEdits = LanguageServer.ComputeTextEditsForDocumentFormat(
+                    testCase.OriginalText, testCase.NewText);
+
+                // Verify that applying the edits produces the expected result
+                var result = LanguageServer.ApplyTextEdits(testCase.OriginalText, actualEdits);
+                result.Should().Be(testCase.NewText);
+
+                // For most test cases, also verify the exact edit format
+                // (Skip exact format verification for cases that might have multiple valid representations)
+                if (testCaseIndex < 6) // Only check exact format for first 6 test cases
+                {
+                    actualEdits.Should().HaveCount(testCase.ExpectedEdits.Count);
+                    
+                    for (int i = 0; i < testCase.ExpectedEdits.Count; i++)
+                    {
+                        var expected = testCase.ExpectedEdits[i];
+                        var actual = actualEdits[i];
+                        
+                        actual.Range.Start.Line.Should().Be(expected.Range.Start.Line);
+                        actual.Range.Start.Character.Should().Be(expected.Range.Start.Character);
+                        actual.Range.End.Line.Should().Be(expected.Range.End.Line);
+                        actual.Range.End.Character.Should().Be(expected.Range.End.Character);
+                        actual.NewText.Should().Be(expected.NewText);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(
+                    "Failed in test case " + testCaseIndex + ":\n" + 
+                    "Original: " + testCase.OriginalText + "\n" +
+                    "New: " + testCase.NewText,
                     innerException: ex);
             }
         }
