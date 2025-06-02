@@ -1903,10 +1903,14 @@ public class LanguageServer(
         int startLine = commonPrefixLength;
         int endLine = originalLines.Length - commonSuffixLength - 1;
 
+        var middleNewLinesCount =
+            newLines.Length - commonPrefixLength - commonSuffixLength;
+
         // Handle the middle section that needs to be replaced
-        var middleNewLines = newLines
+        var middleNewLines =
+            newLines
             .Skip(commonPrefixLength)
-            .Take(newLines.Length - commonPrefixLength - commonSuffixLength)
+            .Take(middleNewLinesCount)
             .ToArray();
 
         // Determine positions and new text based on the scenario
