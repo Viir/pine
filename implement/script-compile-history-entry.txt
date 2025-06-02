@@ -1,0 +1,7 @@
+
+.\pine\bin\Release\net8.0\pine.exe  compile-interactive-env  --env-source=./pine/Elm/elm-compiler  --skip-lowering  --gzip  --output-compact-build=elm-syntax-parser-and-compiler.json.gzip  > compile-int-env-parser-and-compiler.txt 2>&1
+
+.\pine\bin\Release\net8.0\pine.exe  compile-interactive-env  --env-source=./pine/Elm/elm-compiler  --skip-lowering  --root-file-path=src\ElmCompiler.elm  --root-file-path=elm-syntax\src\Elm\Parser.elm  --gzip  --output-compact-build=elm-syntax-parser-and-compiler.json.gzip  > compile-int-env-parser-and-compiler.txt 2>&1
+
+.\pine\bin\Release\net8.0\pine.exe  compile-interactive-env  --env-source=./pine/Elm/elm-compiler  --skip-lowering  --root-file-path=src\ElmCompiler.elm  --root-file-path=elm-syntax\src\Elm\Parser.elm  --root-file-path=src\ElmInteractiveSubmissionParser.elm  --root-file-path=src\LanguageService.elm  --gzip  --output-compact-build=elm-syntax-parser-and-compiler.json.gzip  > compile-int-env-parser-and-compiler.txt 2>&1
+

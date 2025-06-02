@@ -1,0 +1,11 @@
+dotnet  run   1>  test-comp.txt  2>&1
+
+dotnet  run  --configuration Release   1>  test-comp.txt  2>&1
+
+elm-test-rs  --filter="Inspect compiler"  1>  inspect-compiler.txt  2>&1
+
+elm-test-rs  --filter="get-third"  1>  elm-get-third.txt  2>&1
+
+elm-test-rs  --filter="prepend-inline"  1>  elm-prepend-inline.txt  2>&1
+
+elm-test-rs  --filter="convert0OrMoreHexadecimal"  1>  elm-convert0OrMoreHexadecimal.txt  2>&1

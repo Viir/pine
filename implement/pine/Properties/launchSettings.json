@@ -1,0 +1,102 @@
+{
+  "profiles": {
+    "elm-time": {
+      "commandName": "Project"
+    },
+    "compile kernel": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --compile  --elm-engine=pine_without_cache  --scenarios=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-kernel"
+    },
+    "compile kernel encode": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --compile  --elm-engine=pine_without_cache  --scenario=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-kernel/elm-kernel-json-encode"
+    },
+    "interactive with compiler": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  --elm-engine=pine  --context-app=\"K:\\Source\\Repos\\elm-time\\implement\\elm-time\\Elm\\elm-compiler\"  --context-app=\"https://github.com/Viir/elm-bigint/tree/d452b489c5795f8deed19658a7b8f7bf5ef1e9a4/\"  --context-app=\"https://github.com/Viir/elm-syntax/tree/f7d9be0a1f346b22dfaa7b55679659874c72714b/\"  --context-app-module-name-filter=\"ElmCompiler\"  --submit=\"1 + 3\"  > interactive-elm-compiler.txt 2>&1"
+    },
+    "core tests": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --elm-engine=pine_without_cache  --scenarios=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-core"
+    },
+    "test-02-list": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --compile  --save-compiled-csharp=\"list_2024_02_23.cs\"  --elm-engine=pine_without_cache  --scenario=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\2024-02-23-list"
+    },
+    "idiv-compile": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --compile  --save-compiled-csharp=\"elm-train-idiv.cs\"  --elm-engine=pine_without_cache  --scenario=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-train/idiv/"
+    },
+    "dict-compile": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --compile  --save-compiled-csharp=\"elm-train-dict.cs\"  --elm-engine=pine_without_cache  --scenario=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-train/dict/"
+    },
+    "interactive without cache": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  --elm-engine=Pine_without_cache"
+    },
+    "interactive": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive\r\n"
+    },
+    "interactive train compile": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --compile  --save-compiled-csharp=\"elm-train-compiler.cs\"  --elm-engine=pine_without_cache  --scenario=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-train/compiler/"
+    },
+    "kernel tests": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --elm-engine=pine_without_cache  --scenarios=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-kernel"
+    },
+    "compile env complete": {
+      "commandName": "Project",
+      "commandLineArgs": "compile-interactive-env  --env-source=K:\\Source\\Repos\\elm-time\\implement\\pine\\Elm\\elm-compiler  --skip-lowering  --root-file-path=src\\ElmCompiler.elm  --root-file-path=elm-syntax\\src\\Elm\\Parser.elm  "
+    },
+    "syntax": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --scenario=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-train/elm-syntax-7"
+    },
+    "syntax-7-3-7": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --scenario=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-train/elm-syntax-7-3-7"
+    },
+    "interactive syntax-7": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  --context-app=\"K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-train\\elm-syntax-7\\context-app\"\r\n"
+    },
+    "interactive 7-3-7": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  --context-app=\"K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-train\\elm-syntax-7-3-7\\context-app\"\r\n"
+    },
+    "base64": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --scenario=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-kernel/lib-base64"
+    },
+    "compiler-deps": {
+      "commandName": "Project",
+      "commandLineArgs": "interactive  test  --scenario=K:\\Source\\Repos\\elm-time\\implement\\test-and-train\\elm-interactive-scenarios-train/elm-compiler-dependencies"
+    },
+    "pine  self-test": {
+      "commandName": "Project",
+      "commandLineArgs": "self-test"
+    },
+    "build vl": {
+      "commandName": "Project",
+      "commandLineArgs": "make  --input-directory=./core-app/  src/Build.elm  --output=./out/VIALAB-X-Elm.html",
+      "workingDirectory": "K:\\arbait\\pine\\2025-03-31-demo\\2024-04-19-VIALAB-X-Elm.git"
+    },
+    "docker-default": {
+      "commandName": "Project",
+      "commandLineArgs": "run-server  --deploy=https://github.com/pine-vm/pine/tree/885cc26bbb683192780b6b47c53d36725d639b9d/implement/example-apps/docker-image-default-app",
+      "workingDirectory": "K:\\arbait\\pine\\2025-03-31-demo\\2024-04-19-VIALAB-X-Elm.git"
+    },
+    "run-server  editor": {
+      "commandName": "Project",
+      "commandLineArgs": "run-server  --deploy=https://github.com/pine-vm/pine/tree/885cc26bbb683192780b6b47c53d36725d639b9d/implement/example-apps/elm-editor",
+      "workingDirectory": "K:\\arbait\\pine\\2025-03-31-demo\\2024-04-19-VIALAB-X-Elm.git"
+    },
+    "run-server  db-scale": {
+      "commandName": "Project",
+      "commandLineArgs": "run-server  --deploy=https://github.com/pine-vm/pine/tree/3e4b5c659ee2abe60a1fde6e6c8ae779ef4ca494/implement/example-apps/test-database-scale  --process-store=K:\\arbait\\pine\\2025-04-05-runtime-efficiency\\proc-store  --delete-previous-process"
+    }
+  }
+}

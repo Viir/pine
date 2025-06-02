@@ -71,3 +71,13 @@ Published the first version of the Elm developer tools VS Code extension, with a
 
 + Resolved the last usage of the V8 JavaScript engine by switching applications over to Pine.
 
+## 2025-03-XX - New Compilation To C#
+
+### Scope
+
++ We introduce a new compilation path to pick low-hanging fruits for optimizing runtime efficiency. The idea behind this approach is not to emit any higher-order function directly but to instantiate it for each set of function arguments in use following the given compilation roots. One limitation of this approach is it works only for a subset of functions that do not depend on any generic parse&eval (metaprogramming). Looking at the applications so far, this constraint is satisfied for much more than 50 percent of workloads.
++ One consequence of this naive translation approach is extensive usage of the host stack. This stack usage introduces the risk of stack overflows, in contrast to the current virtual machine that uses a virtual stack supporting stack depths into the billions.
+
+### Implementation
+
+How does this differ from the compilation to C# started in 2023?

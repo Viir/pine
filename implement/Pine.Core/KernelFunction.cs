@@ -139,6 +139,16 @@ public static class KernelFunction
             if (remainingCount <= 0)
                 return PineValue.EmptyList;
 
+            if (remainingCount > 4_000)
+            {
+                Console.WriteLine(
+                    "Skip remaining count " +
+                    CommandLineInterface.FormatIntegerForDisplay(remainingCount) +
+                    " skip count " + count +
+                    " source count " +
+                    CommandLineInterface.FormatIntegerForDisplay(listItems.Length));
+            }
+
             var skipped = new PineValue[remainingCount];
 
             listItems[(int)count..].CopyTo(skipped);
@@ -448,6 +458,8 @@ public static class KernelFunction
 
             if (SignedIntegerFromValueRelaxed(listItems[0]) is not { } firstInt)
             {
+                Console.WriteLine("int_is_sorted_asc: first item in list is not an integer");
+
                 return PineValue.EmptyList;
             }
 
@@ -459,6 +471,19 @@ public static class KernelFunction
 
                 if (SignedIntegerFromValueRelaxed(next) is not { } nextInt)
                 {
+                    Console.WriteLine(
+                        "int_is_sorted_asc: item " + i + " in list is not an integer but a " +
+                        next switch
+                        {
+                            PineValue.BlobValue blob =>
+                            "blob with length " + blob.Bytes.Length,
+
+                            PineValue.ListValue list =>
+                            "list with length " + list.Elements.Length,
+
+                            _ => next.GetType().FullName
+                        });
+
                     return PineValue.EmptyList;
                 }
 

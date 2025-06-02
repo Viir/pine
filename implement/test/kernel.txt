@@ -1,0 +1,440 @@
+Using launch settings from .\..\pine\Properties\launchSettings.json...
+K:\Source\Repos\elm-time\implement\Pine.Core\Json\JsonConverterForPineValue.cs(76,68): warning CS8604: Possible null reference argument for parameter 'str' in 'BlobValue StringEncoding.BlobValueFromString(string str)'. [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Json\JsonConverterForPineValue.cs(90,69): warning CS8604: Possible null reference argument for parameter 'str' in 'PineValue StringEncoding.ValueFromString_2024(string str)'. [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(115,81): warning CS8604: Possible null reference argument for parameter 'entries' in 'IReadOnlyDictionary<string, PineValue> PineValueCompactBuild.BuildDictionaryFromEntries(IReadOnlyList<ListEntry> entries)'. [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(167,13): warning CS8604: Possible null reference argument for parameter 'path' in 'DirectoryInfo Directory.CreateDirectory(string path)'. [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(348,20): warning CS8619: Nullability of reference types in value of type '(string name, TreeNodeWithStringPath? component)' doesn't match target type '(string name, TreeNodeWithStringPath component)'. [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularEncodings\StringEncoding.cs(32,9): warning CS8714: The type 'Pine.Core.PineValue.ListValue?' cannot be used as type parameter 'TKey' in the generic type or method 'FrozenDictionary.ToFrozenDictionary<TSource, TKey, TElement>(IEnumerable<TSource>, Func<TSource, TKey>, Func<TSource, TElement>, IEqualityComparer<TKey>?)'. Nullability of type argument 'Pine.Core.PineValue.ListValue?' doesn't match 'notnull' constraint. [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularEncodings\StringEncoding.cs(34,26): warning CS8621: Nullability of reference types in return type of 'lambda expression' doesn't match the target delegate 'Func<KeyValuePair<string, PineValue>, PineValue.ListValue?>' (possibly because of nullability attributes). [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularEncodings\StringEncoding.cs(32,9): warning CS8619: Nullability of reference types in value of type 'FrozenDictionary<PineValue.ListValue?, string>' doesn't match target type 'FrozenDictionary<PineValue.ListValue, string>'. [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(182,33): warning CS8604: Possible null reference argument for parameter 'entries' in 'PineListValueReusedInstances ReusedInstances.LoadFromPrebuilt(IReadOnlyList<ListEntry> entries)'. [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\BytesConversions.cs(75,26): warning CS1591: Missing XML comment for publicly visible type or member 'BytesConversions.TimeStringViewForReport(DateTimeOffset)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\DotNetAssembly.cs(10,14): warning CS1591: Missing XML comment for publicly visible type or member 'DotNetAssembly' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\DotNetAssembly.cs(12,101): warning CS1591: Missing XML comment for publicly visible type or member 'DotNetAssembly.LoadFromAssemblyManifestResourceStreamContents(IReadOnlyList<IReadOnlyList<string>>, string, Assembly)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\DotNetAssembly.cs(43,101): warning CS1591: Missing XML comment for publicly visible type or member 'DotNetAssembly.LoadDirectoryFilesFromManifestEmbeddedFileProviderAsDictionary(IReadOnlyList<string>, Assembly)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\DotNetAssembly.cs(49,58): warning CS1591: Missing XML comment for publicly visible type or member 'DotNetAssembly.LoadTreeFromManifestEmbeddedFileProvider(IReadOnlyList<string>, Assembly)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\DotNetAssembly.cs(71,58): warning CS1591: Missing XML comment for publicly visible type or member 'DotNetAssembly.LoadTreeFromManifestEmbeddedFileProviderFileInfo(IDirectoryContents, Func<string, Result<string, TreeNodeWithStringPath>>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\DotNetAssembly.cs(110,41): warning CS1591: Missing XML comment for publicly visible type or member 'DotNetAssembly.GetManifestResourceStreamContentAsBytes(Assembly, string)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\DotNetAssembly.cs(124,41): warning CS1591: Missing XML comment for publicly visible type or member 'DotNetAssembly.ProgramExecutableFileName' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(9,14): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(11,30): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.BundledElmEnvironmentFromFileTree(TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(18,30): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.BundledElmCompilerCompiledEnvValue()' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(29,26): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.DictionaryKeyHashPartFromFileTree(TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(39,25): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.EmbeddedResourceFilePath' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(57,74): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.LoadBundledCompiledEnvironments(string, Assembly)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(95,74): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.LoadBundledCompiledEnvironments(Stream, bool)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(136,25): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.ResourceFilePath' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(138,24): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.CompressAndWriteBundleFile(IReadOnlyDictionary<TreeNodeWithStringPath, PineValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(154,24): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.CompressAndWriteBundleFile(ReadOnlyMemory<byte>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(177,40): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.CompressResourceFile(ReadOnlyMemory<byte>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(191,90): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.BuildBundleResourceFileJsonUtf8(IReadOnlyDictionary<TreeNodeWithStringPath, PineValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\BundledElmEnvironments.cs(200,66): warning CS1591: Missing XML comment for publicly visible type or member 'BundledElmEnvironments.BuildBundleResourceFileListItems(IReadOnlyDictionary<TreeNodeWithStringPath, PineValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(9,21): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(11,44): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding.PineValueAsElmValue(PineValue, IReadOnlyDictionary<PineValue, ElmValue>?, Action<PineValue, ElmValue>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(57,44): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding.PineBlobValueAsElmValue(PineValue.BlobValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(120,44): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding.PineListValueAsElmValue(PineValue.ListValue, IReadOnlyDictionary<PineValue, ElmValue>?, Action<PineValue, ElmValue>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(332,92): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding.ParseAsTag(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(415,91): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding.ParsePineValueAsRecordTagged(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(443,91): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding.ParsePineValueAsRecord(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(484,29): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding.ElmValueAsPineValue(ElmValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(490,29): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding.ElmValueAsPineValue(ElmValue, IReadOnlyDictionary<ElmValue, PineValue>?, Action<ElmValue, PineValue>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(560,29): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding.ElmRecordAsPineValue(IReadOnlyList<(string FieldName, PineValue FieldValue)>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(573,29): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding.TagAsPineValue(string, IReadOnlyList<PineValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueEncoding.cs(580,29): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueEncoding.StringAsPineValue(string)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(8,14): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(10,38): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.String_Nothing_Value' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(13,38): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.String_Just_Value' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(16,38): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.String_Err_Value' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(19,38): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.String_Ok_Value' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(22,38): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.String_Nothing_Value_2024' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(25,38): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.String_Just_Value_2024' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(28,38): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.String_Err_Value_2024' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(31,38): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.String_Ok_Value_2024' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(34,28): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.PineValueEncodedAsInElmCompiler(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(111,45): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.ElmValueDecodedAsInElmCompiler(ElmValue, IReadOnlyDictionary<ElmValue, PineValue>?, Action<ElmValue, PineValue>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(171,45): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.ElmValueBlobValueDecodedAsInElmCompiler(IReadOnlyList<ElmValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(192,45): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.ElmValueListValueDecodedAsInElmCompiler(IReadOnlyList<ElmValue>, IReadOnlyDictionary<ElmValue, PineValue>?, Action<ElmValue, PineValue>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(228,46): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.ElmValueFromCompilerDecodedAsExpression(ElmValue, IReadOnlyDictionary<ElmValue, Expression>?, Action<ElmValue, Expression>?, IReadOnlyDictionary<ElmValue, PineValue>?, Action<ElmValue, PineValue>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(538,21): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.ParseElmMaybeValue<T>(PineValue, Func<T>, Func<PineValue, T>, Func<string, T>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(583,21): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.ParseElmResultValue<T>(PineValue, Func<PineValue, T>, Func<PineValue, T>, Func<string, T>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Elm\ElmValueInterop.cs(645,21): warning CS1591: Missing XML comment for publicly visible type or member 'ElmValueInterop.ParseElmValueAsCommonResult<T>(ElmValue, Func<ElmValue, T>, Func<ElmValue, T>, Func<string, T>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Expression.cs(8,43): warning CS1591: Missing XML comment for publicly visible type or member 'EvalExprDelegate' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Expression.cs(10,44): warning CS1591: Missing XML comment for publicly visible type or member 'ParseExprDelegate' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(12,21): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(14,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.equal(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(57,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.equal(PineValue, PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(60,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.negate(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(81,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.length(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(96,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.skip(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(120,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.skip(BigInteger, PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(163,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.take(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(186,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.take(BigInteger, PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(227,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.reverse(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(257,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.concat(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(267,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.concat(ReadOnlySpan<PineValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(329,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.concat(PineValue, PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(372,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.head(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(387,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.int_add(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(393,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.int_add(PineValue, PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(404,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.int_add(BigInteger, BigInteger)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(407,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.int_mul(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(413,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.int_mul(PineValue, PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(424,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.int_mul(BigInteger, BigInteger)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(427,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.int_is_sorted_asc(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(503,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.bit_and(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(566,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.bit_or(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(629,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.bit_xor(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(692,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.bit_not(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(709,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.bit_shift_left(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(736,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.bit_shift_left(BigInteger, PineValue.BlobValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(763,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.bit_shift_right(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(790,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.bit_shift_right(BigInteger, PineValue.BlobValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(845,31): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.SignedIntegerFromValueRelaxed(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(878,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.KernelFunctionExpectingList(PineValue, Func<ReadOnlyMemory<PineValue>, PineValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(890,40): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.ParseBoolFromValue(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\KernelFunction.cs(901,29): warning CS1591: Missing XML comment for publicly visible type or member 'KernelFunction.ValueFromBool(bool)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\LanguageServerProtocol\ParticipentInfo.cs(3,15): warning CS1591: Missing XML comment for publicly visible type or member 'ParticipentInfo' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\LanguageServerProtocol\ParticipentInfo.cs(3,15): warning CS1591: Missing XML comment for publicly visible type or member 'ParticipentInfo.ParticipentInfo(string, string?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\LanguageServerProtocol\ParticipentInfo.cs(4,12): warning CS1591: Missing XML comment for publicly visible type or member 'ParticipentInfo.Name' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\LanguageServerProtocol\ParticipentInfo.cs(5,13): warning CS1591: Missing XML comment for publicly visible type or member 'ParticipentInfo.Version' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(88,29): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.List(params PineValue[])' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(121,29): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.ReusedBlobTupleFromBytes(byte, byte)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(124,29): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.ReusedBlobInteger3ByteNegativeFromBytes(byte, byte)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(127,29): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.ReusedBlobInteger3BytePositiveFromBytes(byte, byte)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(130,29): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.ReusedBlobCharFourByte(byte, byte)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(133,49): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.ReusedBlobInstances' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(151,42): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.ListValue.Elements' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(267,46): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.ListValue.ListValueStruct.Elements' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(278,20): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.ListValue.ListValueStruct.ListValueStruct(PineValue.ListValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(334,37): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.BlobValue.Bytes' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(336,16): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.BlobValue.BlobValue(ReadOnlyMemory<byte>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValue.cs(395,70): warning CS1591: Missing XML comment for publicly visible type or member 'PineValue.CollectAllComponentsFromRoots(IEnumerable<PineValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(6,14): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(9,19): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.ListEntry' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(9,19): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.ListEntry.ListEntry(string, PineValueCompactBuild.ListEntryValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(10,16): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.ListEntry.Key' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(11,24): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.ListEntry.Value' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(13,19): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.ListEntryValue' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(13,19): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.ListEntryValue.ListEntryValue(string?, IReadOnlyList<string>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(14,17): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.ListEntryValue.BlobBytesBase64' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(15,32): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.ListEntryValue.ListItemsKeys' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(19,9): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.BuildDictionaryFromEntries(IReadOnlyList<PineValueCompactBuild.ListEntry>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(61,9): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.PrebuildListEntriesAllFromRoot(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(67,9): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.PrebuildListEntriesAllFromRoots(IReadOnlySet<PineValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueCompactBuild.cs(77,9): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueCompactBuild.PrebuildListEntries(IReadOnlySet<PineValue.BlobValue>, IReadOnlySet<PineValue.ListValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(9,21): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(11,91): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.ParseAsTreeWithStringPath(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(16,29): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.FromTreeWithStringPath(TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(20,42): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.SortedTreeFromSetOfBlobsWithCommonFilePath(IEnumerable<(string path, ReadOnlyMemory<byte> blobContent)>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(33,42): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.SortedTreeFromSetOfBlobsWithStringPath<PathT>(IEnumerable<(PathT path, ReadOnlyMemory<byte> blobContent)>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(39,42): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.SortedTreeFromSetOfBlobsWithStringPath<PathT>(IReadOnlyDictionary<PathT, ReadOnlyMemory<byte>>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(47,42): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.SortedTreeFromTree(TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(50,42): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.SortedTreeFromSetOfBlobs<PathT>(IEnumerable<(PathT path, ReadOnlyMemory<byte> blobContent)>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(60,42): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.Union(IEnumerable<TreeNodeWithStringPath>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(66,42): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.Union(TreeNodeWithStringPath, TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(78,9): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.TreeToFlatDictionaryWithPathComparer(TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(82,85): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.ToFlatDictionaryWithPathComparer(IEnumerable<(IImmutableList<string> filePath, ReadOnlyMemory<byte> fileContent)>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(88,85): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.ToFlatDictionaryWithPathComparer(IEnumerable<(IReadOnlyList<string> filePath, ReadOnlyMemory<byte> fileContent)>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueComposition.cs(95,40): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueComposition.FromDictionaryComparer<T>()' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueHashTree.cs(9,21): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueHashTree' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueHashTree.cs(13,40): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueHashTree.ComputeHash(PineValue, Func<PineValue, ReadOnlyMemory<byte>?>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueHashTree.cs(35,9): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueHashTree.ComputeHashAndDependencies(PineValue, Func<PineValue, ReadOnlyMemory<byte>?>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueHashTree.cs(46,9): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueHashTree.ComputeHashTreeNodeSerialRepresentation(PineValue, Func<PineValue, ReadOnlyMemory<byte>?>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueHashTree.cs(106,45): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueHashTree.DeserializeFromHashTree(ReadOnlyMemory<byte>, Func<string, ReadOnlyMemory<byte>?>, Func<string, PineValue?>?, Action<string, PineValue>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueHashTree.cs(244,40): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueHashTree.ComputeHashSorted(TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueHashTree.cs(247,40): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueHashTree.ComputeHashNotSorted(TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineValueHashTree.cs(272,30): warning CS1591: Missing XML comment for publicly visible type or member 'PineValueHashTree.FindNodeByHash(PineValue, ReadOnlyMemory<byte>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\IPineVM.cs(3,18): warning CS1591: Missing XML comment for publicly visible type or member 'IPineVM' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\IPineVM.cs(5,31): warning CS1591: Missing XML comment for publicly visible type or member 'IPineVM.EvaluateExpression(Expression, PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\LockingPineVM.cs(3,14): warning CS1591: Missing XML comment for publicly visible type or member 'LockingPineVM' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\LockingPineVM.cs(9,12): warning CS1591: Missing XML comment for publicly visible type or member 'LockingPineVM.LockingPineVM(IPineVM)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\LockingPineVM.cs(14,38): warning CS1591: Missing XML comment for publicly visible type or member 'LockingPineVM.EvaluateExpression(Expression, PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularEncodings\IntegerEncoding.cs(141,62): warning CS1591: Missing XML comment for publicly visible type or member 'IntegerEncoding.ParseSignedIntegerStrict(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularEncodings\IntegerEncoding.cs(144,62): warning CS1591: Missing XML comment for publicly visible type or member 'IntegerEncoding.ParseSignedIntegerRelaxed(PineValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularEncodings\IntegerEncoding.cs(147,62): warning CS1591: Missing XML comment for publicly visible type or member 'IntegerEncoding.ParseSignedInteger(PineValue, bool, bool)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularEncodings\IntegerEncoding.cs(161,62): warning CS1591: Missing XML comment for publicly visible type or member 'IntegerEncoding.ParseSignedIntegerStrict(ReadOnlySpan<byte>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularEncodings\IntegerEncoding.cs(164,62): warning CS1591: Missing XML comment for publicly visible type or member 'IntegerEncoding.ParseSignedIntegerRelaxed(ReadOnlySpan<byte>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularEncodings\StringEncoding.cs(171,42): warning CS1591: Missing XML comment for publicly visible type or member 'StringEncoding.StringFromListValue(PineValue.ListValue)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularEncodings\StringEncoding.cs(206,38): warning CS1591: Missing XML comment for publicly visible type or member 'StringEncoding.ToCodePoints(string)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularValues.cs(7,21): warning CS1591: Missing XML comment for publicly visible type or member 'PopularValues' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularValues.cs(9,50): warning CS1591: Missing XML comment for publicly visible type or member 'PopularValues.PopularStrings' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PopularValues.cs(670,41): warning CS1591: Missing XML comment for publicly visible type or member 'PopularValues.PopularElmValuesSource()' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(19,44): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.Instance' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(22,88): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.ListValues' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(24,35): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.Expressions' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(26,61): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.LiteralExpressions' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(32,63): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.ExpressionEncodings' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(34,63): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.ExpressionDecodings' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(36,33): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.ElmValues' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(38,51): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.ElmValueDecodedAsInElmCompiler' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(40,51): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.ElmValueEncodedAsInElmCompiler' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(44,51): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.ElmValueDecoding' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(46,51): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.ElmValueEncoding' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(54,43): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.ExpressionsSource()' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(65,47): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.BuildPrecompiledDictFile(ReusedInstances.PineListValueReusedInstances)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(73,66): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.PrebuildListEntries(ReusedInstances.PineListValueReusedInstances)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(126,25): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.EmbeddedResourceFilePath' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(128,48): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.LoadPrecompiledFromEmbeddedOrDefault(Assembly, Func<IEnumerable<Expression>>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(141,64): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.LoadEmbeddedPrebuilt(Assembly, string)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(177,48): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.LoadFromPrebuiltJson(ReadOnlyMemory<byte>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(185,48): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.LoadFromPrebuilt(IReadOnlyList<PineValueCompactBuild.ListEntry>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(236,19): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.PineListValueReusedInstances' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(236,19): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.PineListValueReusedInstances.PineListValueReusedInstances(IReadOnlySet<PineValue.ListValue>, IReadOnlySet<PineValue.BlobValue>, IReadOnlyDictionary<PineValue.ListValue.ListValueStruct, PineValue.ListValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(237,43): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.PineListValueReusedInstances.ValuesExpectedInCompilerLists' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(238,43): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.PineListValueReusedInstances.ValuesExpectedInCompilerBlobs' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(239,87): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.PineListValueReusedInstances.PineValueLists' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(241,48): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.BuildPineListValueReusedInstances(IEnumerable<Expression>, IEnumerable<PineValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(367,17): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.Build()' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\ReusedInstances.cs(622,9): warning CS1591: Missing XML comment for publicly visible type or member 'ReusedInstances.BuildListValuesFromBundledListValues(IReadOnlyDictionary<PineValue.ListValue.ListValueStruct, PineValue.ListValue>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Testing.cs(6,21): warning CS1591: Missing XML comment for publicly visible type or member 'Testing' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Testing.cs(8,27): warning CS1591: Missing XML comment for publicly visible type or member 'Testing.CompareStringsChunkwiseAndReportFirstDifference(IReadOnlyList<string>, string)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(8,24): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(10,19): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.BlobNode' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(14,37): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.BlobNode.Bytes' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(16,16): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.BlobNode.BlobNode(ReadOnlyMemory<byte>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(42,19): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.TreeNode' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(46,79): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.TreeNode.Elements' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(48,16): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.TreeNode.TreeNode(IReadOnlyList<(string name, TreeNodeWithStringPath component)>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(78,87): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.TreeEntryDefaultComparer' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(81,42): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.Blob(ReadOnlyMemory<byte>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(84,42): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.SortedTree(IReadOnlyList<(string name, TreeNodeWithStringPath component)>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(87,42): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.NonSortedTree(IReadOnlyList<(string name, TreeNodeWithStringPath component)>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(90,51): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.EmptyTree' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(93,89): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.EnumerateBlobsTransitive()' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(123,36): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.GetNodeAtPath(IReadOnlyList<string>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(126,36): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.GetNodeAtPath(ReadOnlySpan<string>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(149,36): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.RemoveNodeAtPath(IReadOnlyList<string>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(152,36): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.RemoveNodeAtPath(ReadOnlySpan<string>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(214,35): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.SetNodeAtPathSorted(IReadOnlyList<string>, TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(219,35): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.SetNodeAtPathSorted(ReadOnlySpan<string>, TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(309,42): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.MergeBlobs(TreeNodeWithStringPath, TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(316,42): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.FilterNodesByPath(TreeNodeWithStringPath, Func<IReadOnlyList<string>, bool>, IReadOnlyList<string>?)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(340,43): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.RemoveEmptyNodes(TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(363,42): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.Sort(TreeNodeWithStringPath)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\TreeNodeWithStringPath.cs(373,14): warning CS1591: Missing XML comment for publicly visible type or member 'TreeNodeWithStringPath.Map<T>(Func<ReadOnlyMemory<byte>, T>, Func<IReadOnlyList<(string itemName, TreeNodeWithStringPath itemValue)>, T>)' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\Json\JsonConverterForPineValue.cs(11,14): warning CS1591: Missing XML comment for publicly visible type or member 'JsonConverterForPineValue' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\PineVMValues.cs(5,21): warning CS1591: Missing XML comment for publicly visible type or member 'PineVMValues' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\PineVMValues.cs(7,38): warning CS1591: Missing XML comment for publicly visible type or member 'PineVMValues.TrueValue' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\PineVMValues.cs(9,38): warning CS1591: Missing XML comment for publicly visible type or member 'PineVMValues.FalseValue' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\PopularExpression.cs(12,14): warning CS1591: Missing XML comment for publicly visible type or member 'PopularExpression' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\PopularExpression.cs(16,60): warning CS1591: Missing XML comment for publicly visible type or member 'PopularExpression.BuildPopularExpressionDictionary()' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\PopularExpression.cs(48,59): warning CS1591: Missing XML comment for publicly visible type or member 'PopularExpression.BuildPopularValueDictionary()' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\PopularExpression.cs(78,101): warning CS1591: Missing XML comment for publicly visible type or member 'PopularExpression.LoadPopularExpressionFiles()' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\Pine.Core\PineVM\PopularExpression.cs(83,101): warning CS1591: Missing XML comment for publicly visible type or member 'PopularExpression.LoadPopularValueFiles()' [K:\Source\Repos\elm-time\implement\Pine.Core\Pine.Core.csproj]
+K:\Source\Repos\elm-time\implement\pine\Elm019\ElmPackage.cs(90,47): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(80,17): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(99,21): warning CS8604: Possible null reference argument for parameter 'fileStoreReader' in 'ProcessStoreWriterInFileStore.ProcessStoreWriterInFileStore(IFileStoreReader fileStoreReader, Func<DateTimeOffset> getTimeForCompositionLogBatch, IFileStoreWriter fileStore, bool skipWritingComponentSecondTime)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(101,21): warning CS8604: Possible null reference argument for parameter 'fileStore' in 'ProcessStoreWriterInFileStore.ProcessStoreWriterInFileStore(IFileStoreReader fileStoreReader, Func<DateTimeOffset> getTimeForCompositionLogBatch, IFileStoreWriter fileStore, bool skipWritingComponentSecondTime)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(132,26): warning CS8604: Possible null reference argument for parameter 'urls' in 'IWebHostBuilder HostingAbstractionsWebHostBuilderExtensions.UseUrls(IWebHostBuilder hostBuilder, params string[] urls)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(135,44): warning CS8604: Possible null reference argument for parameter 'fileStore' in 'IWebHostBuilder Configuration.WithProcessStoreFileStore(IWebHostBuilder orig, IFileStore fileStore)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\BlobLibrary.cs(134,80): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmInteractive\ElmInteractive.cs(481,16): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\CompilePineToDotNet\ReducePineExpression.cs(72,13): warning CS0162: Unreachable code detected [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmTime\JsonAdapter.cs(1179,61): warning CS8625: Cannot convert null literal to non-nullable reference type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmTime\JsonAdapter.cs(1192,32): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(458,74): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(458,74): warning CS8604: Possible null reference argument for parameter 'value' in 'KeyValuePair<string, string>.KeyValuePair(string key, string value)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\TarArchive.cs(36,50): warning CS8620: Argument of type 'ImmutableList<(string? name, TreeNodeWithStringPath component)>' cannot be used for parameter 'treeContent' of type 'IReadOnlyList<(string name, TreeNodeWithStringPath component)>' in 'TreeNodeWithStringPath TreeNodeWithStringPath.SortedTree(IReadOnlyList<(string name, TreeNodeWithStringPath component)> treeContent)' due to differences in the nullability of reference types. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(756,76): warning CS8622: Nullability of reference types in type of parameter 'argumentFromCLI' of 'string Program.LoadArgumentFromUserInterfaceAsJsonOrFileTextContext(string argumentFromCLI)' doesn't match the target delegate 'Func<string?, string>' (possibly because of nullability attributes). [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(761,39): warning CS8604: Possible null reference argument for parameter 'functionName' in 'ApplyFunctionReport Program.ApplyFunction(string site, string functionName, IReadOnlyList<string> serializedArgumentsJson, bool commitResultingState, string? siteDefaultPassword, bool promptForPasswordOnConsole)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\DynamicPGOShare.cs(200,89): warning CS8625: Cannot convert null literal to non-nullable reference type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\CodeAnalysis.cs(610,34): warning CS8625: Cannot convert null literal to non-nullable reference type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\CodeAnalysis.cs(738,35): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(275,41): warning CS0219: The variable 'cyclicReductionStoreLastTime' is assigned but its value is never used [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(957,82): warning CS8604: Possible null reference argument for parameter 'sourcePath' in 'ProcessWithLog<string, Result<string, (TreeNodeWithStringPath tree, LoadCompositionOrigin origin)>> LoadComposition.LoadFromPathResolvingNetworkDependencies(string sourcePath, Func<IReadOnlyList<string>, IOException, bool>? ignoreFileOnIOException = null)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(1091,25): warning CS8604: Possible null reference argument for parameter 'path' in 'void File.WriteAllBytes(string path, byte[] bytes)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Elm\ElmCompiler.cs(498,31): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Elm\LanguageServerRpcTarget.cs(215,42): warning CS4014: Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Elm\ElmCompiler.cs(590,17): warning CS8604: Possible null reference argument for parameter 'functionRecord' in 'Result<string, PineValue> ElmInteractiveEnvironment.ApplyFunction(IPineVM pineVM, FunctionRecord functionRecord, IReadOnlyList<PineValue> arguments)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\CompilePineToDotNet\CompileModuleToCSharp.cs(861,25): warning CS8629: Nullable value type may be null. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\CompilePineToDotNet\PineKernelFunctionsInline.cs(247,24): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Elm\LanguageServer.cs(352,72): warning CS8604: Possible null reference argument for parameter 'initializeParams' in 'void LanguageServer.InitializeWorkspaceState(InitializeParams initializeParams)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(1389,32): warning CS8619: Nullability of reference types in value of type '(Program.CompileAppReport, IImmutableDictionary<IReadOnlyList<string>, ReadOnlyMemory<byte>>?)' doesn't match target type '(Program.CompileAppReport, IImmutableDictionary<IReadOnlyList<string>, ReadOnlyMemory<byte>> compiledAppFiles)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(1315,20): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Elm\LanguageServer.cs(37,40): warning CS9113: Parameter 'workspaceFolders' is unread. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\CompilePineToDotNet\PineCSharpSyntaxFactory.cs(53,24): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Elm\ElmCompiler.cs(776,34): warning CS0168: The variable 'e' is declared but never used [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\Precompiled.cs(3397,17): warning CS0162: Unreachable code detected [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(552,45): warning CS8600: Converting null literal or possible null value to non-nullable type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(718,68): warning CS8604: Possible null reference argument for parameter 'request' in 'Result<string, ApplyDatabaseFunctionSuccess> applyDatabaseFunction(ApplyDatabaseFunctionRequest request)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(740,72): warning CS8604: Possible null reference argument for parameter 'messageFromGui' in 'IEnumerable<EventToElmApp> handleMessageFromGui(MessageToHost messageFromGui)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(564,33): warning CS8604: Possible null reference argument for parameter 'source' in 'IEnumerable<HttpRoute> Enumerable.Select<ApiRoute, HttpRoute>(IEnumerable<ApiRoute> source, Func<ApiRoute, HttpRoute> selector)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(1050,94): warning CS8604: Possible null reference argument for parameter 'report' in 'string reportAsString(object report)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(1050,128): warning CS8604: Possible null reference argument for parameter 'report' in 'string reportAsString(object report)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\PineVM.cs(1146,50): warning CS8604: Possible null reference argument for parameter 'ExpressionValue' in 'EvaluationReport.EvaluationReport(PineValue ExpressionValue, Expression Expression, PineValue Environment, long InstructionCount, long InvocationCount, long LoopIterationCount, PineValue ReturnValue, IReadOnlyList<Expression> StackTrace)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\PineVM.cs(1174,93): warning CS8604: Possible null reference argument for parameter 'pineValue' in 'string PineVM.DescribeValueForErrorMessage(PineValue pineValue)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\PineVM.cs(1197,51): warning CS8625: Cannot convert null literal to non-nullable reference type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmSyntax\ElmSyntaxParser.cs(709,52): warning CS8600: Converting null literal or possible null value to non-nullable type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmSyntax\ElmSyntaxParser.cs(709,44): warning CS8600: Converting null literal or possible null value to non-nullable type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmSyntax\ElmSyntaxParser.cs(709,44): warning CS8604: Possible null reference argument for parameter 'Value' in 'Node<TOther>.Node(Range Range, TOther Value)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\FileStore.cs(360,21): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\CompilePineToDotNet\CompileToCSharp.cs(886,24): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+Got 0 source(s) for an individual scenario to load...
+Got 1 source(s) for a directory of scenarios to load...
+Successfully loaded 9 distinct scenario(s) from composition a640891ac70fa865ae77442c1b056ed0cbb02922e33ae2dd76d4c6b4cd48f601.
+Converted tree to Pine value in 0 seconds.
+Computed hash in 0.02 seconds.
+Warmup completed in 94.55 seconds.
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 1
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 2
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 1
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 1
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 1
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+int_is_sorted_asc: item 1 in list is not an integer but a list with length 0
+9 scenario(s) resulted in 187 steps.
+Passed! - Failed: 0, Passed: 187, Total: 187, Duration: 25_121 ms - a640891ac7 (Pine 0.4.7 with Elm compiler f96a6c90)

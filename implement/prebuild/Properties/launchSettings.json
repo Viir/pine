@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "prebuild": {
+      "commandName": "Project",
+      "workingDirectory": "K:\\Source\\Repos\\elm-time\\implement"
+    }
+  }
+}

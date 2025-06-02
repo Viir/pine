@@ -1,0 +1,66 @@
+Loaded compiler package sources in 0 seconds.
+Trying to load from local file system...
+Loaded 1 source trees with 101 aggregate Elm module files.
+Compiling with lowering disabled
+Limiting the compilation to 1 root files: other-library-modules/Elm/Parser.elm
+Loaded compiler package sources in 0 seconds.
+Create new JS engine: 9301
+Converted tree to Pine value in 0 seconds.
+Computed hash in 0.04 seconds.
+Computed hash 33807b96 for Elm make in 0.05 seconds.
+Compiled interactive env in 5.54 seconds.
+Built compiler in 5.57 seconds.
+Create new JS engine: 9302
+Converted tree to Pine value in 0 seconds.
+Computed hash in 0 seconds.
+Parsed module Basics in 1.01 seconds.
+Parsed module Tuple in .05 seconds.
+Parsed module Maybe in .05 seconds.
+Parsed module List in .47 seconds.
+Parsed module Char in .14 seconds.
+Parsed module String in .46 seconds.
+Parsed module Result in .27 seconds.
+Parsed module Elm.Syntax.ModuleName in .03 seconds.
+Parsed module Elm.Syntax.Range in .16 seconds.
+Parsed module Elm.Syntax.Documentation in .01 seconds.
+Parsed module Elm.Syntax.Comments in .01 seconds.
+Parsed module Bitwise in .24 seconds.
+Parsed module Hex in .34 seconds.
+Parsed module Json.Encode in .06 seconds.
+Parsed module Bytes in .01 seconds.
+Parsed module Elm.Syntax.Node in .06 seconds.
+Parsed module Json.Decode in 1.09 seconds.
+Parsed module Bytes.Decode in .65 seconds.
+Parsed module Bytes.Encode in .23 seconds.
+Parsed module Elm.Syntax.Exposing in .04 seconds.
+Parsed module Elm.Syntax.Infix in .01 seconds.
+Parsed module BigInt in .14 seconds.
+Parsed module Elm.Kernel.Parser in .48 seconds.
+Parsed module Dict in .84 seconds.
+Parsed module Elm.Syntax.Pattern in .08 seconds.
+Parsed module Elm.Syntax.TypeAnnotation in .03 seconds.
+Parsed module Common in .2 seconds.
+Parsed module Elm.Syntax.Import in .05 seconds.
+Parsed module Elm.Syntax.Module in .1 seconds.
+Parsed module Set in .27 seconds.
+Parsed module Elm.Syntax.Signature in .01 seconds.
+Parsed module Elm.Syntax.Type in .02 seconds.
+Parsed module Elm.Syntax.TypeAlias in .02 seconds.
+Parsed module Array in .1 seconds.
+Parsed module Pine in 1.73 seconds.
+Parsed module Parser.Advanced in 1.38 seconds.
+Parsed module Elm.Syntax.Expression in .14 seconds.
+Parsed module Parser in .71 seconds.
+Parsed module FirCompiler in 2.16 seconds.
+Parsed module Elm.Syntax.Declaration in .03 seconds.
+Parsed module Elm.Syntax.File in .01 seconds.
+Parsed module ElmCompiler in 4.39 seconds.
+Parsed and compiled 42 modules in 34.64 seconds, 18.28 of which for parsing.
+Decoding environment after compiling 42 modules.
+Decoded environment after compiling 42 modules in .47 seconds.
+Converted tree to Pine value in 0 seconds.
+Computed hash in 0.08 seconds.
+Compiled source tree 7103b9d5 containing 407 files and 101 Elm modules into environment with 135_505_395 nodes.
+Built bundle containing 54_542 list entries in 5_395_620 bytes.
+Applied gzip and compressed from 5_395_620 to 442_437 bytes
+Saved compact build with 54542 list entries in 442_437 bytes to elm-syntax-parser.json.gzip

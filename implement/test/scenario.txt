@@ -1,0 +1,31 @@
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenarios=./../test-and-train/elm-interactive-scenarios-kernel  1>  kernel.txt  2>&1
+
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenarios=./../test-and-train/elm-interactive-scenarios-core  1>  core.txt  2>&1
+
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenarios=./../test-and-train/elm-interactive-scenarios-train  1>  train.txt  2>&1
+
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenario=./../test-and-train/elm-interactive-scenarios-core/literals  1>  core-literals.txt  2>&1
+
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenario=./../test-and-train/elm-interactive-scenarios-core/elm-syntax-float  1>  core-elm-syntax-float.txt  2>&1
+
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenario=./../test-and-train/elm-interactive-scenarios-train/elm-syntax-7  1>  train-elm-syntax-7.txt  2>&1
+
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenario=./../test-and-train/elm-interactive-scenarios-train/elm-compiler  1>  train-elm-compiler.txt  2>&1
+
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenario=./../test-and-train/elm-interactive-scenarios-train/elm-syntax-7-3-7  1>  train-elm-syntax-7-3-7.txt  2>&1
+
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenario=./../test-and-train/elm-interactive-scenarios-train/isolate-1  1>  train-isolate-1.txt  2>&1
+
+dotnet  run  --project ./prebuild/prebuild.csproj  --configuration Release  1>  prebuild.txt  2>&1
+
+
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenario=./../test-and-train/elm-interactive-scenarios-kernel/lib-base64  1>  lib-base64.txt  2>&1
+
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenario=./../test-and-train/elm-interactive-scenarios-train/elm-compiler-dependencies  1>  elm-compiler-dependencies.txt  2>&1
+
+
+dotnet  run  --project ./../pine  --configuration Release --  interactive  test  --scenario=./../test-and-train/elm-interactive-scenarios-train/elm-syntax-7-3-7-small  1>  train-elm-syntax-7-3-7-small.txt  2>&1
+
+
+dotnet  run  --project ./pine  --configuration Release --  make  src/Netlify.elm  --input-directory=./website/pinevm/  --output=./out/netlify.zip  1>  make-website-netlify.txt  2>&1
+

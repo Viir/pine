@@ -1,0 +1,201 @@
+K:\Source\Repos\elm-time\implement\pine\Pine\BlobLibrary.cs(126,80): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(99,17): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(131,21): warning CS8604: Possible null reference argument for parameter 'fileStoreReader' in 'ProcessStoreWriterInFileStore.ProcessStoreWriterInFileStore(IFileStoreReader fileStoreReader, Func<DateTimeOffset> getTimeForCompositionLogBatch, IFileStoreWriter fileStore)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(133,21): warning CS8604: Possible null reference argument for parameter 'fileStore' in 'ProcessStoreWriterInFileStore.ProcessStoreWriterInFileStore(IFileStoreReader fileStoreReader, Func<DateTimeOffset> getTimeForCompositionLogBatch, IFileStoreWriter fileStore)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(164,26): warning CS8604: Possible null reference argument for parameter 'urls' in 'IWebHostBuilder HostingAbstractionsWebHostBuilderExtensions.UseUrls(IWebHostBuilder hostBuilder, params string[] urls)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(168,44): warning CS8604: Possible null reference argument for parameter 'fileStore' in 'IWebHostBuilder Configuration.WithProcessStoreFileStore(IWebHostBuilder orig, IFileStore fileStore)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\CompilePineToDotNet\ReducePineExpression.cs(151,43): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(549,76): warning CS8622: Nullability of reference types in type of parameter 'argumentFromCLI' of 'string Program.LoadArgumentFromUserInterfaceAsJsonOrFileTextContext(string argumentFromCLI)' doesn't match the target delegate 'Func<string?, string>' (possibly because of nullability attributes). [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(554,39): warning CS8604: Possible null reference argument for parameter 'functionName' in 'ApplyFunctionReport Program.ApplyFunction(string site, string functionName, IReadOnlyList<string> serializedArgumentsJson, bool commitResultingState, string? siteDefaultPassword, bool promptForPasswordOnConsole)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\TarArchive.cs(36,50): warning CS8620: Argument of type 'ImmutableList<(string? name, TreeNodeWithStringPath component)>' cannot be used for parameter 'treeContent' of type 'IReadOnlyList<(string name, TreeNodeWithStringPath component)>' in 'TreeNodeWithStringPath TreeNodeWithStringPath.SortedTree(IReadOnlyList<(string name, TreeNodeWithStringPath component)> treeContent)' due to differences in the nullability of reference types. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\CompilePineToDotNet\PineKernelFunctionsInline.cs(246,24): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(794,32): warning CS8619: Nullability of reference types in value of type '(Program.CompileAppReport, IImmutableDictionary<IReadOnlyList<string>, ReadOnlyMemory<byte>>?)' doesn't match target type '(Program.CompileAppReport, IImmutableDictionary<IReadOnlyList<string>, ReadOnlyMemory<byte>> compiledAppFiles)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmTime\PersistentProcess.cs(100,80): warning CS8604: Possible null reference argument for parameter 'json' in 'JsonElement JsonSerializer.Deserialize<JsonElement>(string json, JsonSerializerOptions? options = null)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\Precompiled.cs(276,13): warning CS0162: Unreachable code detected [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JintInterop.cs(41,32): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JintInterop.cs(41,16): warning CS8600: Converting null literal or possible null value to non-nullable type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JintInterop.cs(41,16): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JintInterop.cs(53,35): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JintInterop.cs(53,35): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JintInterop.cs(53,27): warning CS8600: Converting null literal or possible null value to non-nullable type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JintInterop.cs(55,16): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\Precompiled.cs(1125,17): warning CS0162: Unreachable code detected [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JavaScriptEngineJint.cs(105,60): warning CS8604: Possible null reference argument for parameter 'arg' in 'Expression Func<Node, Expression>.Invoke(Node arg)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JavaScriptEngineJint.cs(107,32): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JavaScriptEngineJint.cs(114,57): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JavaScriptEngineJint.cs(118,28): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\Precompiled.cs(1303,17): warning CS0162: Unreachable code detected [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\CompilePineToDotNet\CompileToCSharp.cs(885,24): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmTime\StateShim\StateShim.cs(295,17): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\PineVM.cs(1608,59): warning CS8625: Cannot convert null literal to non-nullable reference type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(570,49): warning CS8600: Converting null literal or possible null value to non-nullable type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(754,68): warning CS8604: Possible null reference argument for parameter 'request' in 'Result<string, ApplyDatabaseFunctionSuccess> applyDatabaseFunction(ApplyDatabaseFunctionRequest request)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(776,72): warning CS8604: Possible null reference argument for parameter 'messageFromGui' in 'IEnumerable<EventToElmApp> handleMessageFromGui(MessageToHost messageFromGui)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(582,33): warning CS8604: Possible null reference argument for parameter 'source' in 'IEnumerable<HttpRoute> Enumerable.Select<ApiRoute, HttpRoute>(IEnumerable<ApiRoute> source, Func<ApiRoute, HttpRoute> selector)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(1093,98): warning CS8604: Possible null reference argument for parameter 'report' in 'string reportAsString(object report)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(1093,132): warning CS8604: Possible null reference argument for parameter 'report' in 'string reportAsString(object report)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\CodeAnalysis.cs(556,34): warning CS8625: Cannot convert null literal to non-nullable reference type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\CodeAnalysis.cs(684,35): warning CS8603: Possible null reference return. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\DynamicPGOShare.cs(199,89): warning CS8625: Cannot convert null literal to non-nullable reference type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(1539,29): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(1548,29): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(1572,62): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(1575,46): warning CS8604: Possible null reference argument for parameter 'path1' in 'string Path.Combine(string path1, string path2)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PublicAppState.cs(294,55): warning CS8625: Cannot convert null literal to non-nullable reference type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PersistentProcessLiveRepresentation.cs(385,28): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PersistentProcessLiveRepresentation.cs(401,39): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PublicAppState.cs(370,53): warning CS8602: Dereference of a possibly null reference. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PublicAppState.cs(370,116): warning CS8625: Cannot convert null literal to non-nullable reference type. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PersistentProcessLiveRepresentation.cs(568,48): warning CS8604: Possible null reference argument for parameter 'webServiceEvent' in 'Result<string, UpdateElmAppStateForEvent> continueWithWebServiceEvent(BackendEventStruct webServiceEvent)'. [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Test\SelfTest.cs(85,30): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Test\SelfTest.cs(89,92): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Test\SelfTest.cs(93,29): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\BlobLibrary.cs(153,60): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\BlobLibrary.cs(128,97): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\BlobLibrary.cs(131,79): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\BlobLibrary.cs(196,35): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\BlobLibrary.cs(209,51): warning VSTHRD200: Use "Async" suffix in names of methods that return an awaitable type (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmInteractive\ElmInteractive.cs(30,55): warning VSTHRD200: Use "Async" suffix in names of methods that return an awaitable type (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\VolatileProcessNative.cs(76,9): warning VSTHRD110: Observe the awaitable result of this method call by awaiting it, assigning to a variable, or passing it to another method (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD110.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\VolatileProcessNative.cs(81,9): warning VSTHRD110: Observe the awaitable result of this method call by awaiting it, assigning to a variable, or passing it to another method (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD110.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\BlobLibrary.cs(283,75): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(237,77): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(241,55): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(262,75): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(268,58): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(277,75): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\RunServer.cs(285,64): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmInteractive\ElmInteractive.cs(272,42): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmInteractive\ElmInteractive.cs(384,67): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\VolatileProcessCSharp.cs(64,64): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\VolatileProcessCSharp.cs(68,49): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmInteractive\InteractiveSessionPine.cs(167,13): warning VSTHRD110: Observe the awaitable result of this method call by awaiting it, assigning to a variable, or passing it to another method (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD110.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(435,55): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmInteractive\ElmInteractive.cs(859,109): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmInteractive\InteractiveSessionPine.cs(196,42): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmInteractive\InteractiveSessionPine.cs(220,57): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\ElmInteractive\InteractiveSessionPine.cs(376,45): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\JavaScript\JavaScriptEngine.cs(43,39): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\Asp.cs(26,30): warning VSTHRD200: Use "Async" suffix in names of methods that return an awaitable type (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\Asp.cs(30,31): warning VSTHRD200: Use "Async" suffix in names of methods that return an awaitable type (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\Asp.cs(78,59): warning VSTHRD200: Use "Async" suffix in names of methods that return an awaitable type (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\Asp.cs(97,52): warning VSTHRD200: Use "Async" suffix in names of methods that return an awaitable type (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\GitPartialForCommitServer.cs(22,24): warning VSTHRD200: Use "Async" suffix in names of methods that return an awaitable type (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(175,17): warning VSTHRD110: Observe the awaitable result of this method call by awaiting it, assigning to a variable, or passing it to another method (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD110.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(147,77): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(391,81): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(1136,9): warning VSTHRD110: Observe the awaitable result of this method call by awaiting it, assigning to a variable, or passing it to another method (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD110.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(1145,48): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\DynamicPGOShare.cs(66,53): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\DynamicPGOShare.cs(119,13): warning VSTHRD110: Observe the awaitable result of this method call by awaiting it, assigning to a variable, or passing it to another method (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD110.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\DynamicPGOShare.cs(177,18): warning VSTHRD200: Use "Async" suffix in names of methods that return an awaitable type (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\DynamicPGOShare.cs(117,40): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\DynamicPGOShare.cs(142,51): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\DynamicPGOShare.cs(147,18): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\PineVM\DynamicPGOShare.cs(153,51): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(447,9): warning ASP0016: The method used to create a RequestDelegate returns Task<int>. RequestDelegate discards this value. If this isn't intended then change the return type to non-generic Task or, if the delegate is a route handler, cast it to Delegate so the return value is written to the response. (https://aka.ms/aspnet/analyzers) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PublicAppState.cs(50,13): warning VSTHRD110: Observe the awaitable result of this method call by awaiting it, assigning to a variable, or passing it to another method (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD110.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PublicAppState.cs(161,28): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PublicAppState.cs(374,21): warning VSTHRD110: Observe the awaitable result of this method call by awaiting it, assigning to a variable, or passing it to another method (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD110.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PublicAppState.cs(383,17): warning VSTHRD110: Observe the awaitable result of this method call by awaiting it, assigning to a variable, or passing it to another method (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD110.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PublicAppState.cs(416,41): warning VSTHRD200: Use "Async" suffix in names of methods that return an awaitable type (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\StartupAdminInterface.cs(957,83): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(1872,28): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Platform\WebService\PublicAppState.cs(695,94): warning VSTHRD200: Use "Async" suffix in names of methods that return an awaitable type (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2367,9): warning VSTHRD200: Use "Async" suffix in names of methods that return an awaitable type (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD200.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2261,69): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2263,82): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2326,69): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2328,82): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2146,77): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2148,86): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2652,69): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2656,81): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2612,69): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2614,78): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2690,69): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Program.cs(2692,78): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\LoadFromGitHubOrGitLab.cs(367,50): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+K:\Source\Repos\elm-time\implement\pine\Pine\LoadFromGitHubOrGitLab.cs(115,50): warning VSTHRD002: Synchronously waiting on tasks or awaiters may cause deadlocks. Use await or JoinableTaskFactory.Run instead. (https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD002.md) [K:\Source\Repos\elm-time\implement\pine\pine.csproj]
+Got 1 source(s) for an individual scenario to load...
+Got 0 source(s) for a directory of scenarios to load...
+Successfully loaded 1 distinct scenario(s) from composition 3d419220e8e047c82075c47f63daaee03fc2ecc5ea33d592233514f792a8f0d0.
+Warmup completed in 18.52 seconds.
+1 scenario(s) resulted in 6 steps.
+Passed! - Failed: 0, Passed: 6, Total: 6, Duration: 980 ms - 3d419220e8 (Pine 0.3.19 with Elm compiler 83fed2c9)
+
+Details from 1 scenarios:
+
+
+Scenario elm-syntax-float-cf2bb7ee8b: 6 steps:
+Step 100:
+ok with 9 log entries:
+Parse: JavaScript function duration: 16 ms
+Parse: Deserialize (from 131 chars) and ParsePineValueFromJson duration: 0 ms
+parse duration: 66 ms
+compile - via vm - encode duration: 0 ms
+compile - via vm - apply duration: 818 ms
+compile - via vm - decode result duration: 0 ms
+compile - via vm - decode expression duration: 0 ms
+eval duration: 0 ms
+parse-result duration: 0 ms
+
+Step 101:
+ok with 9 log entries:
+Parse: JavaScript function duration: 3 ms
+Parse: Deserialize (from 183 chars) and ParsePineValueFromJson duration: 0 ms
+parse duration: 4 ms
+compile - via vm - encode duration: 0 ms
+compile - via vm - apply duration: 18 ms
+compile - via vm - decode result duration: 0 ms
+compile - via vm - decode expression duration: 0 ms
+eval duration: 0 ms
+parse-result duration: 0 ms
+
+Step 102:
+ok with 9 log entries:
+Parse: JavaScript function duration: 3 ms
+Parse: Deserialize (from 183 chars) and ParsePineValueFromJson duration: 0 ms
+parse duration: 3 ms
+compile - via vm - encode duration: 0 ms
+compile - via vm - apply duration: 10 ms
+compile - via vm - decode result duration: 0 ms
+compile - via vm - decode expression duration: 0 ms
+eval duration: 0 ms
+parse-result duration: 0 ms
+
+Step 150:
+ok with 9 log entries:
+Parse: JavaScript function duration: 5 ms
+Parse: Deserialize (from 1_393 chars) and ParsePineValueFromJson duration: 0 ms
+parse duration: 6 ms
+compile - via vm - encode duration: 0 ms
+compile - via vm - apply duration: 26 ms
+compile - via vm - decode result duration: 0 ms
+compile - via vm - decode expression duration: 0 ms
+eval duration: 0 ms
+parse-result duration: 1 ms
+
+Step 151:
+ok with 9 log entries:
+Parse: JavaScript function duration: 4 ms
+Parse: Deserialize (from 1_391 chars) and ParsePineValueFromJson duration: 0 ms
+parse duration: 4 ms
+compile - via vm - encode duration: 0 ms
+compile - via vm - apply duration: 0 ms
+compile - via vm - decode result duration: 0 ms
+compile - via vm - decode expression duration: 0 ms
+eval duration: 0 ms
+parse-result duration: 0 ms
+
+Step 152:
+ok with 9 log entries:
+Parse: JavaScript function duration: 3 ms
+Parse: Deserialize (from 1_391 chars) and ParsePineValueFromJson duration: 0 ms
+parse duration: 3 ms
+compile - via vm - encode duration: 0 ms
+compile - via vm - apply duration: 0 ms
+compile - via vm - decode result duration: 0 ms
+compile - via vm - decode expression duration: 0 ms
+eval duration: 0 ms
+parse-result duration: 0 ms

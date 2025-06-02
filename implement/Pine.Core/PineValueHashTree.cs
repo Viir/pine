@@ -244,8 +244,30 @@ public static class PineValueHashTree
     public static ReadOnlyMemory<byte> ComputeHashSorted(TreeNodeWithStringPath treeNode) =>
         ComputeHashNotSorted(TreeNodeWithStringPath.Sort(treeNode));
 
-    public static ReadOnlyMemory<byte> ComputeHashNotSorted(TreeNodeWithStringPath treeNode) =>
-        ComputeHash(PineValueComposition.FromTreeWithStringPath(treeNode));
+    public static ReadOnlyMemory<byte> ComputeHashNotSorted(TreeNodeWithStringPath treeNode)
+    {
+        var clock = System.Diagnostics.Stopwatch.StartNew();
+
+
+        var asPineValue = PineValueComposition.FromTreeWithStringPath(treeNode);
+
+        Console.WriteLine(
+            "Converted tree to Pine value in " +
+            clock.Elapsed.TotalSeconds.ToString("0.##") +
+            " seconds.");
+
+
+        var hash = ComputeHash(asPineValue);
+
+
+        Console.WriteLine(
+            "Computed hash in " +
+            clock.Elapsed.TotalSeconds.ToString("0.##") +
+            " seconds.");
+
+
+        return hash;
+    }
 
     public static PineValue? FindNodeByHash(PineValue pineValue, ReadOnlyMemory<byte> hash)
     {

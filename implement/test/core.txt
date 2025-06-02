@@ -1,0 +1,11 @@
+Using launch settings from .\..\pine\Properties\launchSettings.json...
+Got 0 source(s) for an individual scenario to load...
+Got 1 source(s) for a directory of scenarios to load...
+Successfully loaded 43 distinct scenario(s) from composition 3eb232010ea7a1ca4b330a1797471a387a00f75565258303c915a2badafb8573.
+Converted tree to Pine value in 0 seconds.
+Computed hash in 0.01 seconds.
+Warmup completed in 89.9 seconds.
+Converted tree to Pine value in 0 seconds.
+Computed hash in 0 seconds.
+43 scenario(s) resulted in 423 steps.
+Passed! - Failed: 0, Passed: 423, Total: 423, Duration: 80_183 ms - 3eb232010e (Pine 0.4.7 with Elm compiler f96a6c90)

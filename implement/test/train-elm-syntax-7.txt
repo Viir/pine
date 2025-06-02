@@ -1,0 +1,2777 @@
+Using launch settings from .\..\pine\Properties\launchSettings.json...
+K:\Source\Repos\elm-time\implement\pine\pine.csproj : warning NU1902: Package 'MessagePack' 2.5.108 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-4qm4-8hg2-g2xm
+K:\Source\Repos\elm-time\implement\pine\pine.csproj : warning NU1902: Package 'MessagePack' 2.5.108 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-4qm4-8hg2-g2xm
+]9;4;3;\]9;4;0;\Got 1 source(s) for an individual scenario to load...
+Got 0 source(s) for a directory of scenarios to load...
+Successfully loaded 1 distinct scenario(s) from composition 43d648a2142471880bb1bf772e918491daeaf80fddac8736e48dd1a3e85b79f6.
+Converted tree to Pine value in 0 seconds.
+Computed hash in 0.02 seconds.
+Create new JS engine: 9301
+Converted tree to Pine value in 0 seconds.
+Computed hash in 0.01 seconds.
+Parsed module Basics in .63 seconds.
+Parsed module Basics contains 225_458 nodes and has hash 369bbc99
+Parsed module Tuple in .04 seconds.
+Parsed module Tuple contains 16_202 nodes and has hash d8d04f1f
+Parsed module Maybe in .04 seconds.
+Parsed module Maybe contains 16_661 nodes and has hash d6e3559e
+Parsed module List in .36 seconds.
+Parsed module List contains 174_046 nodes and has hash b3292ff0
+Parsed module Char in .07 seconds.
+Parsed module Char contains 42_692 nodes and has hash 7f260e3e
+Parsed module String in .56 seconds.
+Parsed module String contains 268_919 nodes and has hash c254cb6e
+Parsed module Result in .13 seconds.
+Parsed module Result contains 69_416 nodes and has hash e1ebdcbd
+Parsed module Json.Encode in .04 seconds.
+Parsed module Json.Encode contains 33_002 nodes and has hash caf3e137
+Parsed module Bytes in  seconds.
+Parsed module Bytes contains 4_209 nodes and has hash faca29e4
+Parsed module Bitwise in .19 seconds.
+Parsed module Bitwise contains 53_293 nodes and has hash 1c8a286c
+Parsed module Json.Decode in .61 seconds.
+Parsed module Json.Decode contains 318_535 nodes and has hash 2a72f758
+Parsed module Bytes.Decode in .39 seconds.
+Parsed module Bytes.Decode contains 194_801 nodes and has hash eaaf79ea
+Parsed module Bytes.Encode in .21 seconds.
+Parsed module Bytes.Encode contains 97_143 nodes and has hash 94b932bc
+Parsed module Elm.Kernel.Parser in .19 seconds.
+Parsed module Elm.Kernel.Parser contains 121_830 nodes and has hash 72c7a9b0
+Parsed module Dict in .39 seconds.
+Parsed module Dict contains 227_021 nodes and has hash a15d7ec6
+Parsed module Set in .12 seconds.
+Parsed module Set contains 68_658 nodes and has hash a84eca0a
+Parsed module Array in .05 seconds.
+Parsed module Array contains 36_504 nodes and has hash e67fdbee
+Parsed module Parser.Advanced in 1.37 seconds.
+Parsed module Parser.Advanced contains 529_038 nodes and has hash 19d6b10e
+Parsed module Parser in .27 seconds.
+Parsed module Parser contains 130_109 nodes and has hash e508066a
+Parsed and compiled 19 modules in 10.34 seconds, 5.67 of which for parsing.
+Decoding environment after compiling 19 modules.
+Decoded environment after compiling 19 modules in .19 seconds.
+Compiled environment for 19 modules:
+
+Comparing environments with node counts of 5_931_781 vs 5_931_781
+Compiled module Parser comparison:
+Type declarations
+Declarations count: 5 Ok
+Ok DeadEnd - b4c68f54 (3_630): hash b4c68f54
+Ok Nestable - 8fa18f74 (3_833): hash 8fa18f74
+Ok Problem - 2c7fe3f9 (23_819): hash 2c7fe3f9
+Ok Step - 06e43ee5 (2_722): hash 06e43ee5
+Ok Trailing - 780f1b9a (4_842): hash 780f1b9a
+Function declarations
+Declarations count: 38 Ok
+Ok andThen - b7bad62d (920_543): hash b7bad62d
+Ok backtrackable - 993888a5 (559_083): hash 993888a5
+Ok chompIf - 8be59f53 (1_630_889): hash 8be59f53
+Ok chompUntil - a7f58988 (2_426_610): hash a7f58988
+Ok chompUntilEndOr - 627d2e8a (1_896_245): hash 627d2e8a
+Ok chompWhile - e9f1c577 (1_409_010): hash e9f1c577
+Ok commit - 434659a6 (44_432): hash 434659a6
+Ok deadEndsToString - 02540ec4 (5_544): hash 02540ec4
+Ok end - cf6b92e3 (218_791): hash cf6b92e3
+Ok float - 607cb965 (12_306_349): hash 607cb965
+Ok getChompedString - 480d4077 (857_736): hash 480d4077
+Ok getCol - 859f8757 (42_227): hash 859f8757
+Ok getIndent - 393da156 (282_636): hash 393da156
+Ok getOffset - 531b1c63 (42_227): hash 531b1c63
+Ok getPosition - 90da7881 (67_828): hash 90da7881
+Ok getRow - 776a585d (42_227): hash 776a585d
+Ok getSource - cb3aeff2 (41_114): hash cb3aeff2
+Ok ignorer - 9c66663f (1_071_232): hash 9c66663f
+Ok int - b2ea78f0 (12_258_774): hash b2ea78f0
+Ok keeper - 083831bc (1_753_491): hash 083831bc
+Ok keyword - 93fe96ab (3_081_949): hash 93fe96ab
+Ok lazy - d66ecf42 (428_153): hash d66ecf42
+Ok lineComment - 734b35e1 (4_822_978): hash 734b35e1
+Ok loop - 72b5a6f3 (3_331_166): hash 72b5a6f3
+Ok map - 1e24eb50 (639_827): hash 1e24eb50
+Ok mapChompedString - 4965bc3b (815_606): hash 4965bc3b
+Ok multiComment - 9c592081 (12_015_592): hash 9c592081
+Ok number - 6d6afe91 (17_962_117): hash 6d6afe91
+Ok oneOf - 266d361c (833_549): hash 266d361c
+Ok problem - 38678847 (230_471): hash 38678847
+Ok run - 05ccb563 (3_103_334): hash 05ccb563
+Ok sequence - d937afb3 (12_081_899): hash d937afb3
+Ok spaces - 92a96690 (1_438_346): hash 92a96690
+Ok succeed - 325c1ee5 (44_432): hash 325c1ee5
+Ok symbol - 9948e375 (1_835_862): hash 9948e375
+Ok token - 597addcd (1_817_916): hash 597addcd
+Ok variable - 509570fc (8_204_198): hash 509570fc
+Ok withIndent - e2aec672 (899_258): hash e2aec672
+Compiled module Parser.Advanced comparison:
+Type declarations
+Declarations count: 11 Ok
+Ok Bag - f23617d8 (4_135): hash f23617d8
+Ok DeadEnd - 9b9f9461 (4_942): hash 9b9f9461
+Ok Located - 2c7a0b26 (3_630): hash 2c7a0b26
+Ok Nestable - 8fa18f74 (3_833): hash 8fa18f74
+Ok PStep - 4df58e1b (2_621): hash 4df58e1b
+Ok Parser - 7eb4245f (2_218): hash 7eb4245f
+Ok State - 60248332 (2_218): hash 60248332
+Ok Step - 06e43ee5 (2_722): hash 06e43ee5
+Ok String - dfc2029d (2_218): hash dfc2029d
+Ok Token - 4e4afb3b (2_117): hash 4e4afb3b
+Ok Trailing - 780f1b9a (4_842): hash 780f1b9a
+Function declarations
+Declarations count: 39 Ok
+Ok andThen - b7bad62d (920_543): hash b7bad62d
+Ok backtrackable - 993888a5 (559_083): hash 993888a5
+Ok changeIndent - 6798cd8d (157_339): hash 6798cd8d
+Ok chompIf - e8316104 (1_576_459): hash e8316104
+Ok chompUntil - df5ad724 (2_331_472): hash df5ad724
+Ok chompUntilEndOr - 627d2e8a (1_896_245): hash 627d2e8a
+Ok chompWhile - e9f1c577 (1_409_010): hash e9f1c577
+Ok commit - 434659a6 (44_432): hash 434659a6
+Ok end - 64b48cc2 (244_281): hash 64b48cc2
+Ok float - 6b30ebe9 (12_722_211): hash 6b30ebe9
+Ok getChompedString - 480d4077 (857_736): hash 480d4077
+Ok getCol - 859f8757 (42_227): hash 859f8757
+Ok getIndent - 393da156 (282_636): hash 393da156
+Ok getOffset - 531b1c63 (42_227): hash 531b1c63
+Ok getPosition - 90da7881 (67_828): hash 90da7881
+Ok getRow - 776a585d (42_227): hash 776a585d
+Ok getSource - cb3aeff2 (41_114): hash cb3aeff2
+Ok ignorer - f9d26223 (1_004_202): hash f9d26223
+Ok inContext - 698c591d (939_967): hash 698c591d
+Ok int - e0f52311 (12_692_574): hash e0f52311
+Ok keeper - d3ee58a4 (1_379_855): hash d3ee58a4
+Ok keyword - 552797b7 (3_011_802): hash 552797b7
+Ok lazy - d66ecf42 (428_153): hash d66ecf42
+Ok lineComment - 9464bafe (4_727_840): hash 9464bafe
+Ok loop - 5f6af99e (1_065_486): hash 5f6af99e
+Ok map - 1e24eb50 (639_827): hash 1e24eb50
+Ok mapChompedString - 4965bc3b (815_606): hash 4965bc3b
+Ok multiComment - 8e0b2dfc (11_797_185): hash 8e0b2dfc
+Ok number - 7545628e (12_396_376): hash 7545628e
+Ok oneOf - 266d361c (833_549): hash 266d361c
+Ok problem - 03bab12c (175_340): hash 03bab12c
+Ok run - d63961d4 (812_492): hash d63961d4
+Ok sequence - b7c92f8c (10_257_573): hash b7c92f8c
+Ok spaces - 92a96690 (1_438_346): hash 92a96690
+Ok succeed - 325c1ee5 (44_432): hash 325c1ee5
+Ok symbol - 4e64ff53 (1_765_816): hash 4e64ff53
+Ok token - bccc102f (1_722_778): hash bccc102f
+Ok variable - d5c0727e (7_351_545): hash d5c0727e
+Ok withIndent - 15c3a6e3 (891_395): hash 15c3a6e3
+Compiled module Result comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Result - 7ed075fd (2_419): hash 7ed075fd
+Function declarations
+Declarations count: 10 Ok
+Ok andThen - 5c8225d1 (485_721): hash 5c8225d1
+Ok fromMaybe - 5a3dc28c (113_995): hash 5a3dc28c
+Ok map - 84cdc47c (488_638): hash 84cdc47c
+Ok map2 - 71f151dd (611_610): hash 71f151dd
+Ok map3 - e163ea10 (734_582): hash e163ea10
+Ok map4 - fd507c2c (857_554): hash fd507c2c
+Ok map5 - 5316df4c (980_526): hash 5316df4c
+Ok mapError - 7247c58f (488_638): hash 7247c58f
+Ok toMaybe - 68c1c1ae (83_964): hash 68c1c1ae
+Ok withDefault - 023e84a8 (107_454): hash 023e84a8
+Compiled module Tuple comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 6 Ok
+Ok first - fc2c5033 (14_818): hash fc2c5033
+Ok mapBoth - d68b0b12 (435_018): hash d68b0b12
+Ok mapFirst - a2caab4c (403_671): hash a2caab4c
+Ok mapSecond - 50523164 (403_671): hash 50523164
+Ok pair - 8d0d1bb4 (28_422): hash 8d0d1bb4
+Ok second - cec62688 (19_252): hash cec62688
+Compiled module Basics comparison:
+Type declarations
+Declarations count: 4 Ok
+Ok Bool - e85dfe7d (1_310): hash e85dfe7d
+Ok Elm_Float - 616032e6 (4_641): hash 616032e6
+Ok Order - 6a80603c (2_822): hash 6a80603c
+Ok String - 949d10fe (4_439): hash 949d10fe
+Function declarations
+Declarations count: 31 Ok
+Ok abs - 82ad33a3 (43_952): hash 82ad33a3
+Ok add - b8e8899e (31_246): hash b8e8899e
+Ok always - 7a783705 (12_297): hash 7a783705
+Ok and - b45254c1 (30_137): hash b45254c1
+Ok apL - 0daf9831 (378_070): hash 0daf9831
+Ok apR - 695fc890 (378_070): hash 695fc890
+Ok append - 51ecb2fb (203_195): hash 51ecb2fb
+Ok clamp - 68dfaa10 (2_219_452): hash 68dfaa10
+Ok compare - 644ce62b (1_858_509): hash 644ce62b
+Ok composeL - a5090516 (409_417): hash a5090516
+Ok composeR - dcbe3a95 (409_417): hash dcbe3a95
+Ok eq - 68faaecc (1_242_597): hash 68faaecc
+Ok floor - 3f02d2c3 (4_564_663): hash 3f02d2c3
+Ok ge - 0109be33 (1_957_486): hash 0109be33
+Ok gt - 77f94ab0 (1_925_333): hash 77f94ab0
+Ok identity - eb99cb48 (12_297): hash eb99cb48
+Ok idiv - 9c70fb26 (2_778_786): hash 9c70fb26
+Ok le - 46293997 (1_957_486): hash 46293997
+Ok lt - 1a293488 (1_925_333): hash 1a293488
+Ok max - a4fd7afa (2_033_085): hash a4fd7afa
+Ok min - b1f2e7c4 (2_033_085): hash b1f2e7c4
+Ok modBy - 4a577e0d (2_778_786): hash 4a577e0d
+Ok mul - 450090ff (2_778_786): hash 450090ff
+Ok negate - 0bbee352 (86_788): hash 0bbee352
+Ok neq - e462785a (1_350_039): hash e462785a
+Ok not - c5892398 (16_831): hash c5892398
+Ok or - a77b8d55 (30_137): hash a77b8d55
+Ok pow - d07b6beb (176_694): hash d07b6beb
+Ok remainderBy - d167cf17 (2_778_786): hash d167cf17
+Ok sub - 80383603 (33_969): hash 80383603
+Ok toFloat - ac18a520 (48_178): hash ac18a520
+Compiled module Json.Encode comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Value - 1057fd0b (8_980): hash 1057fd0b
+Function declarations
+Declarations count: 10 Ok
+Ok bool - 44cdde43 (5_035): hash 44cdde43
+Ok encode - 5c52bede (6_290_447): hash 5c52bede
+Ok encodeField - 09971f00 (6_290_447): hash 09971f00
+Ok escapeChar - f42bee45 (549_690): hash f42bee45
+Ok escapeString - 5ae18750 (1_850_215): hash 5ae18750
+Ok int - 8b7ed5cc (4_934): hash 8b7ed5cc
+Ok list - c1d5c1f2 (967_905): hash c1d5c1f2
+Ok null - 138e6be5 (1_209): hash 138e6be5
+Ok object - 764ca011 (5_237): hash 764ca011
+Ok string - 116b3bc5 (5_237): hash 116b3bc5
+Compiled module Set comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Set - a8644f27 (3_127): hash a8644f27
+Function declarations
+Declarations count: 17 Ok
+Ok diff - 74b71173 (13_146_628): hash 74b71173
+Ok empty - 6d81a9d0 (4_034): hash 6d81a9d0
+Ok filter - 40465a9d (6_177_301): hash 40465a9d
+Ok foldl - 532c37c0 (1_572_374): hash 532c37c0
+Ok foldr - 4a28109c (1_646_554): hash 4a28109c
+Ok fromList - 572efd26 (4_730_838): hash 572efd26
+Ok insert - 4db57979 (4_565_426): hash 4db57979
+Ok intersect - 8a997b97 (6_646_538): hash 8a997b97
+Ok isEmpty - c549e062 (92_344): hash c549e062
+Ok map - 908553be (6_797_985): hash 908553be
+Ok member - 55e3c950 (2_876_238): hash 55e3c950
+Ok partition - 6a8a0506 (6_781_041): hash 6a8a0506
+Ok remove - 3bcf4e1b (11_840_632): hash 3bcf4e1b
+Ok singleton - 14db1499 (30_431): hash 14db1499
+Ok size - 6dbd6da9 (273_671): hash 6dbd6da9
+Ok toList - 81d54085 (239_100): hash 81d54085
+Ok union - 317536e2 (5_733_218): hash 317536e2
+Compiled module Bytes.Encode comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Encoder - ecdc4ceb (8_069): hash ecdc4ceb
+Function declarations
+Declarations count: 17 Ok
+Ok bytes - 7c96f8a9 (16_224): hash 7c96f8a9
+Ok emptyBlob - 473a0f4c (100): hash 473a0f4c
+Ok encode - 594c2d6d (1_971_364): hash 594c2d6d
+Ok encodeBlob - 67bb146e (1_942_946): hash 67bb146e
+Ok encodeCharAsBlob - bb52a635 (3_350_496): hash bb52a635
+Ok encodeCharsAsBlob - 8188772c (4_346_620): hash 8188772c
+Ok getStringWidth - ff4e4a03 (4_412_744): hash ff4e4a03
+Ok maskSingleByte - cdd3fcbf (101): hash cdd3fcbf
+Ok maskSingleByteMSB - 377096cb (101): hash 377096cb
+Ok sequence - 6df81642 (16_527): hash 6df81642
+Ok signedInt16 - d80dc87f (706_515): hash d80dc87f
+Ok signedInt32 - e43c5891 (706_515): hash e43c5891
+Ok signedInt8 - 440d9e5e (15_214): hash 440d9e5e
+Ok string - 4afe3af6 (4_417_572): hash 4afe3af6
+Ok unsignedInt16 - df4dceb1 (706_515): hash df4dceb1
+Ok unsignedInt32 - 6d29ddde (706_515): hash 6d29ddde
+Ok unsignedInt8 - 16e93673 (15_214): hash 16e93673
+Compiled module Bytes comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Bytes - 00756bc5 (2_521): hash 00756bc5
+Ok Endianness - fee4b655 (2_318): hash fee4b655
+Function declarations
+Declarations count: 1 Ok
+Ok width - 02b8a55e (62_606): hash 02b8a55e
+Compiled module Bitwise comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 7 Ok
+Ok and - 29519944 (57_555): hash 29519944
+Ok complement - 08a9e762 (26_914): hash 08a9e762
+Ok or - b3f7c329 (57_454): hash b3f7c329
+Ok shiftLeftBy - 83f99fc3 (192_425): hash 83f99fc3
+Ok shiftRightBy - e9308f13 (167_421): hash e9308f13
+Ok shiftRightZfBy - a03381d1 (307_536): hash a03381d1
+Ok xor - b409f39b (57_555): hash b409f39b
+Compiled module List comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 33 Ok
+Ok all - 9a8ad0b2 (516_870): hash 9a8ad0b2
+Ok any - 856db2a4 (516_870): hash 856db2a4
+Ok append - a504808a (31_145): hash a504808a
+Ok concat - ccbdcc75 (15_020): hash ccbdcc75
+Ok concatMap - 074bbe1e (517_877): hash 074bbe1e
+Ok cons - 2e7f9b83 (31_949): hash 2e7f9b83
+Ok drop - 7946c948 (30_943): hash 7946c948
+Ok filter - 5c372059 (665_639): hash 5c372059
+Ok filterMap - 8e2d72ad (791_737): hash 8e2d72ad
+Ok foldl - 314ec92c (858_551): hash 314ec92c
+Ok foldr - 39bfc2db (932_731): hash 39bfc2db
+Ok head - 88473dfd (76_910): hash 88473dfd
+Ok indexedMap - 5c34af61 (933_638): hash 5c34af61
+Ok intersperse - d595b882 (1_202_740): hash d595b882
+Ok isEmpty - 438bdb6c (20_457): hash 438bdb6c
+Ok length - 49610c61 (15_020): hash 49610c61
+Ok map - 8f565365 (897_150): hash 8f565365
+Ok map2 - 98da7d13 (1_149_619): hash 98da7d13
+Ok map3 - 1aa93801 (1_528_902): hash 1aa93801
+Ok maximum - b45757a8 (2_970_552): hash b45757a8
+Ok member - 9d4d40c1 (1_448_427): hash 9d4d40c1
+Ok minimum - 9f9e01ff (2_970_552): hash 9f9e01ff
+Ok partition - eb3ec14a (1_862_613): hash eb3ec14a
+Ok range - 8bc39fd9 (227_185): hash 8bc39fd9
+Ok repeat - f806a2af (212_973): hash f806a2af
+Ok reverse - ce7bf53a (15_121): hash ce7bf53a
+Ok singleton - d2887a59 (13_101): hash d2887a59
+Ok sort - c3d1df6e (6_167_925): hash c3d1df6e
+Ok sortBy - ecec0f30 (6_237_072): hash ecec0f30
+Ok sortWith - 92fc6079 (4_148_452): hash 92fc6079
+Ok sum - 459bd437 (911_759): hash 459bd437
+Ok tail - 2b31a069 (78_823): hash 2b31a069
+Ok take - 0c0b02de (30_943): hash 0c0b02de
+Compiled module Dict comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Dict - 95d84c60 (5_651): hash 95d84c60
+Ok NColor - 1aa77311 (2_722): hash 1aa77311
+Function declarations
+Declarations count: 21 Ok
+Ok diff - 8a2b4778 (13_056_416): hash 8a2b4778
+Ok empty - 2610397e (2_219): hash 2610397e
+Ok filter - 1829b2f7 (5_716_085): hash 1829b2f7
+Ok foldl - 3d3f5951 (965_601): hash 3d3f5951
+Ok foldr - eb7087ce (965_601): hash eb7087ce
+Ok fromList - 1e67187a (4_784_473): hash 1e67187a
+Ok get - e1e443a5 (2_337_497): hash e1e443a5
+Ok insert - ca2fc798 (4_483_583): hash ca2fc798
+Ok intersect - a6dd07f3 (6_556_326): hash a6dd07f3
+Ok isEmpty - 757c4fbb (63_916): hash 757c4fbb
+Ok keys - 7b20c1aa (177_915): hash 7b20c1aa
+Ok map - 28515ec4 (686_514): hash 28515ec4
+Ok member - 2383e5a6 (2_799_732): hash 2383e5a6
+Ok partition - f0f6dafc (5_849_739): hash f0f6dafc
+Ok remove - 03035f56 (11_759_896): hash 03035f56
+Ok singleton - afe59cd6 (40_415): hash afe59cd6
+Ok size - 7ddd251e (212_486): hash 7ddd251e
+Ok toList - 9e304bed (203_516): hash 9e304bed
+Ok union - 5eb4859d (5_643_006): hash 5eb4859d
+Ok update - 50960bcc (15_703_377): hash 50960bcc
+Ok values - 60c4aa08 (177_915): hash 60c4aa08
+Compiled module Maybe comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Maybe - f6169a42 (3_025): hash f6169a42
+Function declarations
+Declarations count: 4 Ok
+Ok andThen - 99865970 (460_526): hash 99865970
+Ok map - dd8e56e6 (463_645): hash dd8e56e6
+Ok map2 - 1ede3513 (561_422): hash 1ede3513
+Ok withDefault - 1c2650fd (108_060): hash 1c2650fd
+Compiled module Array comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 13 Ok
+Ok append - a504808a (31_145): hash a504808a
+Ok empty - dda26649 (100): hash dda26649
+Ok foldl - e5843001 (940_902): hash e5843001
+Ok foldr - 758834ab (1_015_082): hash 758834ab
+Ok fromList - eb99cb48 (12_297): hash eb99cb48
+Ok get - d55f06c8 (171_553): hash d55f06c8
+Ok isEmpty - 9c599f64 (16_830): hash 9c599f64
+Ok length - 49610c61 (15_020): hash 49610c61
+Ok map - 675a5195 (964_180): hash 675a5195
+Ok push - 4c343d2a (31_949): hash 4c343d2a
+Ok repeat - 927e4e39 (280_003): hash 927e4e39
+Ok set - ab5c258f (157_042): hash ab5c258f
+Ok toList - eb99cb48 (12_297): hash eb99cb48
+Compiled module Bytes.Decode comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Decoder - 093fb106 (2_319): hash 093fb106
+Ok Step - 06e43ee5 (2_722): hash 06e43ee5
+Function declarations
+Declarations count: 20 Ok
+Ok andThen - e6bdf36e (707_769): hash e6bdf36e
+Ok decode - 5b19f92c (490_761): hash 5b19f92c
+Ok decodeBlobAsChars - 7cb2e3d6 (832_022): hash 7cb2e3d6
+Ok decodeBlobAsCharsRec - cc9d3e9a (805_012): hash cc9d3e9a
+Ok decodeUtf8Char - 53d5baeb (584_380): hash 53d5baeb
+Ok loop - 3e8e7210 (837_299): hash 3e8e7210
+Ok loopHelp - 69d2880b (785_198): hash 69d2880b
+Ok map - 87d18724 (532_077): hash 87d18724
+Ok map2 - f8092dac (729_543): hash f8092dac
+Ok map3 - 48e1192b (916_832): hash 48e1192b
+Ok map4 - 7bb2f257 (1_114_798): hash 7bb2f257
+Ok map5 - 76bdfcb4 (1_305_712): hash 76bdfcb4
+Ok signedInt16 - 9eaa3d0b (276_760): hash 9eaa3d0b
+Ok signedInt32 - 6b0caa14 (276_764): hash 6b0caa14
+Ok signedInt8 - 7e9a6635 (183_038): hash 7e9a6635
+Ok string - 9a8d097c (997_817): hash 9a8d097c
+Ok succeed - 4bfbc6c1 (45_544): hash 4bfbc6c1
+Ok unsignedInt16 - 54d6daab (200_966): hash 54d6daab
+Ok unsignedInt32 - 3f5588f6 (200_966): hash 3f5588f6
+Ok unsignedInt8 - 84f6fd7d (74_081): hash 84f6fd7d
+Compiled module String comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Elm_Float - 616032e6 (4_641): hash 616032e6
+Ok String - dfc2029d (2_218): hash dfc2029d
+Function declarations
+Declarations count: 34 Ok
+Ok any - d0ae193e (556_683): hash d0ae193e
+Ok append - f4458b30 (53_418): hash f4458b30
+Ok concat - 6555059c (298_348): hash 6555059c
+Ok cons - ac4bb0f3 (44_746): hash ac4bb0f3
+Ok contains - ffe23724 (219_536): hash ffe23724
+Ok dropLeft - de79d90f (43_740): hash de79d90f
+Ok dropRight - 3ca5a57f (328_976): hash 3ca5a57f
+Ok endsWith - 6164c18f (455_260): hash 6164c18f
+Ok foldr - c7b946d7 (1_024_558): hash c7b946d7
+Ok fromChar - 4b755389 (16_422): hash 4b755389
+Ok fromInt - 5ca54286 (3_521_522): hash 5ca54286
+Ok fromList - 4c8c729c (15_618): hash 4c8c729c
+Ok isEmpty - 19a6880c (26_306): hash 19a6880c
+Ok join - 58b0613b (264_184): hash 58b0613b
+Ok left - da216b75 (43_740): hash da216b75
+Ok length - 38707d1a (24_496): hash 38707d1a
+Ok lines - 88a7f3ea (894_627): hash 88a7f3ea
+Ok padLeft - 105b3124 (345_519): hash 105b3124
+Ok repeat - 341b1d37 (295_523): hash 341b1d37
+Ok replace - ca52cb90 (1_931_282): hash ca52cb90
+Ok reverse - f550f980 (27_918): hash f550f980
+Ok right - 9a809e45 (367_777): hash 9a809e45
+Ok slice - 445bc72f (255_193): hash 445bc72f
+Ok split - bfd6ecf8 (1_558_243): hash bfd6ecf8
+Ok startsWith - 809777ac (76_407): hash 809777ac
+Ok toFloat - 64fff937 (3_194_836): hash 64fff937
+Ok toInt - 22e0be6f (1_340_099): hash 22e0be6f
+Ok toList - b15f6e0c (21_773): hash b15f6e0c
+Ok toLower - 6aa8c5d9 (1_043_802): hash 6aa8c5d9
+Ok toUpper - 0faa0369 (1_046_525): hash 0faa0369
+Ok trim - 9abaa431 (690_210): hash 9abaa431
+Ok trimLeft - f51b0f07 (648_890): hash f51b0f07
+Ok trimRight - 9ed048fe (655_144): hash 9ed048fe
+Ok uncons - 059e6844 (143_736): hash 059e6844
+Compiled module Char comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 11 Ok
+Ok fromCode - 5496e466 (16_731): hash 5496e466
+Ok isAlpha - 82f4bee9 (101_196): hash 82f4bee9
+Ok isAlphaNum - 664e3ebf (93_741): hash 664e3ebf
+Ok isDigit - d5f16980 (47_776): hash d5f16980
+Ok isHexDigit - 80a2ad39 (121_458): hash 80a2ad39
+Ok isLower - 8dd306f8 (47_776): hash 8dd306f8
+Ok isOctDigit - a4029312 (47_776): hash a4029312
+Ok isUpper - ba5b8635 (47_776): hash ba5b8635
+Ok toCode - 0817a8fd (19_656): hash 0817a8fd
+Ok toLower - b6a7dc5d (81_139): hash b6a7dc5d
+Ok toUpper - 92085d6f (83_862): hash 92085d6f
+Compiled module Elm.Kernel.Parser comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 14 Ok
+Ok chompBase10 - e2cf64b1 (213_179): hash e2cf64b1
+Ok chompBase10Helper - 32d0e0b8 (182_842): hash 32d0e0b8
+Ok chompWhileHelp - 39ebc799 (744_562): hash 39ebc799
+Ok consumeBase - 74f436a5 (487_246): hash 74f436a5
+Ok consumeBase16 - b308b249 (542_158): hash b308b249
+Ok consumeBase16Helper - 80234de8 (510_712): hash 80234de8
+Ok consumeBaseHelper - 33b1a638 (440_479): hash 33b1a638
+Ok countOffsetsInString - 99b460d8 (412_055): hash 99b460d8
+Ok findSubString - f55f91a0 (1_167_884): hash f55f91a0
+Ok indexOf - bd06b6c2 (250_575): hash bd06b6c2
+Ok isAsciiCode - d28dfbe8 (56_645): hash d28dfbe8
+Ok isSubChar - 9600022b (517_062): hash 9600022b
+Ok isSubString - c8580d22 (851_319): hash c8580d22
+Ok newlineChar - 4c0d52d1 (101): hash 4c0d52d1
+Compiled module Json.Decode comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Error - 8bc70f20 (4_740): hash 8bc70f20
+Function declarations
+Declarations count: 23 Ok
+Ok andThen - 8eb7f441 (581_977): hash 8eb7f441
+Ok bool - 5c2b557a (420_898): hash 5c2b557a
+Ok decodeString - bb0dd846 (22_248_126): hash bb0dd846
+Ok decodeValue - 0daf9831 (378_070): hash 0daf9831
+Ok fail - bec972cd (34_058): hash bec972cd
+Ok field - 71aba2b6 (1_371_874): hash 71aba2b6
+Ok int - 0c5f4dca (420_797): hash 0c5f4dca
+Ok lazy - 3deec5d7 (379_177): hash 3deec5d7
+Ok list - b1ccc7c1 (838_188): hash b1ccc7c1
+Ok map - c11a56fd (554_252): hash c11a56fd
+Ok map2 - 46c93642 (741_425): hash 46c93642
+Ok map3 - df674d25 (917_710): hash df674d25
+Ok map4 - b7b09b5a (1_153_675): hash b7b09b5a
+Ok map5 - 5fe64cde (1_676_300): hash 5fe64cde
+Ok map6 - 3bc811d7 (2_033_417): hash 3bc811d7
+Ok map7 - 81299043 (2_421_176): hash 81299043
+Ok map8 - affa2d93 (2_839_577): hash affa2d93
+Ok null - ea747a56 (417_969): hash ea747a56
+Ok nullable - 5b230290 (520_178): hash 5b230290
+Ok oneOf - 7743ef19 (803_103): hash 7743ef19
+Ok string - f45305ca (421_100): hash f45305ca
+Ok succeed - 2ce7d20c (15_214): hash 2ce7d20c
+Ok value - fcc31ac2 (4_328): hash fcc31ac2
+Compiled environment for 19 modules:
+
+Compiled environment has size of 597_885_931 and contains 5_931_781 nodes
+Found 19 modules:
+Modules: Basics, Tuple, Maybe, List, Char, String, Result, Json.Encode, Bytes, Bitwise, Json.Decode, Bytes.Decode, Bytes.Encode, Elm.Kernel.Parser, Dict, Set, Array, Parser.Advanced, Parser
+Module Basics has size of 54_525_641 and contains 540_964 nodes
+Module Basics contains 4 type declarations and 31 function declarations
+Module Tuple has size of 1_310_091 and contains 12_997 nodes
+Module Tuple contains 0 type declarations and 6 function declarations
+Module Maybe has size of 1_600_808 and contains 15_881 nodes
+Module Maybe contains 1 type declarations and 4 function declarations
+Module List has size of 38_088_113 and contains 377_885 nodes
+Module List contains 0 type declarations and 33 function declarations
+Module Char has size of 719_873 and contains 7_141 nodes
+Module Char contains 0 type declarations and 11 function declarations
+Module String has size of 21_512_648 and contains 213_435 nodes
+Module String contains 2 type declarations and 34 function declarations
+Module Result has size of 4_964_168 and contains 49_250 nodes
+Module Result contains 1 type declarations and 10 function declarations
+Module Json.Encode has size of 15_988_807 and contains 158_631 nodes
+Module Json.Encode contains 1 type declarations and 10 function declarations
+Module Bytes has size of 70_165 and contains 695 nodes
+Module Bytes contains 2 type declarations and 1 function declarations
+Module Bitwise has size of 873_915 and contains 8_669 nodes
+Module Bitwise contains 0 type declarations and 7 function declarations
+Module Json.Decode has size of 41_214_854 and contains 408_906 nodes
+Module Json.Decode contains 1 type declarations and 23 function declarations
+Module Bytes.Decode has size of 11_925_969 and contains 118_321 nodes
+Module Bytes.Decode contains 2 type declarations and 20 function declarations
+Module Bytes.Encode has size of 23_363_151 and contains 231_792 nodes
+Module Bytes.Encode contains 1 type declarations and 17 function declarations
+Module Elm.Kernel.Parser has size of 6_398_303 and contains 63_478 nodes
+Module Elm.Kernel.Parser contains 0 type declarations and 14 function declarations
+Module Dict has size of 82_212_633 and contains 815_646 nodes
+Module Dict contains 2 type declarations and 21 function declarations
+Module Set has size of 73_171_886 and contains 725_954 nodes
+Module Set contains 1 type declarations and 17 function declarations
+Module Array has size of 3_657_867 and contains 36_290 nodes
+Module Array contains 0 type declarations and 13 function declarations
+Module Parser.Advanced has size of 101_897_541 and contains 1_010_948 nodes
+Module Parser.Advanced contains 11 type declarations and 39 function declarations
+Module Parser has size of 114_371_054 and contains 1_134_697 nodes
+Module Parser contains 5 type declarations and 38 function declarations
+Frame instructions count: Average: 15 max: 217
+
+Returning after 10_422 total instructions performed.
+
+Returning after 1_002 total invocations performed.
+Max stack depth in frames: 78
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 24 max: 306
+
+Returning after 257_458 total instructions performed.
+
+Returning after 18_069 total invocations performed.
+Max stack depth in frames: 122
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+1 + 3
+Frame instructions count: Average: 2 max: 2
+
+Returning after 2 total instructions performed.
+
+Returning after 0 total invocations performed.
+Max stack depth in frames: 1
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval ( s):
+1 + 3
+
+Warmup completed in 14.97 seconds.
+Converted tree to Pine value in 0 seconds.
+Computed hash in 0.01 seconds.
+Converted tree to Pine value in 0 seconds.
+Computed hash in 0.01 seconds.
+Converted tree to Pine value in 0 seconds.
+Computed hash in 0.01 seconds.
+Create new JS engine: 9302
+Parsed module Basics in  seconds.
+Parsed module Basics contains 225_458 nodes and has hash 369bbc99
+Parsed module Tuple in  seconds.
+Parsed module Tuple contains 16_202 nodes and has hash d8d04f1f
+Parsed module Maybe in  seconds.
+Parsed module Maybe contains 16_661 nodes and has hash d6e3559e
+Parsed module List in  seconds.
+Parsed module List contains 174_046 nodes and has hash b3292ff0
+Parsed module Char in  seconds.
+Parsed module Char contains 42_692 nodes and has hash 7f260e3e
+Parsed module String in  seconds.
+Parsed module String contains 268_919 nodes and has hash c254cb6e
+Parsed module Result in  seconds.
+Parsed module Result contains 69_416 nodes and has hash e1ebdcbd
+Parsed module Json.Encode in  seconds.
+Parsed module Json.Encode contains 33_002 nodes and has hash caf3e137
+Parsed module Elm.Syntax.ModuleName in  seconds.
+Parsed module Elm.Syntax.ModuleName contains 1_896 nodes and has hash 472e6657
+Parsed module Elm.Syntax.Range in .07 seconds.
+Parsed module Elm.Syntax.Range contains 30_142 nodes and has hash f54a711c
+Parsed module Hex in .09 seconds.
+Parsed module Hex contains 66_605 nodes and has hash 722d148d
+Parsed module Elm.Syntax.Documentation in  seconds.
+Parsed module Elm.Syntax.Documentation contains 1_482 nodes and has hash 0a1c7aa1
+Parsed module Elm.Syntax.Comments in .01 seconds.
+Parsed module Elm.Syntax.Comments contains 1_560 nodes and has hash 2e07ef93
+Parsed module List.Extra in .05 seconds.
+Parsed module List.Extra contains 21_373 nodes and has hash b57f7eff
+Parsed module Bytes in  seconds.
+Parsed module Bytes contains 4_209 nodes and has hash faca29e4
+Parsed module Bitwise in  seconds.
+Parsed module Bitwise contains 53_293 nodes and has hash 1c8a286c
+Parsed module Json.Decode in  seconds.
+Parsed module Json.Decode contains 318_535 nodes and has hash 2a72f758
+Parsed module Elm.Syntax.Node in .05 seconds.
+Parsed module Elm.Syntax.Node contains 19_579 nodes and has hash 2c2dd999
+Parsed module Bytes.Decode in  seconds.
+Parsed module Bytes.Decode contains 194_801 nodes and has hash eaaf79ea
+Parsed module Bytes.Encode in  seconds.
+Parsed module Bytes.Encode contains 97_143 nodes and has hash 94b932bc
+Parsed module Elm.Kernel.Parser in  seconds.
+Parsed module Elm.Kernel.Parser contains 121_830 nodes and has hash 72c7a9b0
+Parsed module Elm.Parser.State in .09 seconds.
+Parsed module Elm.Parser.State contains 27_192 nodes and has hash 52392dd9
+Parsed module Elm.Syntax.Infix in .01 seconds.
+Parsed module Elm.Syntax.Infix contains 5_802 nodes and has hash b429be3c
+Parsed module Elm.Syntax.Exposing in .03 seconds.
+Parsed module Elm.Syntax.Exposing contains 19_180 nodes and has hash ebd6c7bd
+Parsed module Dict in  seconds.
+Parsed module Dict contains 227_021 nodes and has hash a15d7ec6
+Parsed module Elm.Syntax.Pattern in .04 seconds.
+Parsed module Elm.Syntax.Pattern contains 27_621 nodes and has hash aa883742
+Parsed module Elm.Syntax.TypeAnnotation in .02 seconds.
+Parsed module Elm.Syntax.TypeAnnotation contains 11_451 nodes and has hash 1d5a124a
+Parsed module Set in  seconds.
+Parsed module Set contains 68_658 nodes and has hash a84eca0a
+Parsed module Elm.Syntax.Signature in .01 seconds.
+Parsed module Elm.Syntax.Signature contains 3_924 nodes and has hash 44d45df5
+Parsed module Elm.Syntax.Module in .05 seconds.
+Parsed module Elm.Syntax.Module contains 24_158 nodes and has hash 31082df8
+Parsed module Elm.Syntax.Import in .01 seconds.
+Parsed module Elm.Syntax.Import contains 5_583 nodes and has hash 78311747
+Parsed module Elm.Syntax.Type in .01 seconds.
+Parsed module Elm.Syntax.Type contains 8_685 nodes and has hash 93c2cdc2
+Parsed module Elm.Syntax.TypeAlias in .02 seconds.
+Parsed module Elm.Syntax.TypeAlias contains 6_417 nodes and has hash c8ab150e
+Parsed module Array in  seconds.
+Parsed module Array contains 36_504 nodes and has hash e67fdbee
+Parsed module Parser.Advanced in  seconds.
+Parsed module Parser.Advanced contains 529_038 nodes and has hash 19d6b10e
+Parsed module Elm.Operators in .1 seconds.
+Parsed module Elm.Operators contains 35_709 nodes and has hash 04eceee4
+Parsed module Elm.Syntax.Expression in .1 seconds.
+Parsed module Elm.Syntax.Expression contains 62_849 nodes and has hash 87badbd8
+Parsed module Parser in  seconds.
+Parsed module Parser contains 130_109 nodes and has hash e508066a
+Parsed module Combine in .24 seconds.
+Parsed module Combine contains 152_668 nodes and has hash 72d4af24
+Parsed module Elm.Parser.Whitespace in .04 seconds.
+Parsed module Elm.Parser.Whitespace contains 14_620 nodes and has hash 5bb7a78b
+Parsed module Elm.Syntax.Declaration in .02 seconds.
+Parsed module Elm.Syntax.Declaration contains 9_704 nodes and has hash 8c1bd9ab
+Parsed module Combine.Char in .05 seconds.
+Parsed module Combine.Char contains 17_198 nodes and has hash 4a6942ef
+Parsed module Elm.Parser.Node in .03 seconds.
+Parsed module Elm.Parser.Node contains 8_869 nodes and has hash 21c08511
+Parsed module Elm.Parser.Numbers in .03 seconds.
+Parsed module Elm.Parser.Numbers contains 16_180 nodes and has hash 4871f959
+Parsed module Elm.Parser.Tokens in .3 seconds.
+Parsed module Elm.Parser.Tokens contains 123_850 nodes and has hash c45e719d
+Parsed module Elm.Parser.Ranges in .01 seconds.
+Parsed module Elm.Parser.Ranges contains 7_298 nodes and has hash 94e5de4e
+Parsed module Elm.Parser.CombineTestUtil in .04 seconds.
+Parsed module Elm.Parser.CombineTestUtil contains 14_103 nodes and has hash fdad59e0
+Parsed module Elm.Parser.Comments in .08 seconds.
+Parsed module Elm.Parser.Comments contains 18_691 nodes and has hash 52c9c5c0
+Parsed module Elm.Parser.Base in .02 seconds.
+Parsed module Elm.Parser.Base contains 15_147 nodes and has hash 502de434
+Parsed module Elm.Parser.Layout in .13 seconds.
+Parsed module Elm.Parser.Layout contains 42_048 nodes and has hash ee0d4a2a
+Parsed module Elm.Syntax.File in .01 seconds.
+Parsed module Elm.Syntax.File contains 7_594 nodes and has hash 64400a8e
+Parsed module Elm.Internal.RawFile in .01 seconds.
+Parsed module Elm.Internal.RawFile contains 3_391 nodes and has hash da872bf3
+Parsed module Elm.RawFile in .03 seconds.
+Parsed module Elm.RawFile contains 9_342 nodes and has hash ad36c9ad
+Parsed module Elm.Parser.Expose in .05 seconds.
+Parsed module Elm.Parser.Expose contains 35_291 nodes and has hash 0211dca7
+Parsed module Elm.Parser.TypeAnnotation in .3 seconds.
+Parsed module Elm.Parser.TypeAnnotation contains 92_968 nodes and has hash 832ca4b3
+Parsed module Elm.Interface in .18 seconds.
+Parsed module Elm.Interface contains 82_147 nodes and has hash 28f136a9
+Parsed module Elm.Parser.Patterns in .2 seconds.
+Parsed module Elm.Parser.Patterns contains 70_943 nodes and has hash bd0d1855
+Parsed module Elm.Dependency in .01 seconds.
+Parsed module Elm.Dependency contains 5_628 nodes and has hash eef7dfd8
+Parsed module Elm.Parser.Modules in .16 seconds.
+Parsed module Elm.Parser.Modules contains 54_140 nodes and has hash bf01f9cb
+Parsed module Elm.Parser.Imports in .05 seconds.
+Parsed module Elm.Parser.Imports contains 35_513 nodes and has hash 41695ece
+Parsed module Elm.Processing in .83 seconds.
+Parsed module Elm.Processing contains 192_488 nodes and has hash 2f006e84
+Parsed module Elm.Parser.Typings in .12 seconds.
+Parsed module Elm.Parser.Typings contains 62_861 nodes and has hash 9d106296
+Parsed module Elm.Parser.Expression in .48 seconds.
+Parsed module Elm.Parser.Expression contains 286_399 nodes and has hash b4bec217
+Parsed module Elm.Parser.Declarations in .11 seconds.
+Parsed module Elm.Parser.Declarations contains 38_785 nodes and has hash 83dc6af6
+Parsed module Elm.Parser.File in .04 seconds.
+Parsed module Elm.Parser.File contains 16_926 nodes and has hash aea27dc7
+Parsed module Elm.Parser in .04 seconds.
+Parsed module Elm.Parser contains 17_063 nodes and has hash d8642edd
+Parsed and compiled 66 modules in 42.04 seconds, 4.34 of which for parsing.
+Decoding environment after compiling 66 modules.
+Decoded environment after compiling 66 modules in .14 seconds.
+Compiled environment for 66 modules:
+
+Comparing environments with node counts of 2_535_410_441 vs 2_535_410_441
+Compiled module Combine.Char comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 3 Ok
+Ok anyChar - cc43ee74 (5_772_310): hash cc43ee74
+Ok char - cdfdacd6 (6_424_483): hash cdfdacd6
+Ok oneOf - fd0482c3 (7_924_120): hash fd0482c3
+Compiled module Elm.Parser.State comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok State - 731cb80c (2_117): hash 731cb80c
+Function declarations
+Declarations count: 7 Ok
+Ok addComment - 49904662 (854_942): hash 49904662
+Ok emptyState - 3b435b2f (4_330): hash 3b435b2f
+Ok expectedColumn - 0583d314 (4_740_870): hash 0583d314
+Ok getComments - d544a0f9 (288_796): hash d544a0f9
+Ok popIndent - 65d717d9 (821_685): hash 65d717d9
+Ok pushColumn - 646dd35a (898_684): hash 646dd35a
+Ok storedColumns - 0473f37f (285_770): hash 0473f37f
+Compiled module Elm.Parser.Expression comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 2 Ok
+Ok expression - c787c8ea (3_314_940_522): hash c787c8ea
+Ok function - d30244a6 (3_842_097_117): hash d30244a6
+Compiled module Elm.Parser.Comments comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 2 Ok
+Ok multilineComment - dae10f7d (48_853_361): hash dae10f7d
+Ok singleLineComment - c224fe9b (31_389_598): hash c224fe9b
+Compiled module Elm.Internal.RawFile comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok RawFile - ced91052 (1_915): hash ced91052
+Function declarations
+Declarations count: 1 Ok
+Ok fromFile - 4275d973 (4_429): hash 4275d973
+Compiled module Parser comparison:
+Type declarations
+Declarations count: 5 Ok
+Ok DeadEnd - b4c68f54 (3_630): hash b4c68f54
+Ok Nestable - 8fa18f74 (3_833): hash 8fa18f74
+Ok Problem - 2c7fe3f9 (23_819): hash 2c7fe3f9
+Ok Step - 06e43ee5 (2_722): hash 06e43ee5
+Ok Trailing - 780f1b9a (4_842): hash 780f1b9a
+Function declarations
+Declarations count: 38 Ok
+Ok andThen - b7bad62d (920_543): hash b7bad62d
+Ok backtrackable - 993888a5 (559_083): hash 993888a5
+Ok chompIf - 8be59f53 (1_630_889): hash 8be59f53
+Ok chompUntil - a7f58988 (2_426_610): hash a7f58988
+Ok chompUntilEndOr - 627d2e8a (1_896_245): hash 627d2e8a
+Ok chompWhile - e9f1c577 (1_409_010): hash e9f1c577
+Ok commit - 434659a6 (44_432): hash 434659a6
+Ok deadEndsToString - 02540ec4 (5_544): hash 02540ec4
+Ok end - cf6b92e3 (218_791): hash cf6b92e3
+Ok float - 607cb965 (12_306_349): hash 607cb965
+Ok getChompedString - 480d4077 (857_736): hash 480d4077
+Ok getCol - 859f8757 (42_227): hash 859f8757
+Ok getIndent - 393da156 (282_636): hash 393da156
+Ok getOffset - 531b1c63 (42_227): hash 531b1c63
+Ok getPosition - 90da7881 (67_828): hash 90da7881
+Ok getRow - 776a585d (42_227): hash 776a585d
+Ok getSource - cb3aeff2 (41_114): hash cb3aeff2
+Ok ignorer - 9c66663f (1_071_232): hash 9c66663f
+Ok int - b2ea78f0 (12_258_774): hash b2ea78f0
+Ok keeper - 083831bc (1_753_491): hash 083831bc
+Ok keyword - 93fe96ab (3_081_949): hash 93fe96ab
+Ok lazy - d66ecf42 (428_153): hash d66ecf42
+Ok lineComment - 734b35e1 (4_822_978): hash 734b35e1
+Ok loop - 72b5a6f3 (3_331_166): hash 72b5a6f3
+Ok map - 1e24eb50 (639_827): hash 1e24eb50
+Ok mapChompedString - 4965bc3b (815_606): hash 4965bc3b
+Ok multiComment - 9c592081 (12_015_592): hash 9c592081
+Ok number - 6d6afe91 (17_962_117): hash 6d6afe91
+Ok oneOf - 266d361c (833_549): hash 266d361c
+Ok problem - 38678847 (230_471): hash 38678847
+Ok run - 05ccb563 (3_103_334): hash 05ccb563
+Ok sequence - d937afb3 (12_081_899): hash d937afb3
+Ok spaces - 92a96690 (1_438_346): hash 92a96690
+Ok succeed - 325c1ee5 (44_432): hash 325c1ee5
+Ok symbol - 9948e375 (1_835_862): hash 9948e375
+Ok token - 597addcd (1_817_916): hash 597addcd
+Ok variable - 509570fc (8_204_198): hash 509570fc
+Ok withIndent - e2aec672 (899_258): hash e2aec672
+Compiled module Elm.Parser.Tokens comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok MultilineStringLiteralLoopState - c754bd39 (4_236): hash c754bd39
+Ok StringLiteralLoopState - cf477d92 (3_429): hash cf477d92
+Function declarations
+Declarations count: 17 Ok
+Ok asToken - 1870f447 (5_108_363): hash 1870f447
+Ok caseToken - cd95a868 (3_502_342): hash cd95a868
+Ok characterLiteral - 4ff68342 (89_230_523): hash 4ff68342
+Ok elseToken - 0e66242b (3_502_342): hash 0e66242b
+Ok exposingToken - f6a9982b (3_502_746): hash f6a9982b
+Ok functionName - a08aa40e (9_738_593): hash a08aa40e
+Ok ifToken - 6bc9733e (3_502_140): hash 6bc9733e
+Ok importToken - fa95bd87 (5_109_171): hash fa95bd87
+Ok infixOperatorToken - f47ce7ee (36_758_680): hash f47ce7ee
+Ok moduleToken - 6bab1997 (3_502_544): hash 6bab1997
+Ok multiLineStringLiteral - d5a2c494 (42_213_808): hash d5a2c494
+Ok ofToken - 40804730 (3_502_140): hash 40804730
+Ok portToken - a51f0627 (3_502_342): hash a51f0627
+Ok prefixOperatorToken - 92f20dcc (36_759_084): hash 92f20dcc
+Ok stringLiteral - d7aa1b10 (40_446_111): hash d7aa1b10
+Ok thenToken - 8fc79a41 (3_502_342): hash 8fc79a41
+Ok typeName - 9da5fca9 (9_738_593): hash 9da5fca9
+Compiled module Elm.Parser.TypeAnnotation comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Mode - e4a41a3b (2_823): hash e4a41a3b
+Function declarations
+Declarations count: 2 Ok
+Ok typeAnnotation - 0c583103 (873_354_415): hash 0c583103
+Ok typeAnnotationNonGreedy - 4adcab42 (8_378_440_074): hash 4adcab42
+Compiled module Elm.Syntax.Module comparison:
+Type declarations
+Declarations count: 3 Ok
+Ok DefaultModuleData - 52084de3 (4_439): hash 52084de3
+Ok EffectModuleData - 8f34bfd5 (6_558): hash 8f34bfd5
+Ok Module - 507d6f1a (5_650): hash 507d6f1a
+Function declarations
+Declarations count: 4 Ok
+Ok exposingList - ecb94088 (978_589): hash ecb94088
+Ok isEffectModule - b2ef4845 (24_190): hash b2ef4845
+Ok isPortModule - 8242961d (23_988): hash 8242961d
+Ok moduleName - 2e36caf4 (977_377): hash 2e36caf4
+Compiled module Elm.Parser comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 2 Ok
+Ok parse - a7202bcc (55_149_525_562): hash a7202bcc
+Ok parseToFile - f91e39a2 (55_148_885_735): hash f91e39a2
+Compiled module Elm.Parser.Numbers comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 2 Ok
+Ok forgivingNumber - ee575a21 (21_019_680): hash ee575a21
+Ok number - eab0e161 (20_395_891): hash eab0e161
+Compiled module Parser.Advanced comparison:
+Type declarations
+Declarations count: 11 Ok
+Ok Bag - f23617d8 (4_135): hash f23617d8
+Ok DeadEnd - 9b9f9461 (4_942): hash 9b9f9461
+Ok Located - 2c7a0b26 (3_630): hash 2c7a0b26
+Ok Nestable - 8fa18f74 (3_833): hash 8fa18f74
+Ok PStep - 4df58e1b (2_621): hash 4df58e1b
+Ok Parser - 7eb4245f (2_218): hash 7eb4245f
+Ok State - 60248332 (2_218): hash 60248332
+Ok Step - 06e43ee5 (2_722): hash 06e43ee5
+Ok String - dfc2029d (2_218): hash dfc2029d
+Ok Token - 4e4afb3b (2_117): hash 4e4afb3b
+Ok Trailing - 780f1b9a (4_842): hash 780f1b9a
+Function declarations
+Declarations count: 39 Ok
+Ok andThen - b7bad62d (920_543): hash b7bad62d
+Ok backtrackable - 993888a5 (559_083): hash 993888a5
+Ok changeIndent - 6798cd8d (157_339): hash 6798cd8d
+Ok chompIf - e8316104 (1_576_459): hash e8316104
+Ok chompUntil - df5ad724 (2_331_472): hash df5ad724
+Ok chompUntilEndOr - 627d2e8a (1_896_245): hash 627d2e8a
+Ok chompWhile - e9f1c577 (1_409_010): hash e9f1c577
+Ok commit - 434659a6 (44_432): hash 434659a6
+Ok end - 64b48cc2 (244_281): hash 64b48cc2
+Ok float - 6b30ebe9 (12_722_211): hash 6b30ebe9
+Ok getChompedString - 480d4077 (857_736): hash 480d4077
+Ok getCol - 859f8757 (42_227): hash 859f8757
+Ok getIndent - 393da156 (282_636): hash 393da156
+Ok getOffset - 531b1c63 (42_227): hash 531b1c63
+Ok getPosition - 90da7881 (67_828): hash 90da7881
+Ok getRow - 776a585d (42_227): hash 776a585d
+Ok getSource - cb3aeff2 (41_114): hash cb3aeff2
+Ok ignorer - f9d26223 (1_004_202): hash f9d26223
+Ok inContext - 698c591d (939_967): hash 698c591d
+Ok int - e0f52311 (12_692_574): hash e0f52311
+Ok keeper - d3ee58a4 (1_379_855): hash d3ee58a4
+Ok keyword - 552797b7 (3_011_802): hash 552797b7
+Ok lazy - d66ecf42 (428_153): hash d66ecf42
+Ok lineComment - 9464bafe (4_727_840): hash 9464bafe
+Ok loop - 5f6af99e (1_065_486): hash 5f6af99e
+Ok map - 1e24eb50 (639_827): hash 1e24eb50
+Ok mapChompedString - 4965bc3b (815_606): hash 4965bc3b
+Ok multiComment - 8e0b2dfc (11_797_185): hash 8e0b2dfc
+Ok number - 7545628e (12_396_376): hash 7545628e
+Ok oneOf - 266d361c (833_549): hash 266d361c
+Ok problem - 03bab12c (175_340): hash 03bab12c
+Ok run - d63961d4 (812_492): hash d63961d4
+Ok sequence - b7c92f8c (10_257_573): hash b7c92f8c
+Ok spaces - 92a96690 (1_438_346): hash 92a96690
+Ok succeed - 325c1ee5 (44_432): hash 325c1ee5
+Ok symbol - 4e64ff53 (1_765_816): hash 4e64ff53
+Ok token - bccc102f (1_722_778): hash bccc102f
+Ok variable - d5c0727e (7_351_545): hash d5c0727e
+Ok withIndent - 15c3a6e3 (891_395): hash 15c3a6e3
+Compiled module Elm.Syntax.Comments comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 0 Ok
+Compiled module Elm.Syntax.Expression comparison:
+Type declarations
+Declarations count: 7 Ok
+Ok CaseBlock - 0061da9b (3_732): hash 0061da9b
+Ok Expression - e21384b8 (38_353): hash e21384b8
+Ok Function - 187bd0b5 (5_650): hash 187bd0b5
+Ok FunctionImplementation - 53fa679e (4_640): hash 53fa679e
+Ok Lambda - a35db0f8 (3_631): hash a35db0f8
+Ok LetBlock - 28ed992b (4_439): hash 28ed992b
+Ok LetDeclaration - 5d65a4a9 (4_641): hash 5d65a4a9
+Function declarations
+Declarations count: 6 Ok
+Ok functionRange - e5ada6fa (9_277_621): hash e5ada6fa
+Ok isCase - fbddb85a (24_392): hash fbddb85a
+Ok isIfElse - 12a55b2d (23_685): hash 12a55b2d
+Ok isLambda - 2525c16a (24_594): hash 2525c16a
+Ok isLet - 53a54d1c (24_291): hash 53a54d1c
+Ok isOperatorApplication - ea52106e (24_897): hash ea52106e
+Compiled module Result comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Result - 7ed075fd (2_419): hash 7ed075fd
+Function declarations
+Declarations count: 10 Ok
+Ok andThen - 5c8225d1 (485_721): hash 5c8225d1
+Ok fromMaybe - 5a3dc28c (113_995): hash 5a3dc28c
+Ok map - 84cdc47c (488_638): hash 84cdc47c
+Ok map2 - 71f151dd (611_610): hash 71f151dd
+Ok map3 - e163ea10 (734_582): hash e163ea10
+Ok map4 - fd507c2c (857_554): hash fd507c2c
+Ok map5 - 5316df4c (980_526): hash 5316df4c
+Ok mapError - 7247c58f (488_638): hash 7247c58f
+Ok toMaybe - 68c1c1ae (83_964): hash 68c1c1ae
+Ok withDefault - 023e84a8 (107_454): hash 023e84a8
+Compiled module Elm.Syntax.Infix comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Infix - 602add00 (5_952): hash 602add00
+Ok InfixDirection - 22b74477 (3_428): hash 22b74477
+Function declarations
+Declarations count: 0 Ok
+Compiled module Elm.Parser.Modules comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 1 Ok
+Ok moduleDefinition - c9e1d3e9 (25_578_856_208): hash c9e1d3e9
+Compiled module Elm.Syntax.TypeAlias comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok TypeAlias - 41f7b78d (6_356): hash 41f7b78d
+Function declarations
+Declarations count: 0 Ok
+Compiled module Tuple comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 6 Ok
+Ok first - fc2c5033 (14_818): hash fc2c5033
+Ok mapBoth - d68b0b12 (435_018): hash d68b0b12
+Ok mapFirst - a2caab4c (403_671): hash a2caab4c
+Ok mapSecond - 50523164 (403_671): hash 50523164
+Ok pair - 8d0d1bb4 (28_422): hash 8d0d1bb4
+Ok second - cec62688 (19_252): hash cec62688
+Compiled module Elm.Parser.Expose comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 1 Ok
+Ok exposeDefinition - acc3c6d3 (5_461_769_996): hash acc3c6d3
+Compiled module Basics comparison:
+Type declarations
+Declarations count: 4 Ok
+Ok Bool - e85dfe7d (1_310): hash e85dfe7d
+Ok Elm_Float - 616032e6 (4_641): hash 616032e6
+Ok Order - 6a80603c (2_822): hash 6a80603c
+Ok String - 949d10fe (4_439): hash 949d10fe
+Function declarations
+Declarations count: 31 Ok
+Ok abs - 82ad33a3 (43_952): hash 82ad33a3
+Ok add - b8e8899e (31_246): hash b8e8899e
+Ok always - 7a783705 (12_297): hash 7a783705
+Ok and - b45254c1 (30_137): hash b45254c1
+Ok apL - 0daf9831 (378_070): hash 0daf9831
+Ok apR - 695fc890 (378_070): hash 695fc890
+Ok append - 51ecb2fb (203_195): hash 51ecb2fb
+Ok clamp - 68dfaa10 (2_219_452): hash 68dfaa10
+Ok compare - 644ce62b (1_858_509): hash 644ce62b
+Ok composeL - a5090516 (409_417): hash a5090516
+Ok composeR - dcbe3a95 (409_417): hash dcbe3a95
+Ok eq - 68faaecc (1_242_597): hash 68faaecc
+Ok floor - 3f02d2c3 (4_564_663): hash 3f02d2c3
+Ok ge - 0109be33 (1_957_486): hash 0109be33
+Ok gt - 77f94ab0 (1_925_333): hash 77f94ab0
+Ok identity - eb99cb48 (12_297): hash eb99cb48
+Ok idiv - 9c70fb26 (2_778_786): hash 9c70fb26
+Ok le - 46293997 (1_957_486): hash 46293997
+Ok lt - 1a293488 (1_925_333): hash 1a293488
+Ok max - a4fd7afa (2_033_085): hash a4fd7afa
+Ok min - b1f2e7c4 (2_033_085): hash b1f2e7c4
+Ok modBy - 4a577e0d (2_778_786): hash 4a577e0d
+Ok mul - 450090ff (2_778_786): hash 450090ff
+Ok negate - 0bbee352 (86_788): hash 0bbee352
+Ok neq - e462785a (1_350_039): hash e462785a
+Ok not - c5892398 (16_831): hash c5892398
+Ok or - a77b8d55 (30_137): hash a77b8d55
+Ok pow - d07b6beb (176_694): hash d07b6beb
+Ok remainderBy - d167cf17 (2_778_786): hash d167cf17
+Ok sub - 80383603 (33_969): hash 80383603
+Ok toFloat - ac18a520 (48_178): hash ac18a520
+Compiled module Elm.Syntax.Node comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Node - 5752ea52 (2_016): hash 5752ea52
+Function declarations
+Declarations count: 5 Ok
+Ok combine - 621450df (990_913): hash 621450df
+Ok empty - 67b7d386 (24_887): hash 67b7d386
+Ok map - 78012323 (419_896): hash 78012323
+Ok range - b15f6e0c (21_773): hash b15f6e0c
+Ok value - 52d43a81 (26_207): hash 52d43a81
+Compiled module Elm.Syntax.ModuleName comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 0 Ok
+Compiled module Elm.Parser.Typings comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 1 Ok
+Ok typeDefinition - 06516979 (10_440_309_188): hash 06516979
+Compiled module Elm.Syntax.Exposing comparison:
+Type declarations
+Declarations count: 3 Ok
+Ok ExposedType - e256e075 (3_025): hash e256e075
+Ok Exposing - 02e74c2f (3_025): hash 02e74c2f
+Ok TopLevelExpose - 1ba1c60c (7_770): hash 1ba1c60c
+Function declarations
+Declarations count: 2 Ok
+Ok exposesFunction - 474ee252 (752_633): hash 474ee252
+Ok operators - 11f15fe8 (906_532): hash 11f15fe8
+Compiled module Json.Encode comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Value - 1057fd0b (8_980): hash 1057fd0b
+Function declarations
+Declarations count: 10 Ok
+Ok bool - 44cdde43 (5_035): hash 44cdde43
+Ok encode - 5c52bede (6_290_447): hash 5c52bede
+Ok encodeField - 09971f00 (6_290_447): hash 09971f00
+Ok escapeChar - f42bee45 (549_690): hash f42bee45
+Ok escapeString - 5ae18750 (1_850_215): hash 5ae18750
+Ok int - 8b7ed5cc (4_934): hash 8b7ed5cc
+Ok list - c1d5c1f2 (967_905): hash c1d5c1f2
+Ok null - 138e6be5 (1_209): hash 138e6be5
+Ok object - 764ca011 (5_237): hash 764ca011
+Ok string - 116b3bc5 (5_237): hash 116b3bc5
+Compiled module Elm.Syntax.Signature comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Signature - d4837d46 (4_035): hash d4837d46
+Function declarations
+Declarations count: 0 Ok
+Compiled module Elm.Syntax.Declaration comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Declaration - b60015da (13_222): hash b60015da
+Function declarations
+Declarations count: 0 Ok
+Compiled module Set comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Set - a8644f27 (3_127): hash a8644f27
+Function declarations
+Declarations count: 17 Ok
+Ok diff - 74b71173 (13_146_628): hash 74b71173
+Ok empty - 6d81a9d0 (4_034): hash 6d81a9d0
+Ok filter - 40465a9d (6_177_301): hash 40465a9d
+Ok foldl - 532c37c0 (1_572_374): hash 532c37c0
+Ok foldr - 4a28109c (1_646_554): hash 4a28109c
+Ok fromList - 572efd26 (4_730_838): hash 572efd26
+Ok insert - 4db57979 (4_565_426): hash 4db57979
+Ok intersect - 8a997b97 (6_646_538): hash 8a997b97
+Ok isEmpty - c549e062 (92_344): hash c549e062
+Ok map - 908553be (6_797_985): hash 908553be
+Ok member - 55e3c950 (2_876_238): hash 55e3c950
+Ok partition - 6a8a0506 (6_781_041): hash 6a8a0506
+Ok remove - 3bcf4e1b (11_840_632): hash 3bcf4e1b
+Ok singleton - 14db1499 (30_431): hash 14db1499
+Ok size - 6dbd6da9 (273_671): hash 6dbd6da9
+Ok toList - 81d54085 (239_100): hash 81d54085
+Ok union - 317536e2 (5_733_218): hash 317536e2
+Compiled module Elm.Parser.Ranges comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 1 Ok
+Ok withRange - 31a2d19c (7_048_282): hash 31a2d19c
+Compiled module Elm.Parser.File comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 1 Ok
+Ok file - e79d287e (55_073_850_237): hash e79d287e
+Compiled module Hex comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 2 Ok
+Ok fromString - 3a49d260 (8_466_840): hash 3a49d260
+Ok toString - 70f5f40d (8_835_028): hash 70f5f40d
+Compiled module Bytes.Encode comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Encoder - ecdc4ceb (8_069): hash ecdc4ceb
+Function declarations
+Declarations count: 17 Ok
+Ok bytes - 7c96f8a9 (16_224): hash 7c96f8a9
+Ok emptyBlob - 473a0f4c (100): hash 473a0f4c
+Ok encode - 594c2d6d (1_971_364): hash 594c2d6d
+Ok encodeBlob - 67bb146e (1_942_946): hash 67bb146e
+Ok encodeCharAsBlob - bb52a635 (3_350_496): hash bb52a635
+Ok encodeCharsAsBlob - 8188772c (4_346_620): hash 8188772c
+Ok getStringWidth - ff4e4a03 (4_412_744): hash ff4e4a03
+Ok maskSingleByte - cdd3fcbf (101): hash cdd3fcbf
+Ok maskSingleByteMSB - 377096cb (101): hash 377096cb
+Ok sequence - 6df81642 (16_527): hash 6df81642
+Ok signedInt16 - d80dc87f (706_515): hash d80dc87f
+Ok signedInt32 - e43c5891 (706_515): hash e43c5891
+Ok signedInt8 - 440d9e5e (15_214): hash 440d9e5e
+Ok string - 4afe3af6 (4_417_572): hash 4afe3af6
+Ok unsignedInt16 - df4dceb1 (706_515): hash df4dceb1
+Ok unsignedInt32 - 6d29ddde (706_515): hash 6d29ddde
+Ok unsignedInt8 - 16e93673 (15_214): hash 16e93673
+Compiled module Elm.Interface comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Exposed - 4075578a (5_649): hash 4075578a
+Function declarations
+Declarations count: 4 Ok
+Ok build - df8cd2c4 (23_788_777): hash df8cd2c4
+Ok exposesAlias - b22824f9 (642_354): hash b22824f9
+Ok exposesFunction - 1f1fd2c3 (2_575_035): hash 1f1fd2c3
+Ok operators - e59c5017 (838_803): hash e59c5017
+Compiled module Elm.RawFile comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 2 Ok
+Ok imports - b7620083 (1_249_546): hash b7620083
+Ok moduleName - 8767ef90 (1_318_287): hash 8767ef90
+Compiled module Bytes comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Bytes - 00756bc5 (2_521): hash 00756bc5
+Ok Endianness - fee4b655 (2_318): hash fee4b655
+Function declarations
+Declarations count: 1 Ok
+Ok width - 02b8a55e (62_606): hash 02b8a55e
+Compiled module Bitwise comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 7 Ok
+Ok and - 29519944 (57_555): hash 29519944
+Ok complement - 08a9e762 (26_914): hash 08a9e762
+Ok or - b3f7c329 (57_454): hash b3f7c329
+Ok shiftLeftBy - 83f99fc3 (192_425): hash 83f99fc3
+Ok shiftRightBy - e9308f13 (167_421): hash e9308f13
+Ok shiftRightZfBy - a03381d1 (307_536): hash a03381d1
+Ok xor - b409f39b (57_555): hash b409f39b
+Compiled module List comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 33 Ok
+Ok all - 9a8ad0b2 (516_870): hash 9a8ad0b2
+Ok any - 856db2a4 (516_870): hash 856db2a4
+Ok append - a504808a (31_145): hash a504808a
+Ok concat - ccbdcc75 (15_020): hash ccbdcc75
+Ok concatMap - 074bbe1e (517_877): hash 074bbe1e
+Ok cons - 2e7f9b83 (31_949): hash 2e7f9b83
+Ok drop - 7946c948 (30_943): hash 7946c948
+Ok filter - 5c372059 (665_639): hash 5c372059
+Ok filterMap - 8e2d72ad (791_737): hash 8e2d72ad
+Ok foldl - 314ec92c (858_551): hash 314ec92c
+Ok foldr - 39bfc2db (932_731): hash 39bfc2db
+Ok head - 88473dfd (76_910): hash 88473dfd
+Ok indexedMap - 5c34af61 (933_638): hash 5c34af61
+Ok intersperse - d595b882 (1_202_740): hash d595b882
+Ok isEmpty - 438bdb6c (20_457): hash 438bdb6c
+Ok length - 49610c61 (15_020): hash 49610c61
+Ok map - 8f565365 (897_150): hash 8f565365
+Ok map2 - 98da7d13 (1_149_619): hash 98da7d13
+Ok map3 - 1aa93801 (1_528_902): hash 1aa93801
+Ok maximum - b45757a8 (2_970_552): hash b45757a8
+Ok member - 9d4d40c1 (1_448_427): hash 9d4d40c1
+Ok minimum - 9f9e01ff (2_970_552): hash 9f9e01ff
+Ok partition - eb3ec14a (1_862_613): hash eb3ec14a
+Ok range - 8bc39fd9 (227_185): hash 8bc39fd9
+Ok repeat - f806a2af (212_973): hash f806a2af
+Ok reverse - ce7bf53a (15_121): hash ce7bf53a
+Ok singleton - d2887a59 (13_101): hash d2887a59
+Ok sort - c3d1df6e (6_167_925): hash c3d1df6e
+Ok sortBy - ecec0f30 (6_237_072): hash ecec0f30
+Ok sortWith - 92fc6079 (4_148_452): hash 92fc6079
+Ok sum - 459bd437 (911_759): hash 459bd437
+Ok tail - 2b31a069 (78_823): hash 2b31a069
+Ok take - 0c0b02de (30_943): hash 0c0b02de
+Compiled module Dict comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Dict - 95d84c60 (5_651): hash 95d84c60
+Ok NColor - 1aa77311 (2_722): hash 1aa77311
+Function declarations
+Declarations count: 21 Ok
+Ok diff - 8a2b4778 (13_056_416): hash 8a2b4778
+Ok empty - 2610397e (2_219): hash 2610397e
+Ok filter - 1829b2f7 (5_716_085): hash 1829b2f7
+Ok foldl - 3d3f5951 (965_601): hash 3d3f5951
+Ok foldr - eb7087ce (965_601): hash eb7087ce
+Ok fromList - 1e67187a (4_784_473): hash 1e67187a
+Ok get - e1e443a5 (2_337_497): hash e1e443a5
+Ok insert - ca2fc798 (4_483_583): hash ca2fc798
+Ok intersect - a6dd07f3 (6_556_326): hash a6dd07f3
+Ok isEmpty - 757c4fbb (63_916): hash 757c4fbb
+Ok keys - 7b20c1aa (177_915): hash 7b20c1aa
+Ok map - 28515ec4 (686_514): hash 28515ec4
+Ok member - 2383e5a6 (2_799_732): hash 2383e5a6
+Ok partition - f0f6dafc (5_849_739): hash f0f6dafc
+Ok remove - 03035f56 (11_759_896): hash 03035f56
+Ok singleton - afe59cd6 (40_415): hash afe59cd6
+Ok size - 7ddd251e (212_486): hash 7ddd251e
+Ok toList - 9e304bed (203_516): hash 9e304bed
+Ok union - 5eb4859d (5_643_006): hash 5eb4859d
+Ok update - 50960bcc (15_703_377): hash 50960bcc
+Ok values - 60c4aa08 (177_915): hash 60c4aa08
+Compiled module Elm.Parser.Node comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 1 Ok
+Ok parser - 65dccf4f (7_181_204): hash 65dccf4f
+Compiled module Elm.Syntax.Import comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Import - a0bc6c9d (5_650): hash a0bc6c9d
+Function declarations
+Declarations count: 0 Ok
+Compiled module Elm.Syntax.TypeAnnotation comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok TypeAnnotation - cd424e80 (10_191): hash cd424e80
+Function declarations
+Declarations count: 0 Ok
+Compiled module Maybe comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Maybe - f6169a42 (3_025): hash f6169a42
+Function declarations
+Declarations count: 4 Ok
+Ok andThen - 99865970 (460_526): hash 99865970
+Ok map - dd8e56e6 (463_645): hash dd8e56e6
+Ok map2 - 1ede3513 (561_422): hash 1ede3513
+Ok withDefault - 1c2650fd (108_060): hash 1c2650fd
+Compiled module Elm.Dependency comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Dependency - 45c713df (4_438): hash 45c713df
+Function declarations
+Declarations count: 0 Ok
+Compiled module Elm.Parser.Declarations comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 1 Ok
+Ok declaration - e45eb2c0 (20_650_736_182): hash e45eb2c0
+Compiled module Elm.Syntax.File comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok File - c3971ba3 (6_760): hash c3971ba3
+Function declarations
+Declarations count: 0 Ok
+Compiled module Array comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 13 Ok
+Ok append - a504808a (31_145): hash a504808a
+Ok empty - dda26649 (100): hash dda26649
+Ok foldl - e5843001 (940_902): hash e5843001
+Ok foldr - 758834ab (1_015_082): hash 758834ab
+Ok fromList - eb99cb48 (12_297): hash eb99cb48
+Ok get - d55f06c8 (171_553): hash d55f06c8
+Ok isEmpty - 9c599f64 (16_830): hash 9c599f64
+Ok length - 49610c61 (15_020): hash 49610c61
+Ok map - 675a5195 (964_180): hash 675a5195
+Ok push - 4c343d2a (31_949): hash 4c343d2a
+Ok repeat - 927e4e39 (280_003): hash 927e4e39
+Ok set - ab5c258f (157_042): hash ab5c258f
+Ok toList - eb99cb48 (12_297): hash eb99cb48
+Compiled module Elm.Parser.Whitespace comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 4 Ok
+Ok many1Spaces - aa881b52 (6_130_570): hash aa881b52
+Ok manySpaces - 4d496ff7 (3_595_891): hash 4d496ff7
+Ok realNewLine - 01ade75b (7_847_298): hash 01ade75b
+Ok untilNewlineToken - 86c14620 (4_394_475): hash 86c14620
+Compiled module Elm.Processing comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok DeclarationsAndComments - 0b6501e5 (6_862): hash 0b6501e5
+Ok ProcessContext - 3a43a5e2 (3_026): hash 3a43a5e2
+Function declarations
+Declarations count: 4 Ok
+Ok addDependency - 64dac21c (5_978_768): hash 64dac21c
+Ok addFile - 5da37b07 (29_778_729): hash 5da37b07
+Ok init - 5644d582 (3_933): hash 5644d582
+Ok process - 0762e9b3 (63_617_129): hash 0762e9b3
+Compiled module List.Extra comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 3 Ok
+Ok dropWhile - 61105ae3 (531_082): hash 61105ae3
+Ok takeWhile - ff20e2ae (611_105): hash ff20e2ae
+Ok unique - 46588df3 (1_817_939): hash 46588df3
+Compiled module Elm.Parser.Layout comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok LayoutStatus - 59bbb6b8 (3_328): hash 59bbb6b8
+Function declarations
+Declarations count: 5 Ok
+Ok layout - c1baefd6 (478_580_928): hash c1baefd6
+Ok layoutStrict - b88358c3 (296_326_982): hash b88358c3
+Ok maybeAroundBothSides - 4db5435c (139_118_747): hash 4db5435c
+Ok optimisticLayout - 11cff95a (239_860_630): hash 11cff95a
+Ok optimisticLayoutWith - f3d4d62b (131_359_856): hash f3d4d62b
+Compiled module Bytes.Decode comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Decoder - 093fb106 (2_319): hash 093fb106
+Ok Step - 06e43ee5 (2_722): hash 06e43ee5
+Function declarations
+Declarations count: 20 Ok
+Ok andThen - e6bdf36e (707_769): hash e6bdf36e
+Ok decode - 5b19f92c (490_761): hash 5b19f92c
+Ok decodeBlobAsChars - 7cb2e3d6 (832_022): hash 7cb2e3d6
+Ok decodeBlobAsCharsRec - cc9d3e9a (805_012): hash cc9d3e9a
+Ok decodeUtf8Char - 53d5baeb (584_380): hash 53d5baeb
+Ok loop - 3e8e7210 (837_299): hash 3e8e7210
+Ok loopHelp - 69d2880b (785_198): hash 69d2880b
+Ok map - 87d18724 (532_077): hash 87d18724
+Ok map2 - f8092dac (729_543): hash f8092dac
+Ok map3 - 48e1192b (916_832): hash 48e1192b
+Ok map4 - 7bb2f257 (1_114_798): hash 7bb2f257
+Ok map5 - 76bdfcb4 (1_305_712): hash 76bdfcb4
+Ok signedInt16 - 9eaa3d0b (276_760): hash 9eaa3d0b
+Ok signedInt32 - 6b0caa14 (276_764): hash 6b0caa14
+Ok signedInt8 - 7e9a6635 (183_038): hash 7e9a6635
+Ok string - 9a8d097c (997_817): hash 9a8d097c
+Ok succeed - 4bfbc6c1 (45_544): hash 4bfbc6c1
+Ok unsignedInt16 - 54d6daab (200_966): hash 54d6daab
+Ok unsignedInt32 - 3f5588f6 (200_966): hash 3f5588f6
+Ok unsignedInt8 - 84f6fd7d (74_081): hash 84f6fd7d
+Compiled module Elm.Operators comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok SimpleInfix - ab32ce22 (5_044): hash ab32ce22
+Function declarations
+Declarations count: 1 Ok
+Ok bySymbol - 301026a7 (314_825): hash 301026a7
+Compiled module String comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Elm_Float - 616032e6 (4_641): hash 616032e6
+Ok String - dfc2029d (2_218): hash dfc2029d
+Function declarations
+Declarations count: 34 Ok
+Ok any - d0ae193e (556_683): hash d0ae193e
+Ok append - f4458b30 (53_418): hash f4458b30
+Ok concat - 6555059c (298_348): hash 6555059c
+Ok cons - ac4bb0f3 (44_746): hash ac4bb0f3
+Ok contains - ffe23724 (219_536): hash ffe23724
+Ok dropLeft - de79d90f (43_740): hash de79d90f
+Ok dropRight - 3ca5a57f (328_976): hash 3ca5a57f
+Ok endsWith - 6164c18f (455_260): hash 6164c18f
+Ok foldr - c7b946d7 (1_024_558): hash c7b946d7
+Ok fromChar - 4b755389 (16_422): hash 4b755389
+Ok fromInt - 5ca54286 (3_521_522): hash 5ca54286
+Ok fromList - 4c8c729c (15_618): hash 4c8c729c
+Ok isEmpty - 19a6880c (26_306): hash 19a6880c
+Ok join - 58b0613b (264_184): hash 58b0613b
+Ok left - da216b75 (43_740): hash da216b75
+Ok length - 38707d1a (24_496): hash 38707d1a
+Ok lines - 88a7f3ea (894_627): hash 88a7f3ea
+Ok padLeft - 105b3124 (345_519): hash 105b3124
+Ok repeat - 341b1d37 (295_523): hash 341b1d37
+Ok replace - ca52cb90 (1_931_282): hash ca52cb90
+Ok reverse - f550f980 (27_918): hash f550f980
+Ok right - 9a809e45 (367_777): hash 9a809e45
+Ok slice - 445bc72f (255_193): hash 445bc72f
+Ok split - bfd6ecf8 (1_558_243): hash bfd6ecf8
+Ok startsWith - 809777ac (76_407): hash 809777ac
+Ok toFloat - 64fff937 (3_194_836): hash 64fff937
+Ok toInt - 22e0be6f (1_340_099): hash 22e0be6f
+Ok toList - b15f6e0c (21_773): hash b15f6e0c
+Ok toLower - 6aa8c5d9 (1_043_802): hash 6aa8c5d9
+Ok toUpper - 0faa0369 (1_046_525): hash 0faa0369
+Ok trim - 9abaa431 (690_210): hash 9abaa431
+Ok trimLeft - f51b0f07 (648_890): hash f51b0f07
+Ok trimRight - 9ed048fe (655_144): hash 9ed048fe
+Ok uncons - 059e6844 (143_736): hash 059e6844
+Compiled module Elm.Parser.Base comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 2 Ok
+Ok moduleName - 1ae58d11 (45_662_312): hash 1ae58d11
+Ok typeIndicator - 162c3590 (44_547_198): hash 162c3590
+Compiled module Elm.Syntax.Range comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Location - 89f4c1a6 (3_126): hash 89f4c1a6
+Ok Range - c85f5dd4 (3_025): hash c85f5dd4
+Function declarations
+Declarations count: 5 Ok
+Ok combine - 660cdb0e (9_582_768): hash 660cdb0e
+Ok compare - 404e761d (9_047_703): hash 404e761d
+Ok compareLocations - d9e252e5 (7_467_813): hash d9e252e5
+Ok empty - 5164cc1d (8_464): hash 5164cc1d
+Ok emptyRange - 5164cc1d (8_464): hash 5164cc1d
+Compiled module Combine comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Parser - 7eb4245f (2_218): hash 7eb4245f
+Function declarations
+Declarations count: 28 Ok
+Ok andThen - e3b48be5 (3_157_382): hash e3b48be5
+Ok backtrackable - 7bf6914c (1_333_049): hash 7bf6914c
+Ok between - 3ce574e7 (6_184_745): hash 3ce574e7
+Ok continueWith - 4c149599 (5_900_910): hash 4c149599
+Ok end - ed182824 (937_631): hash ed182824
+Ok fail - 2e415520 (1_045_360): hash 2e415520
+Ok fromCore - 6429860f (2_234_941): hash 6429860f
+Ok ignore - a69ecb70 (5_891_646): hash a69ecb70
+Ok keep - 9afb802b (4_264_894): hash 9afb802b
+Ok lazy - e02c6025 (1_920_745): hash e02c6025
+Ok many - 2e327fd2 (7_501_958): hash 2e327fd2
+Ok many1 - 685d3360 (11_422_515): hash 685d3360
+Ok many1WithEndLocationForLastElement - 1009e83f (11_539_435): hash 1009e83f
+Ok manyWithEndLocationForLastElement - 130c1db5 (6_507_654): hash 130c1db5
+Ok map - 3a494a3f (2_159_741): hash 3a494a3f
+Ok maybe - 58c4b556 (2_395_876): hash 58c4b556
+Ok modifyState - eb73503e (435_893): hash eb73503e
+Ok oneOf - 996baed9 (2_270_326): hash 996baed9
+Ok parens - 9b694f93 (13_188_823): hash 9b694f93
+Ok runParser - f0543cd3 (3_869_147): hash f0543cd3
+Ok sepBy - eb6ab1dd (13_269_610): hash eb6ab1dd
+Ok sepBy1 - 02f5bed0 (11_624_594): hash 02f5bed0
+Ok sepBy1WithoutReverse - c336d112 (13_695_470): hash c336d112
+Ok string - cc35e05f (3_549_708): hash cc35e05f
+Ok succeed - 4d6f2ae7 (73_447): hash 4d6f2ae7
+Ok while - e0af960f (3_140_802): hash e0af960f
+Ok withLocation - 76380348 (2_502_427): hash 76380348
+Ok withState - 49d9697f (472_200): hash 49d9697f
+Compiled module Char comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 11 Ok
+Ok fromCode - 5496e466 (16_731): hash 5496e466
+Ok isAlpha - 82f4bee9 (101_196): hash 82f4bee9
+Ok isAlphaNum - 664e3ebf (93_741): hash 664e3ebf
+Ok isDigit - d5f16980 (47_776): hash d5f16980
+Ok isHexDigit - 80a2ad39 (121_458): hash 80a2ad39
+Ok isLower - 8dd306f8 (47_776): hash 8dd306f8
+Ok isOctDigit - a4029312 (47_776): hash a4029312
+Ok isUpper - ba5b8635 (47_776): hash ba5b8635
+Ok toCode - 0817a8fd (19_656): hash 0817a8fd
+Ok toLower - b6a7dc5d (81_139): hash b6a7dc5d
+Ok toUpper - 92085d6f (83_862): hash 92085d6f
+Compiled module Elm.Parser.Imports comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 1 Ok
+Ok importDefinition - 01469a14 (7_885_820_833): hash 01469a14
+Compiled module Elm.Parser.CombineTestUtil comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 3 Ok
+Ok parse - c2e2f7c3 (11_856_332): hash c2e2f7c3
+Ok parseWithFailure - 6713ccbf (11_387_135): hash 6713ccbf
+Ok parseWithState - 89d4ce7e (11_259_336): hash 89d4ce7e
+Compiled module Elm.Parser.Patterns comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 1 Ok
+Ok pattern - 0dad95c4 (918_353_875): hash 0dad95c4
+Compiled module Elm.Kernel.Parser comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 14 Ok
+Ok chompBase10 - e2cf64b1 (213_179): hash e2cf64b1
+Ok chompBase10Helper - 32d0e0b8 (182_842): hash 32d0e0b8
+Ok chompWhileHelp - 39ebc799 (744_562): hash 39ebc799
+Ok consumeBase - 74f436a5 (487_246): hash 74f436a5
+Ok consumeBase16 - b308b249 (542_158): hash b308b249
+Ok consumeBase16Helper - 80234de8 (510_712): hash 80234de8
+Ok consumeBaseHelper - 33b1a638 (440_479): hash 33b1a638
+Ok countOffsetsInString - 99b460d8 (412_055): hash 99b460d8
+Ok findSubString - f55f91a0 (1_167_884): hash f55f91a0
+Ok indexOf - bd06b6c2 (250_575): hash bd06b6c2
+Ok isAsciiCode - d28dfbe8 (56_645): hash d28dfbe8
+Ok isSubChar - 9600022b (517_062): hash 9600022b
+Ok isSubString - c8580d22 (851_319): hash c8580d22
+Ok newlineChar - 4c0d52d1 (101): hash 4c0d52d1
+Compiled module Json.Decode comparison:
+Type declarations
+Declarations count: 1 Ok
+Ok Error - 8bc70f20 (4_740): hash 8bc70f20
+Function declarations
+Declarations count: 23 Ok
+Ok andThen - 8eb7f441 (581_977): hash 8eb7f441
+Ok bool - 5c2b557a (420_898): hash 5c2b557a
+Ok decodeString - bb0dd846 (22_248_126): hash bb0dd846
+Ok decodeValue - 0daf9831 (378_070): hash 0daf9831
+Ok fail - bec972cd (34_058): hash bec972cd
+Ok field - 71aba2b6 (1_371_874): hash 71aba2b6
+Ok int - 0c5f4dca (420_797): hash 0c5f4dca
+Ok lazy - 3deec5d7 (379_177): hash 3deec5d7
+Ok list - b1ccc7c1 (838_188): hash b1ccc7c1
+Ok map - c11a56fd (554_252): hash c11a56fd
+Ok map2 - 46c93642 (741_425): hash 46c93642
+Ok map3 - df674d25 (917_710): hash df674d25
+Ok map4 - b7b09b5a (1_153_675): hash b7b09b5a
+Ok map5 - 5fe64cde (1_676_300): hash 5fe64cde
+Ok map6 - 3bc811d7 (2_033_417): hash 3bc811d7
+Ok map7 - 81299043 (2_421_176): hash 81299043
+Ok map8 - affa2d93 (2_839_577): hash affa2d93
+Ok null - ea747a56 (417_969): hash ea747a56
+Ok nullable - 5b230290 (520_178): hash 5b230290
+Ok oneOf - 7743ef19 (803_103): hash 7743ef19
+Ok string - f45305ca (421_100): hash f45305ca
+Ok succeed - 2ce7d20c (15_214): hash 2ce7d20c
+Ok value - fcc31ac2 (4_328): hash fcc31ac2
+Compiled module Elm.Syntax.Type comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Type - e5085ea1 (6_154): hash e5085ea1
+Ok ValueConstructor - c3ab7e27 (3_530): hash c3ab7e27
+Function declarations
+Declarations count: 0 Ok
+Compiled module Elm.Syntax.Documentation comparison:
+Type declarations
+Declarations count: 0 Ok
+Function declarations
+Declarations count: 0 Ok
+Compiled module Elm.Syntax.Pattern comparison:
+Type declarations
+Declarations count: 2 Ok
+Ok Pattern - 225671b4 (23_717): hash 225671b4
+Ok QualifiedNameRef - ca969c1f (3_631): hash ca969c1f
+Function declarations
+Declarations count: 1 Ok
+Ok moduleNames - c7839cba (1_852_308): hash c7839cba
+Compiled environment for 66 modules:
+
+Compiled environment has size of 255_549_703_336 and contains 2_535_410_441 nodes
+Found 66 modules:
+Modules: Basics, Tuple, Maybe, List, Char, String, Result, Json.Encode, Elm.Syntax.ModuleName, Elm.Syntax.Range, Hex, Elm.Syntax.Documentation, Elm.Syntax.Comments, List.Extra, Bytes, Bitwise, Json.Decode, Elm.Syntax.Node, Bytes.Decode, Bytes.Encode, Elm.Kernel.Parser, Elm.Parser.State, Elm.Syntax.Infix, Elm.Syntax.Exposing, Dict, Elm.Syntax.Pattern, Elm.Syntax.TypeAnnotation, Set, Elm.Syntax.Signature, Elm.Syntax.Module, Elm.Syntax.Import, Elm.Syntax.Type, Elm.Syntax.TypeAlias, Array, Parser.Advanced, Elm.Operators, Elm.Syntax.Expression, Parser, Combine, Elm.Parser.Whitespace, Elm.Syntax.Declaration, Combine.Char, Elm.Parser.Node, Elm.Parser.Numbers, Elm.Parser.Tokens, Elm.Parser.Ranges, Elm.Parser.CombineTestUtil, Elm.Parser.Comments, Elm.Parser.Base, Elm.Parser.Layout, Elm.Syntax.File, Elm.Internal.RawFile, Elm.RawFile, Elm.Parser.Expose, Elm.Parser.TypeAnnotation, Elm.Interface, Elm.Parser.Patterns, Elm.Dependency, Elm.Parser.Modules, Elm.Parser.Imports, Elm.Processing, Elm.Parser.Typings, Elm.Parser.Expression, Elm.Parser.Declarations, Elm.Parser.File, Elm.Parser
+Module Basics has size of 54_525_641 and contains 540_964 nodes
+Module Basics contains 4 type declarations and 31 function declarations
+Module Tuple has size of 1_310_091 and contains 12_997 nodes
+Module Tuple contains 0 type declarations and 6 function declarations
+Module Maybe has size of 1_600_808 and contains 15_881 nodes
+Module Maybe contains 1 type declarations and 4 function declarations
+Module List has size of 38_088_113 and contains 377_885 nodes
+Module List contains 0 type declarations and 33 function declarations
+Module Char has size of 719_873 and contains 7_141 nodes
+Module Char contains 0 type declarations and 11 function declarations
+Module String has size of 21_512_648 and contains 213_435 nodes
+Module String contains 2 type declarations and 34 function declarations
+Module Result has size of 4_964_168 and contains 49_250 nodes
+Module Result contains 1 type declarations and 10 function declarations
+Module Json.Encode has size of 15_988_807 and contains 158_631 nodes
+Module Json.Encode contains 1 type declarations and 10 function declarations
+Module Elm.Syntax.ModuleName has size of 100 and contains 0 nodes
+Module Elm.Syntax.ModuleName contains 0 type declarations and 0 function declarations
+Module Elm.Syntax.Range has size of 26_128_721 and contains 259_227 nodes
+Module Elm.Syntax.Range contains 2 type declarations and 5 function declarations
+Module Hex has size of 17_304_186 and contains 171_678 nodes
+Module Hex contains 0 type declarations and 2 function declarations
+Module Elm.Syntax.Documentation has size of 100 and contains 0 nodes
+Module Elm.Syntax.Documentation contains 0 type declarations and 0 function declarations
+Module Elm.Syntax.Comments has size of 100 and contains 0 nodes
+Module Elm.Syntax.Comments contains 0 type declarations and 0 function declarations
+Module List.Extra has size of 2_963_250 and contains 29_398 nodes
+Module List.Extra contains 0 type declarations and 3 function declarations
+Module Bytes has size of 70_165 and contains 695 nodes
+Module Bytes contains 2 type declarations and 1 function declarations
+Module Bitwise has size of 873_915 and contains 8_669 nodes
+Module Bitwise contains 0 type declarations and 7 function declarations
+Module Json.Decode has size of 41_214_854 and contains 408_906 nodes
+Module Json.Decode contains 1 type declarations and 23 function declarations
+Module Elm.Syntax.Node has size of 1_489_921 and contains 14_781 nodes
+Module Elm.Syntax.Node contains 1 type declarations and 5 function declarations
+Module Bytes.Decode has size of 11_925_969 and contains 118_321 nodes
+Module Bytes.Decode contains 2 type declarations and 20 function declarations
+Module Bytes.Encode has size of 23_363_151 and contains 231_792 nodes
+Module Bytes.Encode contains 1 type declarations and 17 function declarations
+Module Elm.Kernel.Parser has size of 6_398_303 and contains 63_478 nodes
+Module Elm.Kernel.Parser contains 0 type declarations and 14 function declarations
+Module Elm.Parser.State has size of 7_907_176 and contains 78_444 nodes
+Module Elm.Parser.State contains 1 type declarations and 7 function declarations
+Module Elm.Syntax.Infix has size of 11_799 and contains 116 nodes
+Module Elm.Syntax.Infix contains 2 type declarations and 0 function declarations
+Module Elm.Syntax.Exposing has size of 1_679_842 and contains 16_665 nodes
+Module Elm.Syntax.Exposing contains 3 type declarations and 2 function declarations
+Module Dict has size of 82_212_633 and contains 815_646 nodes
+Module Dict contains 2 type declarations and 21 function declarations
+Module Elm.Syntax.Pattern has size of 1_883_790 and contains 18_688 nodes
+Module Elm.Syntax.Pattern contains 2 type declarations and 1 function declarations
+Module Elm.Syntax.TypeAnnotation has size of 11_905 and contains 117 nodes
+Module Elm.Syntax.TypeAnnotation contains 1 type declarations and 0 function declarations
+Module Set has size of 73_171_886 and contains 725_954 nodes
+Module Set contains 1 type declarations and 17 function declarations
+Module Elm.Syntax.Signature has size of 5_244 and contains 51 nodes
+Module Elm.Syntax.Signature contains 1 type declarations and 0 function declarations
+Module Elm.Syntax.Module has size of 2_031_078 and contains 20_148 nodes
+Module Elm.Syntax.Module contains 3 type declarations and 4 function declarations
+Module Elm.Syntax.Import has size of 6_556 and contains 64 nodes
+Module Elm.Syntax.Import contains 1 type declarations and 0 function declarations
+Module Elm.Syntax.Type has size of 12_204 and contains 120 nodes
+Module Elm.Syntax.Type contains 2 type declarations and 0 function declarations
+Module Elm.Syntax.TypeAlias has size of 7_565 and contains 74 nodes
+Module Elm.Syntax.TypeAlias contains 1 type declarations and 0 function declarations
+Module Array has size of 3_657_867 and contains 36_290 nodes
+Module Array contains 0 type declarations and 13 function declarations
+Module Parser.Advanced has size of 101_897_541 and contains 1_010_948 nodes
+Module Parser.Advanced contains 11 type declarations and 39 function declarations
+Module Elm.Operators has size of 322_288 and contains 3_197 nodes
+Module Elm.Operators contains 1 type declarations and 1 function declarations
+Module Elm.Syntax.Expression has size of 9_481_204 and contains 94_057 nodes
+Module Elm.Syntax.Expression contains 7 type declarations and 6 function declarations
+Module Parser has size of 114_371_054 and contains 1_134_697 nodes
+Module Parser contains 5 type declarations and 38 function declarations
+Module Combine has size of 142_525_206 and contains 1_414_064 nodes
+Module Combine contains 1 type declarations and 28 function declarations
+Module Elm.Parser.Whitespace has size of 21_974_083 and contains 218_011 nodes
+Module Elm.Parser.Whitespace contains 0 type declarations and 4 function declarations
+Module Elm.Syntax.Declaration has size of 14_633 and contains 144 nodes
+Module Elm.Syntax.Declaration contains 1 type declarations and 0 function declarations
+Module Combine.Char has size of 20_123_229 and contains 199_652 nodes
+Module Combine.Char contains 0 type declarations and 3 function declarations
+Module Elm.Parser.Node has size of 7_182_110 and contains 71_257 nodes
+Module Elm.Parser.Node contains 0 type declarations and 1 function declarations
+Module Elm.Parser.Numbers has size of 41_418_192 and contains 410_912 nodes
+Module Elm.Parser.Numbers contains 0 type declarations and 2 function declarations
+Module Elm.Parser.Tokens has size of 303_158_982 and contains 3_007_749 nodes
+Module Elm.Parser.Tokens contains 2 type declarations and 17 function declarations
+Module Elm.Parser.Ranges has size of 7_049_491 and contains 69_941 nodes
+Module Elm.Parser.Ranges contains 0 type declarations and 1 function declarations
+Module Elm.Parser.CombineTestUtil has size of 34_507_038 and contains 342_359 nodes
+Module Elm.Parser.CombineTestUtil contains 0 type declarations and 3 function declarations
+Module Elm.Parser.Comments has size of 80_246_792 and contains 796_159 nodes
+Module Elm.Parser.Comments contains 0 type declarations and 2 function declarations
+Module Elm.Parser.Base has size of 90_212_333 and contains 895_030 nodes
+Module Elm.Parser.Base contains 0 type declarations and 2 function declarations
+Module Elm.Parser.Layout has size of 1_285_260_457 and contains 12_751_580 nodes
+Module Elm.Parser.Layout contains 1 type declarations and 5 function declarations
+Module Elm.Syntax.File has size of 7_464 and contains 73 nodes
+Module Elm.Syntax.File contains 1 type declarations and 0 function declarations
+Module Elm.Internal.RawFile has size of 8_359 and contains 82 nodes
+Module Elm.Internal.RawFile contains 1 type declarations and 1 function declarations
+Module Elm.RawFile has size of 2_570_050 and contains 25_496 nodes
+Module Elm.RawFile contains 0 type declarations and 2 function declarations
+Module Elm.Parser.Expose has size of 5_461_771_912 and contains 54_188_423 nodes
+Module Elm.Parser.Expose contains 0 type declarations and 1 function declarations
+Module Elm.Parser.TypeAnnotation has size of 9_251_802_153 and contains 91_790_863 nodes
+Module Elm.Parser.TypeAnnotation contains 1 type declarations and 2 function declarations
+Module Elm.Interface has size of 27_856_566 and contains 276_367 nodes
+Module Elm.Interface contains 1 type declarations and 4 function declarations
+Module Elm.Parser.Patterns has size of 918_354_882 and contains 9_111_352 nodes
+Module Elm.Parser.Patterns contains 0 type declarations and 1 function declarations
+Module Elm.Dependency has size of 5_748 and contains 56 nodes
+Module Elm.Dependency contains 1 type declarations and 0 function declarations
+Module Elm.Parser.Modules has size of 25_578_858_124 and contains 253_778_059 nodes
+Module Elm.Parser.Modules contains 0 type declarations and 1 function declarations
+Module Elm.Parser.Imports has size of 7_885_822_749 and contains 78_238_399 nodes
+Module Elm.Parser.Imports contains 0 type declarations and 1 function declarations
+Module Elm.Processing has size of 99_396_615 and contains 986_124 nodes
+Module Elm.Processing contains 2 type declarations and 4 function declarations
+Module Elm.Parser.Typings has size of 10_440_310_902 and contains 103_582_535 nodes
+Module Elm.Parser.Typings contains 0 type declarations and 1 function declarations
+Module Elm.Parser.Expression has size of 7_157_039_957 and contains 71_007_757 nodes
+Module Elm.Parser.Expression contains 0 type declarations and 2 function declarations
+Module Elm.Parser.Declarations has size of 20_650_737_593 and contains 204_884_210 nodes
+Module Elm.Parser.Declarations contains 0 type declarations and 1 function declarations
+Module Elm.Parser.File has size of 55_073_850_941 and contains 546_409_668 nodes
+Module Elm.Parser.File contains 0 type declarations and 1 function declarations
+Module Elm.Parser has size of 110_298_413_413 and contains 1_094_314_570 nodes
+Module Elm.Parser contains 0 type declarations and 2 function declarations
+Frame instructions count: Average: 16 max: 110
+
+Returning after 16_026 total instructions performed.
+
+Returning after 1_419 total invocations performed.
+Max stack depth in frames: 176
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 26 max: 306
+
+Returning after 528_299 total instructions performed.
+
+Returning after 36_430 total invocations performed.
+Max stack depth in frames: 158
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.CombineTestUtil.parseWithFailure  "123"  Elm.Parser.Expression.expression
+Frame instructions count: Average: 9 max: 273
+
+Returning after 15_318 total instructions performed.
+
+Returning after 2_156 total invocations performed.
+Max stack depth in frames: 69
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval (.21 s):
+Elm.Parser.CombineTestUtil.parseWithFailure  "123"  Elm.Parser.Expression.expression
+
+Frame instructions count: Average: 16 max: 110
+
+Returning after 21_063 total instructions performed.
+
+Returning after 1_837 total invocations performed.
+Max stack depth in frames: 316
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 15 max: 306
+
+Returning after 4_802 total instructions performed.
+
+Returning after 573 total invocations performed.
+Max stack depth in frames: 33
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.CombineTestUtil.parseWithFailure  "fib n = if n < 1 then 0 else if n < 2 then 1 else fib (n - 2) + fib (n - 1)"  Elm.Parser.Expression.function
+Frame instructions count: Average: 11 max: 560
+
+Returning after 216_778 total instructions performed.
+
+Returning after 26_212 total invocations performed.
+Max stack depth in frames: 174
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval (.37 s):
+Elm.Parser.CombineTestUtil.parseWithFailure  "fib n = if n < 1 then 0 else if n < 2 then 1 else fib (n - 2) + fib (n - 1)"  Elm.Parser.Expression.function
+
+Frame instructions count: Average: 16 max: 110
+
+Returning after 20_180 total instructions performed.
+
+Returning after 1_779 total invocations performed.
+Max stack depth in frames: 292
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 15 max: 306
+
+Returning after 3_932 total instructions performed.
+
+Returning after 474 total invocations performed.
+Max stack depth in frames: 25
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.CombineTestUtil.parseWithFailure  "map func set = fromList (foldl (\\x xs -> func x :: xs) [] set)"  Elm.Parser.Expression.function
+Frame instructions count: Average: 12 max: 560
+
+Returning after 143_257 total instructions performed.
+
+Returning after 17_044 total invocations performed.
+Max stack depth in frames: 200
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval (.41 s):
+Elm.Parser.CombineTestUtil.parseWithFailure  "map func set = fromList (foldl (\\x xs -> func x :: xs) [] set)"  Elm.Parser.Expression.function
+
+Frame instructions count: Average: 15 max: 110
+
+Returning after 13_076 total instructions performed.
+
+Returning after 1_210 total invocations performed.
+Max stack depth in frames: 180
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 15 max: 306
+
+Returning after 3_932 total instructions performed.
+
+Returning after 474 total invocations performed.
+Max stack depth in frames: 25
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.CombineTestUtil.parseWithFailure  ".name"  Elm.Parser.Expression.expression
+Frame instructions count: Average: 12 max: 94
+
+Returning after 12_602 total instructions performed.
+
+Returning after 1_514 total invocations performed.
+Max stack depth in frames: 69
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval (.05 s):
+Elm.Parser.CombineTestUtil.parseWithFailure  ".name"  Elm.Parser.Expression.expression
+
+Frame instructions count: Average: 15 max: 110
+
+Returning after 12_535 total instructions performed.
+
+Returning after 1_169 total invocations performed.
+Max stack depth in frames: 170
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 15 max: 306
+
+Returning after 4_804 total instructions performed.
+
+Returning after 574 total invocations performed.
+Max stack depth in frames: 33
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.CombineTestUtil.parseWithFailure  "\n"  Elm.Parser.Layout.layoutStrict
+Frame instructions count: Average: 11 max: 338
+
+Returning after 4_258 total instructions performed.
+
+Returning after 523 total invocations performed.
+Max stack depth in frames: 42
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval ( s):
+Elm.Parser.CombineTestUtil.parseWithFailure  "\n"  Elm.Parser.Layout.layoutStrict
+
+Frame instructions count: Average: 15 max: 110
+
+Returning after 14_126 total instructions performed.
+
+Returning after 1_299 total invocations performed.
+Max stack depth in frames: 194
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 15 max: 306
+
+Returning after 3_932 total instructions performed.
+
+Returning after 474 total invocations performed.
+Max stack depth in frames: 25
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.CombineTestUtil.parseWithFailure  "-- A comment\n"  Elm.Parser.Layout.layoutStrict
+Frame instructions count: Average: 11 max: 338
+
+Returning after 5_688 total instructions performed.
+
+Returning after 697 total invocations performed.
+Max stack depth in frames: 46
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval (.05 s):
+Elm.Parser.CombineTestUtil.parseWithFailure  "-- A comment\n"  Elm.Parser.Layout.layoutStrict
+
+Frame instructions count: Average: 15 max: 110
+
+Returning after 15_502 total instructions performed.
+
+Returning after 1_399 total invocations performed.
+Max stack depth in frames: 222
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 15 max: 306
+
+Returning after 4_804 total instructions performed.
+
+Returning after 574 total invocations performed.
+Max stack depth in frames: 33
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.CombineTestUtil.parseWithFailure  "type alias AliasInt = Int"  Elm.Parser.Typings.typeDefinition
+Frame instructions count: Average: 11 max: 338
+
+Returning after 23_401 total instructions performed.
+
+Returning after 2_936 total invocations performed.
+Max stack depth in frames: 60
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval (.04 s):
+Elm.Parser.CombineTestUtil.parseWithFailure  "type alias AliasInt = Int"  Elm.Parser.Typings.typeDefinition
+
+Frame instructions count: Average: 15 max: 110
+
+Returning after 12_635 total instructions performed.
+
+Returning after 1_181 total invocations performed.
+Max stack depth in frames: 138
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 14 max: 306
+
+Returning after 4_211 total instructions performed.
+
+Returning after 531 total invocations performed.
+Max stack depth in frames: 25
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.parseToFile  "module Test exposing (..)\n\ndecl = 123"
+Frame instructions count: Average: 12 max: 560
+
+Returning after 49_253 total instructions performed.
+
+Returning after 5_932 total invocations performed.
+Max stack depth in frames: 90
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval (.15 s):
+Elm.Parser.parseToFile  "module Test exposing (..)\n\ndecl = 123"
+
+Frame instructions count: Average: 13 max: 110
+
+Returning after 13_071 total instructions performed.
+
+Returning after 1_311 total invocations performed.
+Max stack depth in frames: 236
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 31 max: 306
+
+Returning after 66_918 total instructions performed.
+
+Returning after 4_801 total invocations performed.
+Max stack depth in frames: 108
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+moduleText =
+    String.trimLeft """
+module Namespace.Beta exposing (..)
+
+
+type alias MaybeInt =
+    Maybe Int
+
+"""
+
+Frame instructions count: Average: 2 max: 2
+
+Returning after 2 total instructions performed.
+
+Returning after 0 total invocations performed.
+Max stack depth in frames: 1
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval ( s):
+moduleText =
+    String.trimLeft """
+module Namespace.Beta exposing (..)
+
+
+type alias MaybeInt =
+    Maybe Int
+
+"""
+
+
+Frame instructions count: Average: 13 max: 110
+
+Returning after 5_687 total instructions performed.
+
+Returning after 586 total invocations performed.
+Max stack depth in frames: 36
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 20 max: 306
+
+Returning after 7_931 total instructions performed.
+
+Returning after 758 total invocations performed.
+Max stack depth in frames: 138
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+moduleText
+Frame instructions count: Average: 2 max: 2
+
+Returning after 2 total instructions performed.
+
+Returning after 0 total invocations performed.
+Max stack depth in frames: 1
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval ( s):
+moduleText
+
+Frame instructions count: Average: 14 max: 110
+
+Returning after 8_282 total instructions performed.
+
+Returning after 806 total invocations performed.
+Max stack depth in frames: 78
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 14 max: 306
+
+Returning after 4_171 total instructions performed.
+
+Returning after 535 total invocations performed.
+Max stack depth in frames: 25
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.parseToFile   moduleText
+Frame instructions count: Average: 12 max: 338
+
+Returning after 59_736 total instructions performed.
+
+Returning after 7_061 total invocations performed.
+Max stack depth in frames: 96
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval (.08 s):
+Elm.Parser.parseToFile   moduleText
+
+Frame instructions count: Average: 15 max: 110
+
+Returning after 20_082 total instructions performed.
+
+Returning after 1_780 total invocations performed.
+Max stack depth in frames: 258
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 14 max: 306
+
+Returning after 3_738 total instructions performed.
+
+Returning after 480 total invocations performed.
+Max stack depth in frames: 25
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.parseToFile "module Namespace.Beta exposing (..)\n\nimport Delta exposing (..)\n\ntype alias MaybeInt = Maybe Int"
+Frame instructions count: Average: 12 max: 355
+
+Returning after 79_992 total instructions performed.
+
+Returning after 9_410 total invocations performed.
+Max stack depth in frames: 96
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval (.13 s):
+Elm.Parser.parseToFile "module Namespace.Beta exposing (..)\n\nimport Delta exposing (..)\n\ntype alias MaybeInt = Maybe Int"
+
+Frame instructions count: Average: 15 max: 274
+
+Returning after 48_954 total instructions performed.
+
+Returning after 4_380 total invocations performed.
+Max stack depth in frames: 592
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 25 max: 306
+
+Returning after 8_812 total instructions performed.
+
+Returning after 866 total invocations performed.
+Max stack depth in frames: 48
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.parseToFile
+    (String.join
+        "\n"
+        [ "module Namespace.Beta exposing (..)"
+        , ""
+        , "import Delta exposing (..)"
+        , "import Dict"
+        , ""
+        , ""
+        , "type alias MaybeInt ="
+        , "    Maybe Int"
+        , ""
+        ]
+    )
+
+Frame instructions count: Average: 12 max: 355
+
+Returning after 90_933 total instructions performed.
+
+Returning after 10_566 total invocations performed.
+Max stack depth in frames: 96
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval (.08 s):
+Elm.Parser.parseToFile
+    (String.join
+        "\n"
+        [ "module Namespace.Beta exposing (..)"
+        , ""
+        , "import Delta exposing (..)"
+        , "import Dict"
+        , ""
+        , ""
+        , "type alias MaybeInt ="
+        , "    Maybe Int"
+        , ""
+        ]
+    )
+
+
+Frame instructions count: Average: 16 max: 274
+
+Returning after 896_998 total instructions performed.
+
+Returning after 75_845 total invocations performed.
+Max stack depth in frames: 12508
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+Frame instructions count: Average: 46 max: 306
+
+Returning after 51_844 total instructions performed.
+
+Returning after 3_955 total invocations performed.
+Max stack depth in frames: 350
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission begin eval:
+Elm.Parser.parseToFile
+    (String.join "\n"
+        [ "module Namespace.Beta exposing (..)"
+        , ""
+        , "import Delta exposing (..)"
+        , "import Dict"
+        , "import Elm.Dependency exposing (Dependency(..), Version, epsilon)"
+        , "import Gamma.Interface as Interface"
+        , ""
+        , ""
+        , "type alias MaybeInt ="
+        , "     Maybe Int"
+        , ""
+        , ""
+        , "type alias RecordType ="
+        , "    { alfa : Int }"
+        , ""
+        , ""
+        , "type ChoiceType"
+        , "    = Choice_Alfa"
+        , "    | Choice_Beta Int"
+        , ""
+        , ""
+        , "greet : String -> String"
+        , "greet param_name ="
+        , "    \"Hello, \" ++ param_name ++ \" !\""
+        , ""
+        , ""
+        , "type String"
+        , "    = String (List Char.Char)"
+        , "    -- We need another tag to prevent the compiler from assuming that the condition for tag 'String' is always true."
+        , "    | AnyOtherKind"
+        , ""
+        , ""
+        , "{-| Replicates the given appendable."
+        , "-}"
+        , "replicate : appendable -> appendable"
+        , "replicate a ="
+        , "    case a of"
+        , "        String stringA ->"
+        , "            String (Pine_kernel.concat [ stringA, stringA ])"
+        , ""
+        , "        _ ->"
+        , "            Pine_kernel.concat [ a, a ]"
+        , ""
+        , ""
+        , "toIntFromList : List Char -> Maybe Int"
+        , "toIntFromList stringAsList ="
+        , "    case stringAsList of"
+        , "        [] ->"
+        , "            Nothing"
+        , ""
+        , "        firstChar :: lessFirstChar ->"
+        , "            let"
+        , "                ( valueString, signMultiplier ) ="
+        , "                    case firstChar of"
+        , "                        '-' ->"
+        , "                            ( lessFirstChar, -1 )"
+        , ""
+        , "                        '+' ->"
+        , "                            ( lessFirstChar, 1 )"
+        , ""
+        , "                        _ ->"
+        , "                            ( stringAsList, 1 )"
+        , "            in"
+        , "            if valueString == [] then"
+        , "                Nothing"
+        , ""
+        , "            else"
+        , "                case toUnsignedIntFromList 0 valueString of"
+        , "                    Just unsigned ->"
+        , "                        Just (Pine_kernel.int_mul [ signMultiplier, unsigned ])"
+        , ""
+        , "                    Nothing ->"
+        , "                        Nothing"
+        , ""
+        , ""
+        , "moveRedLeft : Dict k v -> Dict k v"
+        , "moveRedLeft dict ="
+        , "    case dict of"
+        , "        RBNode_elm_builtin clr k v (RBNode_elm_builtin lClr lK lV lLeft lRight) (RBNode_elm_builtin rClr rK rV ((RBNode_elm_builtin Red rlK rlV rlL rlR) as rLeft) rRight) ->"
+        , "            RBNode_elm_builtin"
+        , "                Red"
+        , "                rlK"
+        , "                rlV"
+        , "                (RBNode_elm_builtin Black k v (RBNode_elm_builtin Red lK lV lLeft lRight) rlL)"
+        , "                (RBNode_elm_builtin Black rK rV rlR rRight)"
+        , ""
+        , "        RBNode_elm_builtin clr k v (RBNode_elm_builtin lClr lK lV lLeft lRight) (RBNode_elm_builtin rClr rK rV rLeft rRight) ->"
+        , "            case clr of"
+        , "                Black ->"
+        , "                    RBNode_elm_builtin"
+        , "                        Black"
+        , "                        k"
+        , "                        v"
+        , "                        (RBNode_elm_builtin Red lK lV lLeft lRight)"
+        , "                        (RBNode_elm_builtin Red rK rV rLeft rRight)"
+        , ""
+        , "                Red ->"
+        , "                    RBNode_elm_builtin"
+        , "                        Black"
+        , "                        k"
+        , "                        v"
+        , "                        (RBNode_elm_builtin Red lK lV lLeft lRight)"
+        , "                        (RBNode_elm_builtin Red rK rV rLeft rRight)"
+        , ""
+        , "        _ ->"
+        , "            dict"
+        , ""
+        , ""
+        , "map3 : (a -> b -> c -> value) -> Decoder a -> Decoder b -> Decoder c -> Decoder value"
+        , "map3 func (Decoder decodeA) (Decoder decodeB) (Decoder decodeC) ="
+        , "    Decoder"
+        , "        (\\bites offset ->"
+        , "            let"
+        , "                ( offsetA, a ) ="
+        , "                    decodeA bites offset"
+        , ""
+        , "                ( offsetB, b ) ="
+        , "                    decodeB bites offsetA"
+        , ""
+        , "                ( offsetC, c ) ="
+        , "                    decodeC bites offsetB"
+        , "            in"
+        , "            ( offsetC, func a b c )"
+        , "        )"
+        , ""
+        , ""
+        , "type Boolean"
+        , "    = MyTrue"
+        , "    | MyFalse"
+        , "    | MyOr Boolean Boolean"
+        , ""
+        , ""
+        , "booleanParser : Parser.Parser Boolean"
+        , "booleanParser ="
+        , "    Parser.oneOf"
+        , "        [ Parser.succeed MyTrue"
+        , "            |. Parser.keyword \"true\""
+        , "        , Parser.succeed MyFalse"
+        , "            |. Parser.keyword \"false\""
+        , "        , Parser.succeed MyOr"
+        , "            |. Parser.symbol \"(\""
+        , "            |. Parser.spaces"
+        , "            |= Parser.lazy (\\_ -> booleanParser)"
+        , "            |. Parser.spaces"
+        , "            |. Parser.symbol \"||\""
+        , "            |. Parser.spaces"
+        , "            |= Parser.lazy (\\_ -> booleanParser)"
+        , "            |. Parser.spaces"
+        , "            |. Parser.symbol \")\""
+        , "        ]"
+        , ""
+        , ""
+        , "mixedOperators_Alfa : Int -> Int -> Int -> Int -> Int"
+        , "mixedOperators_Alfa a b c d ="
+        , "    a + b * c - d"
+        , ""
+        , ""
+        , "mixedOperators_Beta : Int -> Int -> Int -> Int -> Int"
+        , "mixedOperators_Beta a b c d ="
+        , "    a + b // c + d"
+        ])
+Frame instructions count: Average: 12 max: 560
+
+Returning after 3_395_327 total instructions performed.
+
+Returning after 410_373 total invocations performed.
+Max stack depth in frames: 354
+Specialized instructions match percentage: 0
+Specialized instructions wasted iteration percentage: 0
+
+Submission end eval (5.95 s):
+Elm.Parser.parseToFile
+    (String.join "\n"
+        [ "module Namespace.Beta exposing (..)"
+        , ""
+        , "import Delta exposing (..)"
+        , "import Dict"
+        , "import Elm.Dependency exposing (Dependency(..), Version, epsilon)"
+        , "import Gamma.Interface as Interface"
+        , ""
+        , ""
+        , "type alias MaybeInt ="
+        , "     Maybe Int"
+        , ""
+        , ""
+        , "type alias RecordType ="
+        , "    { alfa : Int }"
+        , ""
+        , ""
+        , "type ChoiceType"
+        , "    = Choice_Alfa"
+        , "    | Choice_Beta Int"
+        , ""
+        , ""
+        , "greet : String -> String"
+        , "greet param_name ="
+        , "    \"Hello, \" ++ param_name ++ \" !\""
+        , ""
+        , ""
+        , "type String"
+        , "    = String (List Char.Char)"
+        , "    -- We need another tag to prevent the compiler from assuming that the condition for tag 'String' is always true."
+        , "    | AnyOtherKind"
+        , ""
+        , ""
+        , "{-| Replicates the given appendable."
+        , "-}"
+        , "replicate : appendable -> appendable"
+        , "replicate a ="
+        , "    case a of"
+        , "        String stringA ->"
+        , "            String (Pine_kernel.concat [ stringA, stringA ])"
+        , ""
+        , "        _ ->"
+        , "            Pine_kernel.concat [ a, a ]"
+        , ""
+        , ""
+        , "toIntFromList : List Char -> Maybe Int"
+        , "toIntFromList stringAsList ="
+        , "    case stringAsList of"
+        , "        [] ->"
+        , "            Nothing"
+        , ""
+        , "        firstChar :: lessFirstChar ->"
+        , "            let"
+        , "                ( valueString, signMultiplier ) ="
+        , "                    case firstChar of"
+        , "                        '-' ->"
+        , "                            ( lessFirstChar, -1 )"
+        , ""
+        , "                        '+' ->"
+        , "                            ( lessFirstChar, 1 )"
+        , ""
+        , "                        _ ->"
+        , "                            ( stringAsList, 1 )"
+        , "            in"
+        , "            if valueString == [] then"
+        , "                Nothing"
+        , ""
+        , "            else"
+        , "                case toUnsignedIntFromList 0 valueString of"
+        , "                    Just unsigned ->"
+        , "                        Just (Pine_kernel.int_mul [ signMultiplier, unsigned ])"
+        , ""
+        , "                    Nothing ->"
+        , "                        Nothing"
+        , ""
+        , ""
+        , "moveRedLeft : Dict k v -> Dict k v"
+        , "moveRedLeft dict ="
+        , "    case dict of"
+        , "        RBNode_elm_builtin clr k v (RBNode_elm_builtin lClr lK lV lLeft lRight) (RBNode_elm_builtin rClr rK rV ((RBNode_elm_builtin Red rlK rlV rlL rlR) as rLeft) rRight) ->"
+        , "            RBNode_elm_builtin"
+        , "                Red"
+        , "                rlK"
+        , "                rlV"
+        , "                (RBNode_elm_builtin Black k v (RBNode_elm_builtin Red lK lV lLeft lRight) rlL)"
+        , "                (RBNode_elm_builtin Black rK rV rlR rRight)"
+        , ""
+        , "        RBNode_elm_builtin clr k v (RBNode_elm_builtin lClr lK lV lLeft lRight) (RBNode_elm_builtin rClr rK rV rLeft rRight) ->"
+        , "            case clr of"
+        , "                Black ->"
+        , "                    RBNode_elm_builtin"
+        , "                        Black"
+        , "                        k"
+        , "                        v"
+        , "                        (RBNode_elm_builtin Red lK lV lLeft lRight)"
+        , "                        (RBNode_elm_builtin Red rK rV rLeft rRight)"
+        , ""
+        , "                Red ->"
+        , "                    RBNode_elm_builtin"
+        , "                        Black"
+        , "                        k"
+        , "                        v"
+        , "                        (RBNode_elm_builtin Red lK lV lLeft lRight)"
+        , "                        (RBNode_elm_builtin Red rK rV rLeft rRight)"
+        , ""
+        , "        _ ->"
+        , "            dict"
+        , ""
+        , ""
+        , "map3 : (a -> b -> c -> value) -> Decoder a -> Decoder b -> Decoder c -> Decoder value"
+        , "map3 func (Decoder decodeA) (Decoder decodeB) (Decoder decodeC) ="
+        , "    Decoder"
+        , "        (\\bites offset ->"
+        , "            let"
+        , "                ( offsetA, a ) ="
+        , "                    decodeA bites offset"
+        , ""
+        , "                ( offsetB, b ) ="
+        , "                    decodeB bites offsetA"
+        , ""
+        , "                ( offsetC, c ) ="
+        , "                    decodeC bites offsetB"
+        , "            in"
+        , "            ( offsetC, func a b c )"
+        , "        )"
+        , ""
+        , ""
+        , "type Boolean"
+        , "    = MyTrue"
+        , "    | MyFalse"
+        , "    | MyOr Boolean Boolean"
+        , ""
+        , ""
+        , "booleanParser : Parser.Parser Boolean"
+        , "booleanParser ="
+        , "    Parser.oneOf"
+        , "        [ Parser.succeed MyTrue"
+        , "            |. Parser.keyword \"true\""
+        , "        , Parser.succeed MyFalse"
+        , "            |. Parser.keyword \"false\""
+        , "        , Parser.succeed MyOr"
+        , "            |. Parser.symbol \"(\""
+        , "            |. Parser.spaces"
+        , "            |= Parser.lazy (\\_ -> booleanParser)"
+        , "            |. Parser.spaces"
+        , "            |. Parser.symbol \"||\""
+        , "            |. Parser.spaces"
+        , "            |= Parser.lazy (\\_ -> booleanParser)"
+        , "            |. Parser.spaces"
+        , "            |. Parser.symbol \")\""
+        , "        ]"
+        , ""
+        , ""
+        , "mixedOperators_Alfa : Int -> Int -> Int -> Int -> Int"
+        , "mixedOperators_Alfa a b c d ="
+        , "    a + b * c - d"
+        , ""
+        , ""
+        , "mixedOperators_Beta : Int -> Int -> Int -> Int -> Int"
+        , "mixedOperators_Beta a b c d ="
+        , "    a + b // c + d"
+        ])
+
+Interactive session profile:
+Aggregate count over 510 expressions:
+         451_541 invocations
+     577_844_907 instructions
+   1_865_235_485 subexpressions
+34fa79f7:    36_339 -   67_658_200 -   218_223_642 (Parser.Advanced.andThen.body.subexpr-literal[5].subexpr-literal[2])
+f6c7c374:    36_339 -  121_748_557 -   392_486_550 (Parser.Advanced.andThen.body.subexpr-literal[5])
+11cbf074:    26_761 -      507_508 -     1_190_533 (Parser.Advanced.map.body.subexpr-literal[5].subexpr-literal[2])
+b8ee59db:    26_761 -   82_387_873 -   265_071_382 (Parser.Advanced.map.body.subexpr-literal[5])
+81f969e0:    19_732 -       39_464 -       177_588 (Parser.Advanced.succeed.body.subexpr-literal[2], Combine.fromCore.body.subexpr-literal[3].subexpr-literal[8], Combine.maybe.body.subexpr-literal[4].subexpr-literal[4], Combine.modifyState.body.subexpr-literal[2].subexpr-literal[5], Combine.succeed.body.subexpr-literal[2].subexpr-literal[3])
+5dc2cd60:    19_567 -  100_617_050 -   324_006_190 (Parser.Advanced.multiComment.env-func[10], Parser.Advanced.oneOf.env-func[1], Parser.Advanced.sequence.env-func[9], Parser.oneOf.env-func[1], Combine.oneOf.env-func[0].env-func[1], Parser.multiComment.env-func[0].env-func[10], Parser.sequence.env-func[0].env-func[9])
+197d462f:    19_206 -      337_711 -       397_606 (Parser.Advanced.andThen.body.subexpr-literal[5].subexpr-literal[2].subexpr-literal[15])
+6d17ae97:    17_057 -   62_902_571 -   202_435_499 (Parser.Advanced.oneOf.env-func[1].subexpr-literal[13])
+32631251:    13_731 -       41_193 -       247_158 (Parser.Advanced.andThen.body, Parser.Advanced.multiComment.env-func[11], Parser.Advanced.sequence.env-func[10], Parser.andThen.body, Combine.withLocation.env-func[0].body, Parser.multiComment.env-func[0].env-func[11], Parser.sequence.env-func[0].env-func[10])
+ecd62206:    11_329 -      199_164 -     1_323_120 (Combine.keep.body.subexpr-literal[8])
+2abf0d0e:    10_845 -       43_380 -       303_660 (Combine.between.env-func[1], Combine.continueWith.env-func[0], Combine.ignore.env-func[0], Combine.keep.body, Combine.many1.env-func[0], Combine.parens.env-func[1], Combine.sepBy.env-func[4], Combine.sepBy1.env-func[0], Combine.sepBy1WithoutReverse.env-func[7], Elm.Parser.CombineTestUtil.parseWithState.env-func[1].env-func[0], Elm.Parser.Layout.optimisticLayoutWith.env-func[2].env-func[0], Elm.Parser.Layout.optimisticLayoutWith.env-func[6].env-func[0], Elm.Parser.Node.parser.env-func[1].body, Elm.Parser.Patterns.pattern.env-func[15].env-func[1], Elm.Parser.Patterns.pattern.env-func[16].env-func[4], Elm.Parser.Patterns.pattern.env-func[19].env-func[1], Elm.Parser.TypeAnnotation.typeAnnotation.env-func[14].env-func[0])
+a4cd2b68:    10_545 -    1_087_193 -     3_770_671 (Parser.Advanced.ignorer.env-func[1].subexpr-literal[8].subexpr-literal[2])
+290110ec:    10_545 -    1_447_955 -     5_187_060 (Parser.Advanced.ignorer.env-func[1].subexpr-literal[8])
+5a95bc50:     8_678 -       26_034 -       381_832 (Parser.Advanced.chompIf.env-func[1], Parser.Advanced.end.env-func[0], Parser.Advanced.float.env-func[6], Parser.Advanced.int.env-func[6], Parser.Advanced.keyword.env-func[4], Parser.Advanced.lineComment.env-func[5], Parser.Advanced.multiComment.env-func[13], Parser.Advanced.number.env-func[5], Parser.Advanced.problem.env-func[0], Parser.Advanced.sequence.env-func[6], Parser.Advanced.symbol.env-func[2], Parser.Advanced.token.env-func[1], Parser.Advanced.variable.env-func[2], Parser.chompIf.env-func[0].env-func[1], Parser.keyword.env-func[0].env-func[4], Parser.lineComment.env-func[0].env-func[5], Parser.multiComment.env-func[0].env-func[13], Parser.number.env-func[0].env-func[5], Parser.problem.env-func[0].env-func[0], Parser.sequence.env-func[0].env-func[6], Parser.symbol.env-func[0].env-func[2], Parser.token.env-func[0].env-func[1], Parser.variable.env-func[0].env-func[2])
+fafac2d7:     8_316 -      154_111 -       221_182 (Parser.Advanced.ignorer.env-func[1].subexpr-literal[8].subexpr-literal[2].subexpr-literal[11])
+28a03a34:     7_706 -   38_092_747 -   122_044_973 (Parser.Advanced.oneOf.body.subexpr-literal[3])
+8185f587:     7_219 -       21_657 -       137_161 (Elm.Kernel.Parser.isSubString.body.subexpr-literal[12])
+23898310:     7_219 -      112_515 -       346_586 (Elm.Kernel.Parser.isSubString.body.subexpr-literal[13])
+833de34a:     7_219 -      141_391 -       541_499 (Elm.Kernel.Parser.isSubString.body, Parser.Advanced.token.env-func[0].body)
+f5fad5e6:     7_117 -      251_298 -     1_622_071 (Parser.Advanced.token.body.subexpr-literal[7].subexpr-literal[15])
+9ce3c2d8:     7_117 -      279_766 -     1_942_336 (Parser.Advanced.token.body.subexpr-literal[7])
+31dadbe0:     6_992 -      172_676 -       313_665 (Basics.apL.env-func[0], Basics.apR.env-func[0], Basics.composeL.env-func[0], Basics.composeR.env-func[0], Bytes.Decode.andThen.env-func[0], Bytes.Decode.decode.env-func[0], Bytes.Decode.loop.env-func[0], Bytes.Decode.loopHelp.env-func[0], Bytes.Decode.map.env-func[0], Bytes.Decode.map2.env-func[0], Bytes.Decode.map3.env-func[0], Bytes.Decode.map4.env-func[0], Bytes.Decode.map5.env-func[0], Combine.fromCore.env-func[0], Combine.many1WithEndLocationForLastElement.env-func[0], Combine.manyWithEndLocationForLastElement.env-func[0], Combine.modifyState.env-func[0], Combine.withState.env-func[0], Dict.diff.env-func[0], Dict.filter.env-func[0], Dict.fromList.env-func[0], Dict.insert.env-func[0], Dict.intersect.env-func[0], Dict.map.env-func[0], Dict.member.env-func[0], Dict.partition.env-func[0], Dict.remove.env-func[0], Dict.union.env-func[0], Dict.update.env-func[0], Elm.Interface.build.env-func[0], Elm.Interface.operators.env-func[0], Elm.Kernel.Parser.chompWhileHelp.env-func[0], Elm.Kernel.Parser.isSubChar.env-func[0], Elm.Parser.parse.env-func[0], Elm.Parser.parseToFile.env-func[0], Elm.Processing.process.env-func[0], Elm.Syntax.Node.combine.env-func[0], Elm.Syntax.Node.map.env-func[0], Elm.Syntax.Range.compare.env-func[0], Json.Decode.andThen.env-func[0], Json.Decode.bool.env-func[0], Json.Decode.decodeString.env-func[0], Json.Decode.decodeValue.env-func[0], Json.Decode.field.env-func[0], Json.Decode.int.env-func[0], Json.Decode.lazy.env-func[0], Json.Decode.list.env-func[0], Json.Decode.map.env-func[0], Json.Decode.map2.env-func[0], Json.Decode.map3.env-func[0])
+1b6eeaab:     6_886 -       13_772 -       110_176 (Combine.succeed.body.subexpr-literal[2], Elm.Parser.Expression.expression.env-func[38].subexpr-literal[3], Elm.Parser.Expression.expression.env-func[57].subexpr-literal[4], Elm.Parser.Expression.expression.env-func[58].subexpr-literal[8], Elm.Parser.Expression.expression.env-func[65].subexpr-literal[7], Elm.Parser.Expression.expression.env-func[75].subexpr-literal[7], Elm.Parser.Patterns.pattern.env-func[28].subexpr-literal[9], Elm.Parser.Patterns.pattern.env-func[28].subexpr-literal[20], Elm.Parser.Patterns.pattern.env-func[28].subexpr-literal[64], Elm.Parser.TypeAnnotation.typeAnnotation.env-func[22].subexpr-literal[13], Elm.Parser.Expression.expression.env-func[79].subexpr-literal[50].subexpr-literal[6], Elm.Parser.Expression.expression.env-func[80].subexpr-literal[4].subexpr-literal[7], Elm.Parser.Patterns.pattern.env-func[34].subexpr-literal[53].subexpr-literal[34], Elm.Parser.TypeAnnotation.typeAnnotation.env-func[24].subexpr-literal[61].subexpr-literal[8], Elm.Parser.TypeAnnotation.typeAnnotation.env-func[24].subexpr-literal[61].subexpr-literal[90], Elm.Parser.TypeAnnotation.typeAnnotation.env-func[26].subexpr-literal[1].subexpr-literal[3])
+544e5a07:     6_189 -       18_567 -       167_103 ()
+c5699b49:     6_011 -       18_033 -       108_198 (Parser.Advanced.map.body, Parser.Advanced.sequence.env-func[16], Parser.map.body, Parser.loop.env-func[2].body, Parser.sequence.env-func[0].env-func[16])
+4bd2aad5:     5_854 -      259_409 -     1_849_516 (Combine.withLocation.body.subexpr-literal[2].subexpr-literal[4])
+b3611c02:     5_575 -       62_133 -       112_563 (Parser.Advanced.mapChompedString.body.subexpr-literal[5].subexpr-literal[3])
+8af51e52:     5_575 -      557_363 -     2_137_985 (Parser.Advanced.mapChompedString.body.subexpr-literal[5])
+a04d3278:     5_189 -       10_378 -        77_835 (Combine.withLocation.body, Elm.Parser.Node.parser.env-func[0].body)
+4ca79091:     4_781 -       81_277 -       516_348 (Elm.Parser.Node.parser.body.subexpr-literal[3])
+3092fb55:     3_816 -       52_688 -       118_307 (Tuple.mapSecond.body, Json.Decode.decodeString.env-func[8].body)
+3d96a001:     3_339 -       71_459 -       203_474 (Combine.map.body.subexpr-literal[5].subexpr-literal[6])
+52b835b1:     2_570 -      134_974 -       482_642 (Combine.keep.body.subexpr-literal[8].subexpr-literal[8])
+d4c0d695:     2_436 -        4_872 -         4_872 (Parser.Advanced.chompIf.env-func[2], Parser.Advanced.keyword.env-func[2], Parser.Advanced.multiComment.env-func[14], Parser.loop.env-func[1], Parser.withIndent.body, Combine.manyWithEndLocationForLastElement.env-func[1].env-func[1], Parser.chompIf.env-func[0].env-func[2], Parser.keyword.env-func[0].env-func[2], Parser.multiComment.env-func[0].env-func[14])
+0fd5a631:     1_844 -        3_688 -         3_688 (Array.fromList.body, Array.toList.body, Basics.always.body, Basics.identity.body)
+1bac8dac:     1_664 -       11_894 -        18_438 (Bytes.Decode.decodeBlobAsCharsRec.body, Bytes.Decode.loopHelp.body, Bytes.Encode.encodeBlob.body, Dict.get.body, Dict.map.body, Elm.Kernel.Parser.chompWhileHelp.body, List.Extra.dropWhile.body, List.all.body, List.any.body, List.concatMap.body, List.map2.body, List.map3.body, List.member.body, Elm.Interface.build.env-func[6].body, Elm.Processing.process.env-func[21].body, Elm.Syntax.Exposing.exposesFunction.env-func[0].body, Elm.Syntax.Pattern.moduleNames.env-func[0].body, List.Extra.unique.env-func[1].body, Parser.Advanced.chompWhile.env-func[0].body)
+cdff1145:     1_639 -       31_784 -        29_022 (Elm.Kernel.Parser.isSubChar.body.subexpr-literal[9])
+909fa8d7:     1_639 -       38_340 -        60_163 (Elm.Kernel.Parser.isSubChar.body, Parser.Advanced.chompIf.env-func[3].body)
+219a93ec:     1_630 -       21_362 -        98_011 (Parser.Advanced.chompIf.body.subexpr-literal[7].subexpr-literal[14])
+34593f5b:     1_630 -       78_875 -       237_513 (Parser.Advanced.chompIf.body.subexpr-literal[7])
+22adff8c:     1_597 -       49_364 -       281_815 (Combine.map.body.subexpr-literal[5])
+dd661077:     1_553 -        4_659 -        26_401 (Parser.Advanced.multiComment.env-func[9], Parser.Advanced.oneOf.body, Parser.Advanced.sequence.env-func[8], Parser.oneOf.body, Combine.oneOf.env-func[0].body, Parser.multiComment.env-func[0].env-func[9], Parser.sequence.env-func[0].env-func[8])
+f622f010:     1_431 -        2_862 -         8_586 (Combine.fail.body.subexpr-literal[3].subexpr-literal[8], Combine.fromCore.body.subexpr-literal[3].subexpr-literal[5], Combine.while.body.subexpr-literal[4].subexpr-literal[13])
+896a8cbb:     1_363 -       16_406 -        25_030 (Parser.loop.env-func[3], Combine.manyWithEndLocationForLastElement.env-func[1].env-func[3])
+d4013afa:     1_363 -   25_837_955 -    83_718_608 (Parser.Advanced.loop.env-func[1].subexpr-literal[10])
+ff8a7b25:     1_363 -   33_366_522 -   107_891_847 (Parser.Advanced.loop.env-func[1], Parser.Advanced.sequence.env-func[13], Parser.loop.env-func[0].env-func[1], Parser.sequence.env-func[0].env-func[13])
+01361d91:     1_338 -        2_676 -         5_352 ()
+59563fe1:     1_208 -       22_595 -       139_131 (Combine.andThen.body.subexpr-literal[5])
+69c158db:     1_196 -        7_529 -        20_913 (Basics.apL.body, Json.Decode.decodeString.env-func[1], Json.Decode.decodeValue.body, Hex.toString.env-func[0].body)
+d65faf2e:     1_189 -        3_567 -        21_402 (Combine.between.env-func[5], Combine.continueWith.env-func[4], Combine.ignore.env-func[4], Combine.many.env-func[0], Combine.many1.env-func[5], Combine.many1WithEndLocationForLastElement.env-func[3], Combine.map.body, Combine.parens.env-func[5], Combine.sepBy.env-func[9], Combine.sepBy1.env-func[5], Combine.sepBy1WithoutReverse.env-func[9], Elm.Parser.CombineTestUtil.parseWithState.env-func[1].env-func[4], Elm.Parser.Expression.expression.env-func[21].env-func[3], Elm.Parser.Layout.optimisticLayoutWith.env-func[2].env-func[4], Elm.Parser.Layout.optimisticLayoutWith.env-func[3].env-func[0], Elm.Parser.Layout.optimisticLayoutWith.env-func[6].env-func[5], Elm.Parser.Patterns.pattern.env-func[15].env-func[5], Elm.Parser.Patterns.pattern.env-func[16].env-func[9], Elm.Parser.Patterns.pattern.env-func[19].env-func[5], Elm.Parser.TypeAnnotation.typeAnnotation.env-func[3].body, Elm.Parser.TypeAnnotation.typeAnnotation.env-func[14].env-func[5])
+Interactive session report:
+1 scenario(s) resulted in 14 steps.
+Passed! - Failed: 0, Passed: 14, Total: 14, Duration: 59_366 ms - 43d648a214 (Pine 0.3.25 with Elm compiler ff3d26d8)
+
+Details from 1 scenarios:
+
+
+Scenario elm-syntax-7-adb22c19ad: 14 steps:
+Step 111:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 380 ms
+parse duration: 380 ms
+compile - encode environment duration: 562 ms
+compile - apply duration: 687 ms
+compile - decode result duration: 117 ms
+eval duration: 210 ms
+parse-result duration: 4 ms
+
+Step 311:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 20 ms
+parse duration: 21 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 6 ms
+compile - decode result duration: 165 ms
+eval duration: 365 ms
+parse-result duration: 5 ms
+
+Step 321:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 94 ms
+parse duration: 94 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 12 ms
+compile - decode result duration: 0 ms
+eval duration: 405 ms
+parse-result duration: 0 ms
+
+Step 371:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 45 ms
+parse duration: 45 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 15 ms
+compile - decode result duration: 0 ms
+eval duration: 46 ms
+parse-result duration: 0 ms
+
+Step 531:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 31 ms
+parse duration: 31 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 13 ms
+compile - decode result duration: 8 ms
+eval duration: 2 ms
+parse-result duration: 0 ms
+
+Step 533:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 35 ms
+parse duration: 35 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 3 ms
+compile - decode result duration: 0 ms
+eval duration: 45 ms
+parse-result duration: 0 ms
+
+Step 611:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 46 ms
+parse duration: 46 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 14 ms
+compile - decode result duration: 353 ms
+eval duration: 40 ms
+parse-result duration: 0 ms
+
+Step 711:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 6 ms
+parse duration: 6 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 4 ms
+compile - decode result duration: 1_585 ms
+eval duration: 151 ms
+parse-result duration: 0 ms
+
+Step 720:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 38 ms
+parse duration: 38 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 150 ms
+compile - decode result duration: 0 ms
+eval duration: 0 ms
+parse-result duration: 0 ms
+
+Step 721:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 6 ms
+parse duration: 7 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 41 ms
+compile - decode result duration: 0 ms
+eval duration: 0 ms
+parse-result duration: 0 ms
+
+Step 722:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 8 ms
+parse duration: 8 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 4 ms
+compile - decode result duration: 0 ms
+eval duration: 75 ms
+parse-result duration: 0 ms
+
+Step 730:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 36 ms
+parse duration: 36 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 5 ms
+compile - decode result duration: 0 ms
+eval duration: 132 ms
+parse-result duration: 0 ms
+
+Step 731:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 170 ms
+parse duration: 170 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 13 ms
+compile - decode result duration: 0 ms
+eval duration: 82 ms
+parse-result duration: 0 ms
+
+Step 741:
+ok with 7 log entries:
+Parse: parse via Elm compiler duration: 2_320 ms
+parse duration: 2_321 ms
+compile - encode environment duration: 0 ms
+compile - apply duration: 34 ms
+compile - decode result duration: 1 ms
+eval duration: 5_947 ms
+parse-result duration: 10 ms
