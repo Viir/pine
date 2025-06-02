@@ -354,11 +354,7 @@ public class ElmLanguageServerTests
                 "dec_a = 11\n\n\n\ndecl_b = 13",
                 NewText:
                 "dec_a = 11\n\n\ndecl_b = 13",
-                ExpectedEdits: [new TextEdit(
-                    Range: new Pine.Core.LanguageServerProtocol.Range(
-                        Start: new Position(Line: 1, Character: 0),
-                        End: new Position(Line: 2, Character: 0)),
-                    NewText: "")]
+                ExpectedEdits: null
             )
             ];
 
@@ -373,9 +369,10 @@ public class ElmLanguageServerTests
                         testCase.OriginalText,
                         testCase.NewText);
 
-                // Verify that applying the edits produces the expected result
-                var result = LanguageServer.ApplyTextEdits(testCase.OriginalText, actualEdits);
-                result.Should().Be(testCase.NewText);
+                var resultingText =
+                    LanguageServer.ApplyTextEdits(testCase.OriginalText, actualEdits);
+
+                resultingText.Should().Be(testCase.NewText);
 
                 // For most test cases, also verify the exact edit format
                 // (Skip exact format verification for cases that might have multiple valid representations)
