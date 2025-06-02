@@ -1951,9 +1951,40 @@ public class LanguageServer(
                 endChar = (uint)originalLines[endLine].Length;
                 newTextForEdit = "";
             }
+            else if (startLine == endLine)
+            {
+                // Deleting a single line from middle or beginning
+                if (endLine + 1 < originalLines.Length)
+                {
+                    // Extend to next line to include the newline
+                    startLinePos = (uint)startLine;
+                    endLinePos = (uint)(endLine + 1);
+                    startChar = 0;
+                    endChar = 0;
+                    newTextForEdit = "";
+                }
+                else if (startLine > 0)
+                {
+                    // Deleting the last line - delete from previous line's end
+                    startLinePos = (uint)(startLine - 1);
+                    endLinePos = (uint)endLine;
+                    startChar = (uint)originalLines[startLine - 1].Length;
+                    endChar = (uint)originalLines[endLine].Length;
+                    newTextForEdit = "";
+                }
+                else
+                {
+                    // Deleting the only line in the document
+                    startLinePos = (uint)startLine;
+                    endLinePos = (uint)endLine;
+                    startChar = 0;
+                    endChar = (uint)originalLines[endLine].Length;
+                    newTextForEdit = "";
+                }
+            }
             else
             {
-                // Deleting lines from middle or beginning
+                // Deleting multiple lines
                 startLinePos = (uint)startLine;
                 endLinePos = (uint)endLine;
                 startChar = 0;
