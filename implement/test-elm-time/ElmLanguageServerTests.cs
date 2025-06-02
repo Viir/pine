@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 using FluentAssertions;
+using System.Text.Json;
 
 namespace TestElmTime;
 
@@ -368,6 +369,10 @@ public class ElmLanguageServerTests
                     LanguageServer.ComputeTextEditsForDocumentFormat(
                         testCase.OriginalText,
                         testCase.NewText);
+
+                Console.WriteLine(
+                    "Derived " + actualEdits.Count + " edits:\n" +
+                    string.Join('\n', actualEdits.Select(e => JsonSerializer.Serialize(e))));
 
                 var resultingText =
                     LanguageServer.ApplyTextEdits(testCase.OriginalText, actualEdits);
