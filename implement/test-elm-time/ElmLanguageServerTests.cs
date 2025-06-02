@@ -347,6 +347,18 @@ public class ElmLanguageServerTests
                         Start: new Position(Line: 1, Character: 6),
                         End: new Position(Line: 2, Character: 6)),
                     NewText: "")]
+            ),
+
+            new(
+                OriginalText:
+                "dec_a = 11\n\n\n\ndecl_b = 13",
+                NewText:
+                "dec_a = 11\n\n\ndecl_b = 13",
+                ExpectedEdits: [new TextEdit(
+                    Range: new Pine.Core.LanguageServerProtocol.Range(
+                        Start: new Position(Line: 1, Character: 0),
+                        End: new Position(Line: 2, Character: 0)),
+                    NewText: "")]
             )
             ];
 
