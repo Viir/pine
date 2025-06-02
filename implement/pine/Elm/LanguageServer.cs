@@ -2,11 +2,13 @@ using ElmTime.ElmSyntax;
 using Interface = Pine.Elm.LanguageServiceInterface;
 using Pine.Core;
 using Pine.Core.LanguageServerProtocol;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using Pine.Elm019;
 using System.Collections.Immutable;
+using LspRange = Pine.Core.LanguageServerProtocol.Range;
 
 namespace Pine.Elm;
 
@@ -1114,14 +1116,14 @@ public class LanguageServer(
                 Name: documentSymbol.Name,
                 Detail: null,
                 Kind: mapSymbolKind(documentSymbol.Kind),
-                Range: new Range(
+                Range: new LspRange(
                     Start: new Position(
                         Line: (uint)documentSymbol.Range.StartLineNumber - 1,
                         Character: (uint)documentSymbol.Range.StartColumn - 1),
                     End: new Position(
                         Line: (uint)documentSymbol.Range.EndLineNumber - 1,
                         Character: (uint)documentSymbol.Range.EndColumn - 1)),
-                SelectionRange: new Range(
+                SelectionRange: new LspRange(
                     Start: new Position(
                         Line: (uint)documentSymbol.SelectionRange.StartLineNumber - 1,
                         Character: (uint)documentSymbol.SelectionRange.StartColumn - 1),
@@ -1243,7 +1245,7 @@ public class LanguageServer(
                     documentEdit.Edits
                     .Select(edit =>
                         new TextEdit(
-                            Range: new Range(
+                            Range: new LspRange(
                                 Start: new Position(
                                     Line: (uint)edit.Range.StartLineNumber - 1,
                                     Character: (uint)edit.Range.StartColumn - 1),
@@ -1380,7 +1382,7 @@ public class LanguageServer(
                     [..pathErrors
                     .Select(problem =>
                         new Diagnostic(
-                            Range: new Range(
+                            Range: new LspRange(
                                 Start: new Position(
                                     Line: (uint)problem.Region.Start.Line - 1,
                                     Character: (uint)problem.Region.Start.Column - 1),
@@ -1684,7 +1686,7 @@ public class LanguageServer(
                     [
                     new Location(
                         uri,
-                        new Range(
+                        new LspRange(
                             Start: new Position(
                                 Line: (uint)location.Range.StartLineNumber - 1,
                                 Character: (uint)location.Range.StartColumn - 1),
@@ -1875,8 +1877,79 @@ public class LanguageServer(
         if (originalText == newText)
             return [];
 
-        // Not implemented yet
+        // Split both texts into lines
+        var originalLines = originalText.ModuleLines().ToList();
+        var newLines = newText.ModuleLines().ToList();
 
-        return [];
+        // Find common prefix (lines that are the same at the beginning)
+        int commonPrefixLength = 0;
+        int minLength = Math.Min(originalLines.Count, newLines.Count);
+        
+        while (commonPrefixLength < minLength && 
+               originalLines[commonPrefixLength] == newLines[commonPrefixLength])
+        {
+            commonPrefixLength++;
+        }
+
+        // Find common suffix (lines that are the same at the end)
+        int commonSuffixLength = 0;
+        int remainingOriginal = originalLines.Count - commonPrefixLength;
+        int remainingNew = newLines.Count - commonPrefixLength;
+        int maxSuffixLength = Math.Min(remainingOriginal, remainingNew);
+
+        while (commonSuffixLength < maxSuffixLength &&
+               originalLines[originalLines.Count - 1 - commonSuffixLength] == 
+               newLines[newLines.Count - 1 - commonSuffixLength])
+        {
+            commonSuffixLength++;
+        }
+
+        // Calculate what needs to be replaced
+        int firstChangedLine = commonPrefixLength;
+        int lastChangedLineInOriginal = originalLines.Count - commonSuffixLength - 1;
+        int lastChangedLineInNew = newLines.Count - commonSuffixLength - 1;
+
+        // Get the replacement text (the lines from new text that differ)
+        var replacementLines = newLines.Skip(commonPrefixLength).Take(newLines.Count - commonPrefixLength - commonSuffixLength);
+        string replacementText = string.Join("\n", replacementLines);
+
+        // Determine the range to replace
+        LspRange range;
+
+        if (firstChangedLine >= originalLines.Count)
+        {
+            // Insertion at the end of the document
+            int lastExistingLine = originalLines.Count - 1;
+            int lastExistingLineLength = lastExistingLine >= 0 ? originalLines[lastExistingLine].Length : 0;
+            
+            range = new LspRange(
+                Start: new Position(Line: (uint)lastExistingLine, Character: (uint)lastExistingLineLength),
+                End: new Position(Line: (uint)lastExistingLine, Character: (uint)lastExistingLineLength));
+            
+            replacementText = "\n" + replacementText;
+        }
+        else if (newLines.Count < originalLines.Count && firstChangedLine >= newLines.Count)
+        {
+            // Deletion from the end - delete extra lines from original
+            int lastKeptLine = newLines.Count - 1;
+            int lastKeptLineLength = lastKeptLine >= 0 ? originalLines[lastKeptLine].Length : 0;
+            int lastDeletedLine = originalLines.Count - 1;
+            int lastDeletedLineLength = originalLines[lastDeletedLine].Length;
+            
+            range = new LspRange(
+                Start: new Position(Line: (uint)lastKeptLine, Character: (uint)lastKeptLineLength),
+                End: new Position(Line: (uint)lastDeletedLine, Character: (uint)lastDeletedLineLength));
+            
+            replacementText = "";
+        }
+        else
+        {
+            // Normal replacement case
+            range = new LspRange(
+                Start: new Position(Line: (uint)firstChangedLine, Character: 0),
+                End: new Position(Line: (uint)lastChangedLineInOriginal, Character: (uint)originalLines[lastChangedLineInOriginal].Length));
+        }
+
+        return [new TextEdit(Range: range, NewText: replacementText)];
     }
 }
