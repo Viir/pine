@@ -1942,6 +1942,21 @@ public class LanguageServer(
             
             replacementText = "";
         }
+        else if (firstChangedLine < originalLines.Count && newLines.Count < originalLines.Count)
+        {
+            // Deletion in the middle - we need to delete some lines
+            // The range should include the newline that creates the line to be deleted
+            int startLine = firstChangedLine > 0 ? firstChangedLine - 1 : 0;
+            int startChar = firstChangedLine > 0 ? originalLines[startLine].Length : 0;
+            int endLine = lastChangedLineInOriginal;
+            int endChar = originalLines[endLine].Length;
+            
+            range = new LspRange(
+                Start: new Position(Line: (uint)startLine, Character: (uint)startChar),
+                End: new Position(Line: (uint)endLine, Character: (uint)endChar));
+            
+            // Use the replacement text as calculated earlier
+        }
         else
         {
             // Normal replacement case
